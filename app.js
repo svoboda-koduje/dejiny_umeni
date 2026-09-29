@@ -23,7 +23,8 @@ const zkratka = n => n.split(/[\s–-]+/).slice(0, 2).map(w => w[0]).join("").to
 
 function kolecko(e, cls = "circ") {
   const o = OBD[e.obdobi];
-  if (e.ikona) return `<span class="${cls}" style="--c:${o.barva}"><img src="img/thumb/${esc(e.ikona)}" alt="" loading="lazy"></span>`;
+  // chybí-li náhled v img/thumb/, zkusí se plný obrázek v img/; když chybí i ten, zůstane zkratka
+  if (e.ikona) return `<span class="${cls}" style="--c:${o.barva}"><img src="img/thumb/${esc(e.ikona)}" alt="" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='img/${esc(e.ikona)}'}else{this.parentNode.innerHTML='<span class=abbr>${esc(zkratka(e.nazev))}</span>'}"></span>`;
   return `<span class="${cls}" style="--c:${o.barva}"><span class="abbr">${esc(zkratka(e.nazev))}</span></span>`;
 }
 function doplnit(popis) {
