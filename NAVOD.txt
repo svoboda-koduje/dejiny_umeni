@@ -1,0 +1,54 @@
+ČASOVÁ OSA DĚJIN UMĚNÍ – návod k úpravám a zveřejnění
+======================================================
+
+Co je v této složce
+-------------------
+index.html            – stránka (vzhled a struktura, CSS uvnitř)
+app.js                – aplikační logika (osa, seznam, přehled, mapa, psychologie, detail)
+data-souvislosti.js   – období, klimatické/astronomické/dějinné události, duchové času (Páleš), body na mapě
+data-epochy-1.js      – epochy: pravěk a starověk
+data-epochy-2.js      – epochy: středověk a novověk
+data-epochy-3.js      – epochy: 19. století a moderní umění
+data-epochy-4.js      – umění mimo Evropu (spodní řádek osy)
+mapa-svet.js          – schematická mapa světa (SVG)
+img/                  – obrazové ukázky (max. 1400 px), img/thumb/ – náhledy (480 px)
+obrazky-k-doplneni.txt – seznam ukázek, které je třeba doplnit (názvy souborů jsou už připravené)
+zdroje-obrazku.txt    – původ obrazových ukázek stažených z Wikimedia Commons (autor, licence, odkaz)
+STAHNI-OBRAZKY.cmd    – jednorázový stahovač chybějících ukázek z Wikimedia Commons (spouští stahni-obrazky.ps1;
+                        existující soubory v img/ nepřepisuje, výsledek zapíše do commons-protokol.csv a chybi.txt;
+                        STAHNI-OBRAZKY-2.cmd byl 2. opravný průchod – oba už proběhly, znovu je spouštět netřeba)
+
+Univerzální vyhledávání
+-----------------------
+Lupa v hlavičce, klávesa Ctrl+K (Cmd+K) nebo lomítko „/“ otevře hledání odkudkoli – i z otevřené karty epochy
+(tlačítko Hledat vedle Domů). Prohledávají se epochy, obrazové ukázky, osobnosti, události, body na mapě,
+duchové času a části stránky; diakritika nerozhoduje. Šipky ↑↓ pohyb, Enter otevře, Esc zavře.
+Logika je v app.js v části „univerzální vyhledávání“ (funkce sestavIndex, hledej, vyberVysledek).
+
+Jak upravit texty
+-----------------
+Otevřete příslušný soubor data-epochy-*.js v textovém editoru (Poznámkový blok, VS Code).
+Každá epocha je jeden blok { ... }. Pole jsou popsána v hlavičce souboru data-epochy-1.js.
+Text pište do uvozovek; uvozovky uvnitř textu nahraďte „českými“ nebo je napište jako \".
+Novou epochu přidáte zkopírováním celého bloku a změnou id, názvu, letopočtů od/do atd.
+
+Jak přidat obrázek
+------------------
+1. Vložte soubor do img/ (a zmenšeninu do img/thumb/ – není nutné).
+2. Pokud jde o připravenou položku ze seznamu obrazky-k-doplneni.txt, hotovo.
+3. Pro novou ukázku přidejte do pole pamatky: { img: "soubor.jpg", nazev: "Název", popis: "Popis." }
+4. Ikona v kolečku epochy: pole ikona: "soubor.jpg" (soubor musí být v img/thumb/).
+
+Jak přidat událost nebo bod na mapě
+-----------------------------------
+V data-souvislosti.js: pole UDALOSTI (id, rok, typ klima/astro/dejiny, nazev, kdy, popis, umeni, epochy)
+a pole MAPA_BODY (lon, lat, nazev, kdy, obdobi, popis, epocha).
+
+Přímý odkaz na epochu
+---------------------
+index.html#renesance (id epochy za mřížkou) – otevře rovnou kartu.
+
+Zveřejnění
+----------
+Celou složku nahrajte na web (GitHub Pages, školní server). Stránka nepotřebuje žádný server ani databázi;
+funguje i po otevření souboru index.html přímo z disku.

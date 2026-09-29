@@ -1,0 +1,7 @@
+OBRÁZKY K DOPLNĚNÍ – Časová osa dějin umění
+=============================================
+
+Stav: všech 85 ukázek je doplněno. Chcete-li některou vyměnit, stačí přepsat soubor stejného jména v img/ a img/thumb/ (delší strana 1400 px, náhled 480 px).
+
+
+Celkem zbývá 0 obrázků.
