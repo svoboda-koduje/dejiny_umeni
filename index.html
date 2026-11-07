@@ -6,6 +6,7 @@
 <title>Časová osa dějin umění</title>
 <meta name="description" content="Interaktivní výuková aplikace dějin umění pro střední školy: časová osa od paleolitu po současnost, obrazové ukázky, klimatické a dějinné souvislosti, hlubinná psychologie (C. G. Jung) a duchové času (E. Páleš). SPŠE a VOŠ Pardubice.">
 <meta name="theme-color" content="#17313A">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%2338C4F0'/%3E%3Cpath d='M4 12h16M12 4v16' stroke='%2317313A' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +52,12 @@ body{margin:0;font-family:var(--font);font-size:17px;line-height:1.55;color:var(
 img{max-width:100%;display:block}
 a{color:var(--deep)} a:hover{color:var(--ink)}
 :focus-visible{outline:3px solid var(--water);outline-offset:2px}
+:focus:not(:focus-visible){outline:none}
+svg [tabindex]:focus{outline:none}
+.serp .band:focus-visible rect,.kompas .node:focus-visible circle,.kolo .seg7:focus-visible path,.pt:focus-visible circle{stroke:var(--water);stroke-width:4}
+button,a,label,[role=button]{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+html.lock,html.lock body{overflow:hidden}
+body{overflow-x:clip}
 button{font-family:inherit}
 [hidden]{display:none!important}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -68,13 +75,14 @@ h1,h2,h3,h4{text-wrap:balance}
 .topbar .social{display:flex;gap:14px;align-items:center}
 .topbar .social svg{width:18px;height:18px;fill:currentColor;display:block}
 .site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--hdr-bg);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
-.site-header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:86px;gap:24px}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:80px;gap:16px}
 .brand{display:flex;align-items:center;gap:18px;text-decoration:none;color:var(--ink)}
 .brand img{height:50px;width:auto}
 .brand .brand-sub{border-left:1px solid var(--line);padding-left:18px;font-size:14px;line-height:1.3;color:var(--ink-soft)}
 .brand .brand-sub strong{display:block;color:var(--ink);font-weight:600;font-size:15px}
-.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px;align-items:center;flex-wrap:wrap}
-.main-nav a{display:block;padding:10px 12px;font-weight:500;font-size:15.5px;text-decoration:none;color:var(--ink);border-bottom:3px solid transparent}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:0;align-items:center;flex-wrap:nowrap}
+.main-nav .nav-social{display:none}
+.main-nav a{display:block;padding:10px 9px;font-weight:500;font-size:15px;white-space:nowrap;text-decoration:none;color:var(--ink);border-bottom:3px solid transparent}
 .main-nav a:hover{border-bottom-color:var(--water)}
 .main-nav .ext{display:flex;align-items:center;gap:6px;margin-left:8px;border:1px solid var(--line);border-radius:4px;padding:8px 12px}
 .main-nav .ext:hover{border-color:var(--water)}
@@ -82,8 +90,11 @@ h1,h2,h3,h4{text-wrap:balance}
 .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:4px;padding:8px 12px;font:600 15px var(--font);color:var(--ink);cursor:pointer;align-items:center;gap:8px}
 .nav-toggle svg{width:20px;height:20px}
 @media (max-width:1320px){.brand .brand-sub{display:none}}
-@media (max-width:920px){
+@media (max-width:1180px){
   .nav-toggle{display:inline-flex}
+  .main-nav .nav-social{display:flex;gap:22px;justify-content:center;padding-top:16px}
+  .main-nav .nav-social a{border:0;padding:6px}
+  .main-nav .nav-social svg{width:22px;height:22px;fill:currentColor;display:block}
   .main-nav{position:absolute;left:0;right:0;top:100%;background:var(--surface);border-bottom:1px solid var(--line);display:none}
   .main-nav.open{display:block}
   .main-nav ul{flex-direction:column;align-items:stretch;padding:8px var(--gut) 16px}
@@ -116,10 +127,11 @@ h1,h2,h3,h4{text-wrap:balance}
 /* serpentina období */
 .serp{width:100%;max-width:440px;margin:0 auto;display:block}
 .serp .band{cursor:pointer;transition:opacity .2s}
-.serp .band:hover rect{filter:brightness(1.08)}
+.serp .band{transition:transform .2s,opacity .2s;transform-box:fill-box;transform-origin:center}
+@media (hover:hover){.serp:hover .band{opacity:.75}.serp .band:hover{opacity:1;transform:scale(1.045)}.serp .band:hover rect{filter:brightness(1.15) saturate(1.1)}}
 .serp text{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;fill:#fff;pointer-events:none}
 .serp .lbl{fill:var(--ink-soft);font-weight:600;font-size:12px;letter-spacing:.06em}
-.serp-cap{text-align:center;font-size:14px;color:var(--ink-soft);margin:10px 0 0}
+.serp-cap{text-align:center;font-size:14.5px;font-weight:500;color:var(--deep);margin:10px 0 0}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
 
 /* ---------- Sekce ---------- */
@@ -202,8 +214,8 @@ section[id]{scroll-margin-top:100px}
 .icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:18px 12px}
 .icon-btn{background:transparent;border:0;cursor:pointer;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:10px;padding:6px;border-radius:8px}
 .icon-btn:hover .circ{transform:translateY(-3px);box-shadow:0 12px 20px -14px rgba(23,49,58,.6)}
-.circ{width:84px;height:84px;border-radius:50%;background:var(--water-soft);overflow:hidden;display:grid;place-items:center;transition:transform .2s,box-shadow .2s;border:3px solid var(--c,var(--water))}
-.circ img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(1.02);mix-blend-mode:multiply}
+.circ{position:relative;width:84px;height:84px;border-radius:50%;background:var(--water-soft);overflow:hidden;display:grid;place-items:center;transition:transform .2s,box-shadow .2s;border:3px solid var(--c,var(--water))}
+.circ img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(1.02);mix-blend-mode:multiply}
 :root[data-theme="dark"] .circ img{mix-blend-mode:normal;opacity:.85}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .circ img{mix-blend-mode:normal;opacity:.85}}
 .circ .abbr{font:800 26px var(--cond);color:var(--deep)}
@@ -230,15 +242,23 @@ section[id]{scroll-margin-top:100px}
 /* ---------- Mapa ---------- */
 .mapa-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(18px,3vw,36px);align-items:start}
 .mapa-box{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px;box-shadow:var(--shadow)}
-.mapa-box svg{width:100%;height:auto;display:block}
+.mapa-box{position:relative}
+.mapa-box svg{width:100%;height:auto;display:block;touch-action:none;cursor:grab;border-radius:4px}
+.mapa-box svg.drag{cursor:grabbing}
+.mapa-ctl{position:absolute;right:16px;top:16px;display:flex;flex-direction:column;gap:6px;z-index:2}
+.mapa-ctl button{width:40px;height:40px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font:700 20px/1 var(--font);cursor:pointer;box-shadow:0 6px 14px -10px rgba(0,0,0,.5)}
+@media (hover:hover){.mapa-ctl button:hover{background:var(--water-soft);border-color:var(--water)}}
+.mapa-ctl button:active{background:var(--water);color:#fff}
+.mapa-hint{font-size:13.5px;color:var(--ink-soft);margin:8px 4px 2px}
 .mapa-box .land{fill:var(--paper-2);stroke:var(--surface);stroke-width:1;stroke-linejoin:round}
 .mapa-box .sea{fill:var(--water-soft)}
 .pt{cursor:pointer}
 .pt circle{stroke:#fff;stroke-width:2;transition:r .15s}
-.pt:hover circle,.pt.on circle{r:11}
+.pt.on circle{stroke:var(--ink)}
 .pt .lb{display:none}
-.pt:hover .lb,.pt.on .lb{display:block}
-.pt text{font:700 10px var(--font);fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:3px;pointer-events:none}
+.pt.on .lb{display:block}
+@media (hover:hover){.pt:hover circle{stroke:var(--ink)}.pt:hover .lb{display:block}}
+.pt text{font-weight:700;font-family:var(--font);fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:3px;pointer-events:none}
 .mapa-card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px 22px;min-height:200px;position:sticky;top:110px}
 .mapa-card h3{margin:0 0 2px;font:700 24px var(--cond);line-height:1.1}
 .mapa-card .kdy{color:var(--ink-soft);font-size:14px;margin-bottom:10px}
@@ -266,8 +286,9 @@ section[id]{scroll-margin-top:100px}
 .kompas svg{width:100%;max-width:300px;height:auto;display:block;margin:0 auto}
 .kompas .node{cursor:pointer}
 .kompas .node circle{fill:var(--surface);stroke:var(--c);stroke-width:2.5;transition:r .15s}
-.kompas .node:hover circle,.kompas .node.on circle{fill:var(--c)}
-.kompas .node:hover text,.kompas .node.on text{fill:#fff}
+.kompas .node.on circle{fill:var(--c)}
+.kompas .node.on text{fill:#fff}
+@media (hover:hover){.kompas .node:hover circle{fill:var(--c)}.kompas .node:hover text{fill:#fff}}
 .kompas .node text{font:700 13px var(--cond);text-anchor:middle;fill:var(--ink);pointer-events:none;letter-spacing:.06em}
 .kompas .node .sub{font:500 9px var(--font);fill:var(--ink-soft);letter-spacing:.06em}
 .kompas .axis{stroke:var(--line-strong);stroke-width:1}
@@ -289,7 +310,9 @@ section[id]{scroll-margin-top:100px}
 .kolo svg{width:100%;max-width:340px;height:auto;display:block;margin:0 auto}
 .kolo .seg7{cursor:pointer;transition:opacity .2s}
 .kolo .seg7 path{stroke:var(--surface);stroke-width:3}
-.kolo .seg7:hover path,.kolo .seg7.on path{filter:brightness(1.12)}
+#kolo-svg.sel .seg7:not(.on){opacity:.4}
+.kolo .seg7.on path{filter:brightness(1.1)}
+@media (hover:hover){#kolo-svg.sel .seg7:hover{opacity:.85}}
 .kolo .seg7 text{font:700 12px var(--cond);fill:#fff;text-anchor:middle;pointer-events:none;letter-spacing:.06em}
 .kolo .seg7 .sym{font-size:18px;font-family:var(--font)}
 .kolo .mid{font:700 13px var(--cond);text-anchor:middle;fill:var(--ink-soft);letter-spacing:.1em}
@@ -331,11 +354,15 @@ section[id]{scroll-margin-top:100px}
 dialog.detail{border:0;padding:0;background:var(--paper);color:var(--ink);width:min(1180px,100vw);max-width:100vw;height:100dvh;max-height:100dvh;margin:auto;border-radius:0}
 @media (min-width:1000px){dialog.detail{height:min(94dvh,1000px);max-height:94dvh;border-radius:10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}}
 dialog.detail::backdrop{background:rgba(10,20,24,.62);backdrop-filter:blur(3px)}
-.det{height:100%;overflow:auto;padding:0 0 40px;position:relative}
-.det-top{position:sticky;top:0;z-index:5;background:var(--paper);display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;padding:14px var(--gut) 10px;border-bottom:1px solid var(--line)}
+.det{height:100%;overflow:auto;padding:0 0 40px;position:relative;overscroll-behavior:contain}
+.det-top{position:sticky;top:0;z-index:5;background:var(--paper);display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:max(12px,env(safe-area-inset-top)) var(--gut) 10px;border-bottom:1px solid var(--line);box-shadow:0 -60px 0 60px var(--paper)}
+.det-top .x-close{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;width:40px;height:38px;font:400 26px/1 var(--font);cursor:pointer;display:grid;place-items:center;padding:0 0 3px}
+@media (hover:hover){.det-top .home:hover,.det-top .x-close:hover{border-color:var(--water);background:var(--water-soft)}}
+.det-top .home:active,.det-top .x-close:active{background:var(--water);color:#fff}
 .det-top .home{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;padding:8px 12px;font:600 14px var(--font);cursor:pointer}
 .det-top .home svg{width:18px;height:18px}
-.det-top .obd{display:inline-flex;align-items:center;gap:8px;font:600 12.5px var(--font);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);justify-content:center}
+.det-top .obd{display:inline-flex;align-items:center;gap:8px;font:600 12.5px var(--font);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);justify-content:center;flex:1 1 auto;min-width:0}
+@media (max-width:640px){.det-top .x-close{order:2;margin-left:auto}.det-top .dat{order:3;font-size:13.5px;padding:5px 10px;white-space:normal}.det-top .obd{order:4;justify-content:flex-start}.det-top .home .txt-h{display:none}.det-head h2{font-size:1.85rem;overflow-wrap:anywhere;hyphens:auto}.det-head .circ{width:92px;height:92px}}
 .det-top .obd i{width:10px;height:10px;border-radius:50%;background:var(--c)}
 .det-top .dat{font:600 15px var(--cond);letter-spacing:.04em;background:var(--water-soft);color:var(--deep);padding:6px 12px;border-radius:20px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .det-head{text-align:center;padding:clamp(18px,3vw,30px) var(--gut) 0}
@@ -357,6 +384,11 @@ dialog.detail::backdrop{background:rgba(10,20,24,.62);backdrop-filter:blur(3px)}
 .det-body li{margin-bottom:3px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chips span{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:3px 10px;font-size:13.5px}
+.chips .os{border:1px solid var(--line-strong);background:var(--surface);color:var(--deep);border-radius:14px;padding:3px 11px 3px 7px;font:600 13.5px var(--font);cursor:pointer;display:inline-flex;align-items:center;gap:5px;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:2px}
+.chips .os svg{width:14px;height:14px;flex:0 0 14px}
+@media (hover:hover){.chips .os:hover{border-color:var(--water);background:var(--water-soft);text-decoration-color:var(--water)}}
+.chips .more{border:1px dashed var(--line-strong);background:transparent;color:var(--ink-soft);border-radius:14px;padding:3px 10px;font:600 13px var(--font);cursor:pointer}
+.os-note{font-size:12.5px;color:var(--ink-faint);margin:4px 0 0}
 .det-gal{padding:clamp(18px,3vw,30px) var(--gut) 0}
 .det-gal>h3,.det-links>h3{font:700 clamp(1.3rem,2.4vw,1.8rem) var(--cond);margin:0 0 12px;display:flex;align-items:center;gap:12px}
 .det-gal>h3::after,.det-links>h3::after{content:"";flex:1;height:1px;background:var(--line)}
@@ -384,9 +416,21 @@ dialog.detail::backdrop{background:rgba(10,20,24,.62);backdrop-filter:blur(3px)}
 /* lightbox */
 dialog.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100dvh;width:100vw;height:100dvh;margin:0}
 dialog.lb::backdrop{background:rgba(5,10,12,.9)}
-.lb-in{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;cursor:zoom-out}
-.lb-in img{max-width:100%;max-height:82vh;object-fit:contain;box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
-.lb-in p{color:#fff;margin:0;font-size:15px;text-align:center;max-width:70ch}
+.lb-in{position:relative;width:100%;height:100%;display:grid;grid-template-columns:64px minmax(0,1fr) 64px;grid-template-rows:minmax(0,1fr) auto;align-items:center;gap:10px 6px;padding:max(16px,env(safe-area-inset-top)) 8px max(14px,env(safe-area-inset-bottom))}
+.lb-stage{grid-column:2;grid-row:1;height:100%;min-height:0;overflow:auto;display:flex;align-items:center;justify-content:center;overscroll-behavior:contain;touch-action:pan-x pan-y pinch-zoom}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-in;box-shadow:0 30px 60px -20px rgba(0,0,0,.8);user-select:none;-webkit-user-drag:none}
+.lb-stage.zoom{display:block;cursor:grab}
+.lb-stage.zoom img{max-width:none;max-height:none;margin:auto;cursor:zoom-out}
+.lb-cap{grid-column:1/-1;grid-row:2;color:#fff;margin:0 auto;font-size:15px;text-align:center;max-width:80ch;padding:0 8px}
+.lb-cap b{display:block;font:700 19px var(--cond);letter-spacing:.02em}
+.lb-cap .cnt{display:inline-block;margin-left:8px;font-size:13px;opacity:.7;font-variant-numeric:tabular-nums}
+.lb-cap .tip{display:block;font-size:12.5px;opacity:.6;margin-top:4px}
+.lb-nav{width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;display:grid;place-items:center;justify-self:center}
+.lb-nav svg{width:26px;height:26px}
+@media (hover:hover){.lb-nav:hover,.lb-x:hover{background:rgba(255,255,255,.28)}}
+.lb-prev{grid-column:1;grid-row:1}.lb-next{grid-column:3;grid-row:1}
+.lb-x{position:absolute;top:max(12px,env(safe-area-inset-top));right:12px;z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.45);color:#fff;font:400 30px/1 var(--font);cursor:pointer;padding:0 0 4px}
+@media (max-width:640px){.lb-in{grid-template-columns:0 minmax(0,1fr) 0;gap:10px 0}.lb-nav{position:absolute;bottom:max(14px,env(safe-area-inset-bottom));width:46px;height:46px;z-index:3}.lb-prev{left:10px}.lb-next{right:10px}.lb-cap{padding:0 60px}}
 
 /* ---------- Univerzální vyhledávání (Ctrl+K nebo /) ---------- */
 .hdr-search{display:inline-flex;align-items:center;gap:10px;margin-left:auto;border:1px solid var(--line-strong);background:var(--surface-2);color:var(--ink-soft);border-radius:8px;padding:8px 12px;font:500 14.5px var(--font);cursor:text;min-width:220px;transition:border-color .2s,box-shadow .2s}
@@ -395,11 +439,12 @@ dialog.lb::backdrop{background:rgba(5,10,12,.9)}
 .hdr-search .lbl{flex:1;text-align:left;white-space:nowrap}
 .hdr-search kbd{font:600 11px var(--font);letter-spacing:.04em;border:1px solid var(--line-strong);border-bottom-width:2px;border-radius:4px;padding:1px 6px;color:var(--ink-faint);background:var(--surface)}
 .srch-in input::-webkit-search-cancel-button,.srch-in input::-webkit-search-decoration{-webkit-appearance:none;display:none}
-@media (max-width:1400px){.hdr-search{min-width:0;padding:9px 10px;border-radius:50%}.hdr-search .lbl,.hdr-search kbd{display:none}}
-@media (max-width:920px){.hdr-search{margin-left:0}}
+.hdr-search{min-width:190px}
+@media (max-width:1180px){.hdr-search{min-width:0}}
+@media (max-width:560px){.hdr-search .lbl{display:none}.hdr-search{padding:9px 11px}.brand img{height:36px}}
 .det-top .tools{display:inline-flex;gap:8px;flex-wrap:wrap}
 dialog.srch{border:0;padding:0;background:transparent;width:min(760px,calc(100vw - 24px));max-width:100vw;max-height:calc(100dvh - 24px);margin:12px auto auto;overflow:visible}
-@media (min-width:700px){dialog.srch{margin-top:min(9vh,90px)}}
+@media (min-width:700px){dialog.srch{margin-top:min(9vh,90px);max-height:calc(100dvh - min(9vh,90px) - 24px)}dialog.srch .srch-box{max-height:calc(100dvh - min(9vh,90px) - 24px)}}
 dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
 .srch-box{background:var(--surface);color:var(--ink);border-radius:12px;box-shadow:0 40px 80px -24px rgba(0,0,0,.65);border:1px solid var(--line);display:flex;flex-direction:column;max-height:calc(100dvh - 24px);overflow:hidden}
 .srch-in{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)}
@@ -408,7 +453,7 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
 .srch-in input::placeholder{color:var(--ink-faint)}
 .srch-in .x{border:1px solid var(--line-strong);background:var(--surface-2);color:var(--ink-soft);border-radius:6px;padding:5px 9px;font:600 12px var(--font);cursor:pointer;letter-spacing:.04em}
 .srch-in .x:hover{color:var(--ink);border-color:var(--water)}
-.srch-res{overflow:auto;padding:6px 8px 10px;scroll-padding:48px 0 12px}
+.srch-res{overflow:auto;padding:6px 8px 28px;scroll-padding:48px 0 28px;overscroll-behavior:contain}
 .srch-res h4{margin:12px 8px 4px;font:700 11.5px var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);display:flex;align-items:center;gap:10px}
 .srch-res h4::after{content:"";flex:1;height:1px;background:var(--line)}
 .srch-res h4 small{font:600 11px var(--font);letter-spacing:0;text-transform:none;color:var(--ink-faint)}
@@ -446,6 +491,91 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
 .foot-grid p{margin:0 0 6px}
 .foot-bottom{padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;color:rgba(255,255,255,.6)}
 @media (max-width:860px){.foot-grid{grid-template-columns:1fr}}
+
+/* ---------- Úpravy po betatestování (11/2026) ---------- */
+.hero .btn{background:var(--surface);color:var(--ink);border-color:var(--line-strong);font-size:16.5px;padding:13px 20px 13px 14px;box-shadow:0 10px 24px -18px rgba(23,49,58,.7)}
+.hero .btn .ico{background:var(--water-soft);color:var(--deep)}
+@media (hover:hover){.hero .btn:hover{background:var(--water-soft);border-color:var(--water);color:var(--ink)}.hero .btn:hover .ico{background:var(--water);color:#fff}}
+.hero .btn:active{background:var(--water);border-color:var(--water);color:#fff}
+@media (max-width:600px){.hero .btn{flex:1 1 calc(50% - 6px)}}
+.osa-btn{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:20px;height:32px;padding:0 12px;font:600 13.5px var(--font);cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.osa-btn svg{width:16px;height:16px}
+@media (hover:hover){.osa-btn:hover,.zoom button:hover{border-color:var(--water);background:var(--water-soft)}}
+.osa-btn:active,.zoom button:active{background:var(--water);color:#fff}
+.osa-scroll.aktiv{box-shadow:inset 0 0 0 2px var(--water)}
+.osa-box.fs{position:fixed;inset:0;z-index:300;background:var(--paper);padding:max(10px,env(safe-area-inset-top)) 12px 10px;overflow:auto;display:flex;flex-direction:column}
+.osa-box.fs .osa-frame{flex:0 0 auto}
+.curve circle{pointer-events:all;cursor:pointer;transition:r .15s}
+@media (hover:hover){.curve circle:hover{r:7;fill:var(--water)}}
+.osa-tip{position:absolute;z-index:25;pointer-events:none;background:var(--ink);color:var(--paper);font:600 12.5px var(--font);padding:5px 9px;border-radius:6px;white-space:nowrap;transform:translate(-50%,calc(-100% - 10px))}
+@media (max-width:700px){.bar .ico{display:none}.bar{padding-left:10px}.osa-tools .grp:first-child{display:none}}
+.rows.collapsed .row:nth-child(n+9){display:none}
+.more-row{display:flex;justify-content:center;margin-top:16px}
+.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:40;width:50px;height:50px;border-radius:50%;border:2px solid var(--surface);background:var(--ink);color:var(--paper);box-shadow:var(--shadow);cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .2s,transform .2s}
+.to-top.on{opacity:1;pointer-events:auto;transform:none}
+.to-top svg{width:24px;height:24px}
+@media (hover:hover){.to-top:hover{background:var(--deep)}}
+/* profil osobnosti */
+.prof-head{display:flex;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.prof-head .ico{width:48px;height:48px;border-radius:50%;background:var(--water-soft);color:var(--deep);display:grid;place-items:center;flex:0 0 48px}
+.prof-head .ico svg{width:24px;height:24px}
+.prof-head h3{margin:0;font:700 clamp(1.5rem,3vw,2rem) var(--cond);line-height:1.05}
+.prof-head p{margin:2px 0 0;font-size:14px;color:var(--ink-soft)}
+.prof-head .x{margin-left:auto;border:1px solid var(--line-strong);background:var(--surface-2);color:var(--ink-soft);border-radius:6px;padding:6px 10px;font:600 13px var(--font);cursor:pointer;align-self:flex-start}
+.prof-body{overflow:auto;padding:6px 18px 26px;overscroll-behavior:contain}
+.prof-body h4{margin:16px 0 8px;font:700 12px var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--deep)}
+.prof-body .links{display:flex;flex-wrap:wrap;gap:6px}
+.prof-gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.prof-gal button{border:1px solid var(--line);background:var(--surface-2);border-radius:6px;padding:0;overflow:hidden;cursor:pointer;text-align:left;color:var(--ink);font:inherit;display:flex;flex-direction:column}
+.prof-gal img{aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--paper-2)}
+.prof-gal span{display:block;padding:6px 8px 8px;font-size:13px;line-height:1.3}
+.prof-gal small{display:block;color:var(--ink-soft);font-size:12px}
+@media (hover:hover){.prof-gal button:hover{border-color:var(--water)}}
+.prof-note{font-size:12.5px;color:var(--ink-faint);margin:18px 0 0}
+/* procvičování */
+.pr-bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:20px}
+.pr-bar .seg{margin:0}
+.pr-bar select{font:500 15px var(--font);padding:8px 10px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface);color:var(--ink);max-width:100%}
+.pr-bar label{font:600 12.5px var(--font);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);display:inline-flex;align-items:center;gap:8px}
+.seg.big button{padding:9px 16px;font-size:14.5px}
+.flash{perspective:1400px;max-width:660px;margin:0 auto}
+.flash-in{position:relative;height:min(420px,70vh);transition:transform .55s;transform-style:preserve-3d;cursor:pointer}
+.flash.flip .flash-in{transform:rotateY(180deg)}
+.flash-f,.flash-b{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:10px;box-shadow:var(--shadow);padding:22px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:auto}
+.flash-b{transform:rotateY(180deg);justify-content:flex-start;text-align:left;align-items:stretch;font-size:15.5px}
+.flash-f h3{font:800 clamp(1.8rem,4.5vw,2.8rem) var(--cond);margin:10px 0 4px;text-transform:uppercase;line-height:1}
+.flash-b h3{font:700 26px var(--cond);margin:0 0 4px;line-height:1.05}
+.flash-f img{max-height:230px;max-width:100%;object-fit:contain;border-radius:4px}
+.flash p{margin:0 0 8px}
+.flash ul{margin:0 0 8px;padding-left:18px}
+.flash .hint{font-size:13.5px;color:var(--ink-soft);margin-top:12px}
+.flash-ctl{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}
+.flash-ctl .cnt{font:600 14px var(--font);color:var(--ink-soft);min-width:70px;text-align:center;font-variant-numeric:tabular-nums}
+.quiz{max-width:780px;margin:0 auto}
+.quiz-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 24px;box-shadow:var(--shadow)}
+.quiz-prog{height:6px;background:var(--paper-2);border-radius:3px;overflow:hidden;margin-bottom:14px}
+.quiz-prog i{display:block;height:100%;background:var(--water);transition:width .3s}
+.quiz-q{font:700 clamp(1.25rem,2.6vw,1.6rem) var(--cond);line-height:1.15;margin:0 0 6px}
+.quiz-meta{font-size:13px;color:var(--ink-soft);margin:0 0 4px}
+.quiz-img{max-height:300px;max-width:100%;margin:12px auto 0;object-fit:contain;border-radius:4px}
+.quiz-opts{display:grid;gap:10px;margin-top:16px}
+.quiz-opts button{text-align:left;padding:12px 16px;border:1.5px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font:500 16px var(--font);cursor:pointer;line-height:1.35}
+@media (hover:hover){.quiz-opts button:not(:disabled):hover{border-color:var(--water);background:var(--water-soft)}}
+.quiz-opts button.ok{border-color:var(--moss);background:rgba(78,122,69,.16)}
+.quiz-opts button.bad{border-color:var(--heat);background:rgba(181,85,47,.16)}
+.quiz-opts button:disabled{cursor:default}
+.quiz-fb{margin:14px 0 0;font-size:15px}
+.quiz-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:16px;flex-wrap:wrap}
+.quiz-score{font:800 clamp(2.4rem,6vw,3.6rem) var(--cond);line-height:1;margin:6px 0}
+.quiz-wrong{margin:12px 0 0;padding-left:18px;font-size:15px}
+.quiz-wrong li{margin-bottom:6px}
+.cmp{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--line);background:var(--surface);border-radius:6px}
+.cmp>div{padding:10px 14px;border-bottom:1px solid var(--line);font-size:15px}
+.cmp .lab{font:700 12px var(--font);letter-spacing:.08em;text-transform:uppercase;color:var(--deep);padding-top:13px}
+.cmp .hd{font:700 24px var(--cond);line-height:1.05;border-top:5px solid var(--c)}
+.cmp ul{margin:0;padding-left:18px}
+.cmp .gauge{margin:6px 0 2px}
+@media (max-width:700px){.cmp{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.cmp .lab{grid-column:1/-1;padding-bottom:0;border-bottom:0;background:var(--surface-2)}.cmp .e0{border-right:1px solid var(--line)}}
 </style>
 </head>
 <body>
@@ -467,6 +597,10 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
   <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.8-3.8"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
   <symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 5l-7 7 7 7"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-shrink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></symbol>
   <symbol id="i-jung" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18 4.5 4.5 0 0 1 0-9 4.5 4.5 0 0 0 0-9z" fill="currentColor"/></symbol>
 </svg>
 
@@ -476,6 +610,7 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
       <a href="https://i4.spse.cz/">Intranet</a>
       <a href="https://supl.spse.cz/">Suplování</a>
       <a href="https://rozvrh.spse.cz/">Rozvrh</a>
+      <a href="https://www.spse.cz/stredni-skola/obory-m/18-20-M-01-informacni-technologie-pocitacova-grafika">Obor na spse.cz</a>
     </nav>
     <div class="social">
       <a href="https://www.youtube.com/channel/UCoHN_5zWRyX0izwCz7ZbgnA/videos" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a>
@@ -490,10 +625,9 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
     <a class="brand" href="https://www.spse.cz/" aria-label="SPŠE a VOŠ Pardubice – web školy">
       <img class="logo-light" src="img/spse-logo.png" alt="SPŠE a VOŠ Pardubice" width="600" height="168">
       <img class="logo-dark" src="img/spse-logo-bila.png" alt="" width="600" height="168">
-      <span class="brand-sub"><strong>Časová osa dějin umění</strong>výuková aplikace · Grafika · Dějiny výtvarné kultury</span>
     </a>
-    <button class="hdr-search" type="button" id="btn-hledat" aria-label="Hledat v celé aplikaci (Ctrl+K)" title="Hledat v celé aplikaci (Ctrl+K nebo /)">
-      <svg><use href="#i-search"/></svg><span class="lbl">Hledat epochu, dílo, umělce…</span><kbd>Ctrl K</kbd>
+    <button class="hdr-search" type="button" id="btn-hledat" aria-label="Hledat v celé aplikaci" title="Hledat v celé aplikaci">
+      <svg><use href="#i-search"/></svg><span class="lbl">Hledat…</span>
     </button>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu
@@ -502,11 +636,12 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
       <ul>
         <li><a href="#osa">Osa</a></li>
         <li><a href="#seznam">Seznam</a></li>
-        <li><a href="#prehled">Rychlý přehled</a></li>
-        <li><a href="#mapa">Mapa světa</a></li>
+        <li><a href="#prehled">Přehled</a></li>
+        <li><a href="#mapa">Mapa</a></li>
         <li><a href="#psychologie">Psychologie</a></li>
-        <li><a href="#klima">Klima a dějiny</a></li>
-        <li><a class="ext" href="https://www.spse.cz/stredni-skola/obory-m/18-20-M-01-informacni-technologie-pocitacova-grafika">Obor na spse.cz <svg><use href="#i-ext"/></svg></a></li>
+        <li><a href="#klima">Klima</a></li>
+        <li><a href="#procvicovani">Procvičování</a></li>
+        <li class="nav-social" id="nav-social"></li>
       </ul>
     </nav>
   </div>
@@ -521,16 +656,17 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
       <h1>Časová osa dějin umění <small>od jeskyní doby ledové po umělou inteligenci</small></h1>
       <p class="lead">Čtyřicet tisíc let výtvarné kultury na jedné ose. Ke každé epoše stručná charakteristika, obrazové ukázky nejznámějších památek a tři vrstvy souvislostí: <strong>klima a dějiny</strong>, <strong>hlubinná psychologie</strong> C. G. Junga a střídání <strong>duchů času</strong> podle Emila Páleše.</p>
       <div class="btns">
-        <a class="btn btn-primary" href="#osa"><span class="ico"><svg><use href="#i-osa"/></svg></span>Osa</a>
+        <a class="btn" href="#osa"><span class="ico"><svg><use href="#i-osa"/></svg></span>Osa</a>
         <a class="btn" href="#seznam"><span class="ico"><svg><use href="#i-seznam"/></svg></span>Seznam</a>
         <a class="btn" href="#prehled"><span class="ico"><svg><use href="#i-prehled"/></svg></span>Rychlý přehled</a>
         <a class="btn" href="#mapa"><span class="ico"><svg><use href="#i-mapa"/></svg></span>Mapa světa</a>
+        <a class="btn" href="#procvicovani"><span class="ico"><svg><use href="#i-jung"/></svg></span>Procvičování</a>
       </div>
       <div class="hero-stats" id="hero-stats"></div>
     </div>
     <div>
       <svg class="serp" id="serp" viewBox="0 0 440 300" role="img" aria-label="Schéma šesti období dějin umění"></svg>
-      <p class="serp-cap">Šest základních období. Klikněte na pruh a osa se posune na začátek období.</p>
+      <p class="serp-cap">Šest základních období – klikněte na barevný pruh a časová osa se posune na jeho začátek.</p>
     </div>
   </div>
 </section>
@@ -542,6 +678,7 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
       <h2><span class="num">01 · Interaktivní osa</span>Od paleolitu po současnost</h2>
       <p>Osa má proměnlivé měřítko: pravěk je stlačený, 20. století roztažené. Horní pruh ukazuje základní období, pod ním duchové času podle Páleše (období po 354 letech), hlavní řádky nesou evropské epochy a slohy, spodní řádek umění ostatních kontinentů. Kroužky jsou klimatické, astronomické a dějinné události. Křivka dole sleduje, zda se umění dané doby obrací dovnitř (introverze), nebo ven (extraverze).</p>
     </div>
+    <div class="osa-box" id="osa-box">
     <div class="osa-tools">
       <div class="grp" id="era-jump"><span class="lab">Skok na</span></div>
       <div class="grp">
@@ -554,6 +691,8 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
       <div class="grp">
         <span class="lab">Měřítko</span>
         <div class="zoom"><button type="button" id="zoom-out" aria-label="Zmenšit">−</button><button type="button" id="zoom-in" aria-label="Zvětšit">+</button></div>
+        <button type="button" class="osa-btn" id="zoom-reset" title="Vrátit výchozí měřítko">Výchozí</button>
+        <button type="button" class="osa-btn" id="osa-fs"><svg><use href="#i-expand"/></svg><span>Celá obrazovka</span></button>
       </div>
     </div>
     <div class="osa-frame">
@@ -562,7 +701,8 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
       </div>
     </div>
     <div class="osa-legend" id="osa-legend"></div>
-    <p class="osa-hint">Osou lze posouvat tažením myší, kolečkem s klávesou Shift nebo prstem. Kliknutím na epochu otevřete její kartu; kliknutím na kroužek událost.</p>
+    <p class="osa-hint" id="osa-hint">Osou posouvejte tažením myší nebo prstem. Kolečko myši posouvá osu do stran, jakmile do ní kliknete (nebo v režimu celé obrazovky), jinak kolečko se Shiftem. Měřítko měňte tlačítky + / − nebo <b>Ctrl + kolečkem</b>. Kliknutím na epochu otevřete její kartu, na kroužek událost, na bod Jungovy křivky příslušnou epochu.</p>
+    </div>
   </div>
 </section>
 
@@ -586,6 +726,7 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
     </div>
     <div class="search"><label class="sr-only" for="q">Hledat</label><input id="q" type="search" placeholder="Hledat epochu, umělce, pojem… (např. Parléř, mozaika, katedrála)"><span class="pill" id="q-count"></span></div>
     <div class="rows" id="prehled-rows"></div>
+    <div class="more-row"><button type="button" class="btn" id="prehled-more"></button></div>
   </div>
 </section>
 
@@ -598,7 +739,9 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
     </div>
     <div class="mapa-filters" id="mapa-filters"></div>
     <div class="mapa-grid">
-      <div class="mapa-box"><svg id="mapa-svg" viewBox="0 0 1000 520" role="img" aria-label="Schematická mapa světa s body významných uměleckých památek"></svg></div>
+      <div><div class="mapa-box"><svg id="mapa-svg" viewBox="0 0 1000 520" role="img" aria-label="Schematická mapa světa s body významných uměleckých památek"></svg>
+        <div class="mapa-ctl"><button type="button" id="map-in" aria-label="Přiblížit mapu">+</button><button type="button" id="map-out" aria-label="Oddálit mapu">−</button><button type="button" id="map-reset" aria-label="Celá mapa" title="Celá mapa">⟲</button></div></div>
+        <p class="mapa-hint">Mapu přibližujte tlačítky + / −, Ctrl + kolečkem myši nebo dvěma prsty; posouvejte ji tažením.</p></div>
       <aside class="mapa-card" id="mapa-card"><p class="empty">Klikněte na bod v mapě.</p></aside>
     </div>
   </div>
@@ -650,11 +793,27 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
   </div>
 </section>
 
+<!-- ===================== PROCVIČOVÁNÍ ===================== -->
+<section class="section alt" id="procvicovani">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><span class="num">07 · Procvičování</span>Kartičky, kvíz a porovnání</h2>
+      <p>Opakování k maturitě: studijní kartičky (klepnutím se otočí), krátký kvíz s vyhodnocením a porovnání dvou epoch vedle sebe. Otázky se skládají z dat aplikace, takže jsou pokaždé jiné.</p>
+    </div>
+    <div class="pr-bar">
+      <div class="seg big" id="pr-tabs" role="tablist"><button type="button" data-t="karticky" class="on">Kartičky</button><button type="button" data-t="kviz">Kvíz</button><button type="button" data-t="porovnani">Porovnání</button></div>
+      <label id="pr-filtr-lab">Období <select id="pr-filtr"></select></label>
+      <label id="pr-typ-lab">Kartičky <select id="pr-typ"><option value="epochy">epochy a slohy</option><option value="dila">obrazové ukázky</option></select></label>
+    </div>
+    <div id="pr-box"></div>
+  </div>
+</section>
+
 <!-- ===================== ZDROJE ===================== -->
 <section class="section" id="zdroje">
   <div class="wrap">
     <div class="section-head">
-      <h2><span class="num">07 · Zdroje</span>Z čeho web vychází</h2>
+      <h2><span class="num">08 · Zdroje</span>Z čeho web vychází</h2>
       <p>Texty epoch vycházejí z výukových materiálů předmětu dějiny umění na SPŠE a VOŠ Pardubice (Mgr. Jaroslav Svoboda) a z uvedené literatury. Obrazové ukázky pocházejí z výukového archivu školy a z Wikimedia Commons (volná díla a fotografie s otevřenou licencí – autoři a licence jsou uvedeni v souboru <code>zdroje-obrazku.txt</code>); u několika autorsky chráněných děl 20. století zůstává místo ukázky rámeček.</p>
     </div>
     <div class="sources">
@@ -725,9 +884,12 @@ dialog.srch::backdrop{background:rgba(10,20,24,.58);backdrop-filter:blur(3px)}
       <button type="button" class="x" id="srch-close" aria-label="Zavřít">Esc</button>
     </div>
     <div class="srch-res" id="srch-res" role="listbox" aria-label="Výsledky hledání"></div>
-    <div class="srch-foot"><span><kbd>↑</kbd><kbd>↓</kbd> pohyb</span><span><kbd>Enter</kbd> otevřít</span><span><kbd>Esc</kbd> zavřít</span><span><kbd>Ctrl</kbd>+<kbd>K</kbd> nebo <kbd>/</kbd> otevře hledání odkudkoli</span></div>
+    <div class="srch-foot"><span><kbd>↑</kbd><kbd>↓</kbd> pohyb</span><span><kbd>Enter</kbd> otevřít</span><span><kbd>Esc</kbd> zavřít</span><span id="srch-kb"><kbd>Ctrl</kbd>+<kbd>K</kbd> nebo <kbd>/</kbd> otevře hledání odkudkoli</span></div>
   </div>
 </dialog>
+
+<dialog class="srch prof" id="profil" aria-label="Osobnost"><div class="srch-box" id="profil-box"></div></dialog>
+<button type="button" class="to-top" id="to-top" aria-label="Zpět na začátek stránky" title="Nahoru"><svg><use href="#i-up"/></svg></button>
 
 <script src="mapa-svet.js"></script>
 <script src="data-souvislosti.js"></script>

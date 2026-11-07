@@ -74,7 +74,11 @@ const EPOCHY = [
   cesko: "Mezolitická sídliště v Polabí a v pískovcových převisech Českého ráje (Kokořínsko).",
   pamatky: [
     { img: "pravek_amazonie.jpg", nazev: "Serranía de la Lindosa (Kolumbie)", popis: "Skalní malby staré cca 12 500 let s ledovcovou faunou – objeveny roku 2020." },
-    { img: "mezolit_valltorta.jpg", nazev: "Lovci z Valltorty (Španělsko)", popis: "Schematičtí lučištníci v pohybu – levantské skalní umění." }
+    { img: "mezolit_valltorta.jpg", nazev: "Lovci z Valltorty (Španělsko)", popis: "Schematičtí lučištníci v pohybu – levantské skalní umění." },
+    { img: "mezolit_sigirsky_idol.jpg", nazev: "Šigirský idol (Rusko)", popis: "Modřínové dřevo, cca 9500 př. n. l. – nejstarší dochovaná dřevěná socha světa s rytými tvářemi a ornamenty." },
+    { img: "mezolit_lepenski_vir.jpg", nazev: "Lepenski Vir (Srbsko)", popis: "Kamenné hlavy „rybích lidí“ z osady na Dunaji, cca 7000–6000 př. n. l." },
+    { img: "mezolit_star_carr.jpg", nazev: "Čelenka ze Star Carr (Anglie)", popis: "Upravená jelení lebka s parohy, cca 9000 př. n. l. – snad maska šamana nebo lovce." },
+    { img: "mezolit_azil_oblazky.jpg", nazev: "Malované oblázky (Mas-d'Azil)", popis: "Říční oblázky s tečkami a čarami z okru, azilien cca 10 000 př. n. l. – znaky, jejichž význam neznáme." }
   ],
   jung: { postoj: -0.5, nazevPostoje: "Introverze s otevíráním se světu", funkce: "Vnímání & intuice",
     text: "Člověk vstupuje do obrazu: přechod od magického splynutí se zvířetem k vědomí vlastní role. Pohyblivá, schematická figura je prvním krokem k abstrakci znaku." },
@@ -102,7 +106,9 @@ const EPOCHY = [
     { img: "neolit_gobekli.jpg", nazev: "Göbekli Tepe (Turecko)", popis: "Pilíře ve tvaru T s reliéfy lišek, hadů a jeřábů, cca 9 500 př. n. l. – nejstarší chrám světa." },
     { img: "neolit_catalhoyuk.jpg", nazev: "Çatalhöyük (Turecko)", popis: "Nástěnná malba a reliéfy v domech prvního „města“, 7. tisíciletí př. n. l." },
     { img: "neolit_moravska_malovana.jpg", nazev: "Moravská malovaná keramika", popis: "Lengyelská kultura, 5. tisíciletí př. n. l. – malovaný geometrický ornament." },
-    { img: "neolit_newgrange.jpg", nazev: "Newgrange (Irsko)", popis: "Chodbová hrobka z 3 200 př. n. l., do níž o zimním slunovratu vniká slunce – přechod k eneolitu." }
+    { img: "neolit_newgrange.jpg", nazev: "Newgrange (Irsko)", popis: "Chodbová hrobka z 3 200 př. n. l., do níž o zimním slunovratu vniká slunce – přechod k eneolitu." },
+    { img: "neolit_myslitel_hamangia.jpg", nazev: "Myslitel z Hamangie (Rumunsko)", popis: "Pálená hlína, cca 5000 př. n. l. – sedící postava podpírající si hlavu, ikona neolitu." },
+    { img: "neolit_skara_brae.jpg", nazev: "Skara Brae (Orkneje)", popis: "Kamenná vesnice s vestavěným nábytkem, cca 3100 př. n. l. – zachovaná pod pískovými dunami." }
   ],
   jung: { postoj: -0.3, nazevPostoje: "Vznikající extraverze", funkce: "Myšlení & vnímání",
     text: "Cyklus Velké Matky a zemědělství: úzkost z nepředvídatelnosti přírody (sucho, neúroda) je kompenzována vtištěním geometrického řádu do krajiny i na nádoby. Zrození vědomého řádu – první pokus oddělit nebe od země." },
@@ -128,7 +134,11 @@ const EPOCHY = [
   cesko: "Menhiry v Klobukách a Drahomyšli, hradiště Homolka u Stehelčevsi, řivnáčská kultura, hrob lukostřelce (zvoncovité poháry).",
   pamatky: [
     { img: "neolit_stonehenge.jpg", nazev: "Stonehenge (Anglie)", popis: "Kruh sarsenových trilitů orientovaný na letní slunovrat, 3 000–2 000 př. n. l." },
-    { img: "neolit_otzi.jpg", nazev: "Ötzi – rekonstrukce", popis: "Muž z ledovce v Ötztalských Alpách, cca 3 300 př. n. l., s měděnou sekerou a tetováním." }
+    { img: "neolit_otzi.jpg", nazev: "Ötzi – rekonstrukce", popis: "Muž z ledovce v Ötztalských Alpách, cca 3 300 př. n. l., s měděnou sekerou a tetováním." },
+    { img: "eneolit_varna_zlato.jpg", nazev: "Zlato z Varny (Bulharsko)", popis: "Pohřební výbava z nekropole ve Varně, cca 4500 př. n. l. – nejstarší zpracované zlato světa." },
+    { img: "eneolit_carnac.jpg", nazev: "Kamenné řady v Carnacu (Bretaň)", popis: "Přes 3000 menhirů seřazených do alejí, cca 4500–3300 př. n. l." },
+    { img: "eneolit_cucuteni.jpg", nazev: "Keramika kultury Cucuteni-Trypillia", popis: "Malované nádoby se spirálami, cca 4800–3000 př. n. l. (Rumunsko, Moldavsko, Ukrajina)." },
+    { img: "eneolit_zvoncovity_pohar.jpg", nazev: "Zvoncovitý pohár", popis: "Typická nádoba kultury zvoncovitých pohárů, cca 2800–2300 př. n. l.; nálezy i z Čech a Moravy." }
   ],
   jung: { postoj: -0.2, nazevPostoje: "Řád vtištěný do krajiny", funkce: "Myšlení & vnímání (Te-Se)",
     text: "Geometrické vyměřování a astronomická orientace megalitů – racionální organizace posvátného prostoru. Vědomí (ego) se vyděluje z přírody a začíná ji měřit." },
@@ -155,7 +165,10 @@ const EPOCHY = [
   pamatky: [
     { img: "bronz_slunecni_vuz.jpg", nazev: "Sluneční vůz z Trundholmu (Dánsko)", popis: "Bronz a zlatý plech, cca 1 400 př. n. l. – kůň táhne Slunce po obloze." },
     { img: "bronz_nadobka.jpg", nazev: "Kultovní nádobka z Kolínska", popis: "Doba bronzová, české země." },
-    { img: "bronz_nebra.jpg", nazev: "Disk z Nebry (Německo)", popis: "Bronz se zlatými intarziemi Slunce, Měsíce a Plejád, cca 1 600 př. n. l." }
+    { img: "bronz_nebra.jpg", nazev: "Disk z Nebry (Německo)", popis: "Bronz se zlatými intarziemi Slunce, Měsíce a Plejád, cca 1 600 př. n. l." },
+    { img: "bronz_zlaty_klobouk.jpg", nazev: "Berlínský zlatý klobouk", popis: "Tepaný zlatý kužel, cca 1000–800 př. n. l. – zdobení je zřejmě kalendářem slunce a měsíce." },
+    { img: "bronz_tanum.jpg", nazev: "Skalní rytiny v Tanumu (Švédsko)", popis: "Lodě, válečníci a zvířata vytesané do žuly, cca 1700–500 př. n. l. (UNESCO)." },
+    { img: "bronz_lury.jpg", nazev: "Bronzové lury (Dánsko)", popis: "Dlouhé zatočené troubení nástroje, cca 1000 př. n. l., nalézané v párech v rašeliništích." }
   ],
   jung: { postoj: -0.4, nazevPostoje: "Abstraktní řád a sluneční kult", funkce: "Myšlení & intuice",
     text: "Ornament nahrazuje obraz: kompenzace nejistoty geometrickým řádem kosmu. Sluneční symbol = vznikající vědomí (ego) jako světlo oddělující se z temnoty nevědomí (Neumann)." },
@@ -182,7 +195,10 @@ const EPOCHY = [
   pamatky: [
     { img: "zelezo_keltsky_sperk.jpg", nazev: "Keltský bronzový šperk (Cerhýnky)", popis: "Mladší doba železná, laténský styl." },
     { img: "zelezo_ozdoba.jpg", nazev: "Ozdoba doby železné", popis: "Užité umění halštatského období." },
-    { img: "zelezo_msecke_zehrovice.jpg", nazev: "Hlava Kelta z Mšeckých Žehrovic", popis: "Opuka, 2. stol. př. n. l. – nejslavnější keltská plastika střední Evropy." }
+    { img: "zelezo_msecke_zehrovice.jpg", nazev: "Hlava Kelta z Mšeckých Žehrovic", popis: "Opuka, 2. stol. př. n. l. – nejslavnější keltská plastika střední Evropy." },
+    { img: "zelezo_byci_skala.jpg", nazev: "Jeskyně Býčí skála (Moravský kras)", popis: "Zde Jindřich Wankel roku 1872 objevil halštatský pohřeb s bronzovou soškou býčka, cca 600 př. n. l." },
+    { img: "zelezo_gundestrup.jpg", nazev: "Kotel z Gundestrupu", popis: "Stříbrný kotel s reliéfy bohů a zvířat, cca 150–1 př. n. l. – vrchol keltské ikonografie." },
+    { img: "zelezo_vix_krater.jpg", nazev: "Kráter z Vix (Francie)", popis: "Bronzová nádoba na víno, vysoká 1,64 m, cca 510 př. n. l. – řecký dar keltské kněžně." }
   ],
   jung: { postoj: -0.3, nazevPostoje: "Introvertní ornament", funkce: "Intuice & cítění",
     text: "Keltský ornament rozpouští tvar v nekonečném pohybu linie – protiklad řecké extravertní míry. Worringerova abstrakce jako výraz sepětí s neviditelnými silami přírody (druidové)." },
@@ -210,7 +226,10 @@ const EPOCHY = [
   pamatky: [
     { img: "mezopotamie_zikkurat_ur.jpg", nazev: "Zikkurat v Uru (Irák)", popis: "Chrámová věž měsíčního boha Nanny, cca 2 100 př. n. l., rekonstruovaná ve 20. století." },
     { img: "mezopotamie_istarina_brana.jpg", nazev: "Ištařina brána (Babylon)", popis: "Glazované cihly s draky a býky, cca 575 př. n. l. Dnes v Pergamonském muzeu v Berlíně." },
-    { img: "mezopotamie_chammurapi.jpg", nazev: "Chammurapiho stéla", popis: "Diorit, cca 1 750 př. n. l., Louvre – král přijímá zákony od boha Šamaše." }
+    { img: "mezopotamie_chammurapi.jpg", nazev: "Chammurapiho stéla", popis: "Diorit, cca 1 750 př. n. l., Louvre – král přijímá zákony od boha Šamaše." },
+    { img: "mezopotamie_standarta_ur.jpg", nazev: "Standarta z Uru", popis: "Dřevěná skříňka s intarzií lastur a lapisu, cca 2600 př. n. l. – válka a mír v pásech nad sebou." },
+    { img: "mezopotamie_lamassu.jpg", nazev: "Lamassu (Chorsábád)", popis: "Okřídlený býk s lidskou hlavou, strážce asyrského paláce, cca 710 př. n. l." },
+    { img: "mezopotamie_lov_lvu.jpg", nazev: "Aššurbanipalův lov lvů", popis: "Reliéf z paláce v Ninive, cca 645 př. n. l. – umírající lvice je mistrovským dílem asyrského realismu." }
   ],
   jung: { postoj: 0.5, nazevPostoje: "Rigidní extraverze", funkce: "Myšlení & cítění",
     text: "Umění opouští individuální duši a stává se nástrojem organizace sociálního davu: monumentální měřítko potlačuje jednotlivce a vštěpuje kolektivní řád. Vzestup patriarchálního vědomí (Logos) nad mateřskou přírodou." },
@@ -267,7 +286,10 @@ const EPOCHY = [
   pamatky: [
     { img: "egejske_lvi_brana.jpg", nazev: "Lví brána v Mykénách", popis: "Cca 1 250 př. n. l. – kyklopské zdivo a reliéf lvic nad překladem." },
     { img: "egejske_knossos_byk.jpg", nazev: "Skok přes býka (Knóssos)", popis: "Freska z paláce, cca 1 450 př. n. l., Archeologické muzeum Heraklion." },
-    { img: "egejske_maska.jpg", nazev: "Agamemnonova maska", popis: "Zlato, cca 1 550 př. n. l., Národní muzeum Athény." }
+    { img: "egejske_maska.jpg", nazev: "Agamemnonova maska", popis: "Zlato, cca 1 550 př. n. l., Národní muzeum Athény." },
+    { img: "egejske_kykladsky_idol.jpg", nazev: "Kykladský idol", popis: "Mramorová ženská figurka, cca 2700–2300 př. n. l. – geometrická zkratka, která inspirovala moderní sochaře." },
+    { img: "egejske_hadi_bohyne.jpg", nazev: "Hadí bohyně (Knóssos)", popis: "Fajánsová soška, cca 1600 př. n. l. – kněžka nebo bohyně s hady v rukou." },
+    { img: "egejske_knossos_palac.jpg", nazev: "Palác v Knóssu", popis: "Rekonstruovaný severní vchod s červenými sloupy, které se zužují směrem dolů, cca 1700–1400 př. n. l." }
   ],
   jung: { postoj: 0.7, nazevPostoje: "Radostná extraverze (Kréta) → vojenský řád (Mykény)", funkce: "Vnímání & cítění",
     text: "Mínojské umění je vzácným příkladem „naivního“ (Schiller) splynutí s přírodou bez úzkosti – teplé moře jako spolehlivý živitel. Mykény přinášejí patriarchální hrdinský archetyp (Ilias)." },
@@ -322,7 +344,11 @@ const EPOCHY = [
   cesko: "Etruské bronzy a zboží se dostávaly přes Alpy i k Keltům ve střední Evropě (situly).",
   pamatky: [
     { img: "etruskove_sarkofag.jpg", nazev: "Sarkofág manželů (Cerveteri)", popis: "Terakota, cca 520 př. n. l., Villa Giulia v Římě." },
-    { img: "etruskove_tarquinia.jpg", nazev: "Hrobka Leopardů (Tarquinia)", popis: "Nástěnná malba hostiny, cca 470 př. n. l." }
+    { img: "etruskove_tarquinia.jpg", nazev: "Hrobka Leopardů (Tarquinia)", popis: "Nástěnná malba hostiny, cca 470 př. n. l." },
+    { img: "etruskove_apollon_veje.jpg", nazev: "Apollón z Vejí", popis: "Malovaná terakota, cca 510 př. n. l. – socha z vrcholu chrámové střechy, připisovaná Vulcovi." },
+    { img: "etruskove_chimera.jpg", nazev: "Chiméra z Arezza", popis: "Bronz, cca 400 př. n. l. – lev s kozí hlavou na hřbetě a hadím ocasem." },
+    { img: "etruskove_vlcice.jpg", nazev: "Kapitolská vlčice", popis: "Bronzová vlčice, symbol Říma; dvojčata Romulus a Remus byla doplněna v renesanci." },
+    { img: "etruskove_banditaccia.jpg", nazev: "Nekropole Banditaccia (Cerveteri)", popis: "Mohylové hrobky tesané do tufu jako domy mrtvých, 9.–3. stol. př. n. l. (UNESCO)." }
   ],
   jung: { postoj: 0.5, nazevPostoje: "Extravertní radost ze života", funkce: "Cítění & vnímání",
     text: "Vítězství smyslového cítění nad strachem ze smrti: hrobka jako hostina. Etruské umění je „naivní“ a bezprostřední – před římským racionálním myšlením." },
@@ -350,7 +376,9 @@ const EPOCHY = [
     { img: "rim_akvadukt.jpg", nazev: "Pont du Gard (Francie)", popis: "Akvadukt z 1. stol. n. l., 49 m vysoký; voda pro Nîmes – inženýrství jako umění." },
     { img: "rim_tetrarchove.jpg", nazev: "Tetrarchové (Benátky)", popis: "Porfyr, cca 300 n. l. – pozdně antický přechod od realismu k strnulé symbolice." },
     { img: "rim_pantheon.jpg", nazev: "Pantheon (Řím)", popis: "Kupole o průměru 43,3 m s okulem, cca 125 n. l." },
-    { img: "rim_koloseum.jpg", nazev: "Koloseum", popis: "Flaviovský amfiteátr, 72–80 n. l." }
+    { img: "rim_koloseum.jpg", nazev: "Koloseum", popis: "Flaviovský amfiteátr, 72–80 n. l." },
+    { img: "rim_augustus_prima_porta.jpg", nazev: "Augustus z Prima Porta", popis: "Mramor, 1. stol. – císař jako vojevůdce s gestem řečníka; původně barevně malovaný." },
+    { img: "rim_villa_misteri.jpg", nazev: "Vila mystérií (Pompeje)", popis: "Nástěnná malba s obřadem zasvěcení, cca 60 př. n. l. – slavná pompejská červeň." }
   ],
   jung: { postoj: 0.7, nazevPostoje: "Praktická extraverze", funkce: "Myšlení & vnímání",
     text: "Extravertní myšlení: svět je materiál k organizaci. Portrét = úcta k reálné osobě, ne ideálu. V pozdní antice (Tetrarchové) začíná odhmotnění a obrat k introverzi – příchod křesťanství." },
@@ -376,7 +404,10 @@ const EPOCHY = [
   pamatky: [
     { img: "krestanska_dobry_pastyr.jpg", nazev: "Dobrý pastýř (Ravenna)", popis: "Mozaika v mauzoleu Gally Placidie, cca 425 – Kristus jako antický pastýř." },
     { img: "krestanska_sant_apollinare.jpg", nazev: "Sant'Apollinare Nuovo (Ravenna)", popis: "Průvod mučedníků, 6. století – rytmus, frontálnost, zlaté pozadí." },
-    { img: "krestanska_santa_costanza.jpg", nazev: "Santa Costanza (Řím)", popis: "Mozaika klenby, 4. století – vinná réva, ptáci, antický dekor s novým smyslem." }
+    { img: "krestanska_santa_costanza.jpg", nazev: "Santa Costanza (Řím)", popis: "Mozaika klenby, 4. století – vinná réva, ptáci, antický dekor s novým smyslem." },
+    { img: "krestanska_galla_placidia.jpg", nazev: "Mauzoleum Gally Placidie (Ravenna)", popis: "Mozaiková klenba s hvězdným nebem, cca 430 – nejstarší dochované mozaiky Ravenny." },
+    { img: "krestanska_junius_bassus.jpg", nazev: "Sarkofág Junia Bassa", popis: "Mramor, 359 – biblické scény v antických arkádách, Vatikán." },
+    { img: "krestanska_katakomby.jpg", nazev: "Katakomby sv. Priscilly (Řím)", popis: "Nástěnné malby podzemních pohřebišť, 3. stol. – nejstarší zobrazení Panny Marie." }
   ],
   jung: { postoj: -0.3, nazevPostoje: "Obrat k introverzi", funkce: "Cítění & intuice",
     text: "Krize antického světa vede k odvrácení od těla a pozemského světa k nebeskému řádu: obraz už není okno do světa, ale znamení neviditelného. Počátek transcendentního cyklu (Neumann: od hrdiny k duchovní transformaci)." },

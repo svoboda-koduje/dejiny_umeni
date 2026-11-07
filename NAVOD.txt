@@ -18,6 +18,29 @@ STAHNI-OBRAZKY.cmd    – jednorázový stahovač chybějících ukázek z Wikim
                         existující soubory v img/ nepřepisuje, výsledek zapíše do commons-protokol.csv a chybi.txt;
                         STAHNI-OBRAZKY-2.cmd byl 2. opravný průchod – oba už proběhly, znovu je spouštět netřeba)
 
+Úpravy po betatestování (listopad 2026)
+---------------------------------------
+Podle protokolů a dotazníku žáků 4.G:
+- Hlavička: zjednodušená (bez podnadpisu, bez nápovědy „Ctrl K“), odkaz „Obor na spse.cz“ je v horní liště;
+  na menších obrazovkách (do 1180 px) se menu skládá do tlačítka Menu, na mobilu jsou v menu i sociální sítě.
+- Šipka Zpět v prohlížeči / na telefonu: karta epochy, galerie, hledání i profil osobnosti mají vlastní záznam
+  v historii, Zpět je zavře a neopustí aplikaci. Tlačítko v kartě se jmenuje „Zpět“, vpravo je křížek.
+- Při otevřené kartě nebo okně se stránka pod ním neposouvá.
+- Galerie obrázků: šipky ← →, přejetí prstem, křížek, přiblížení klepnutím a posun tažením.
+- Osobnosti v kartě epochy jsou proklikávací: profil osobnosti ukáže její epochy a díla, která jsou v aplikaci
+  (sestavuje se automaticky podle jména v názvu ukázky, např. „Leonardo: Mona Lisa“). Totéž z vyhledávání.
+  Dílo lze vyhledat i podle celého jména autora.
+- Osa: tlačítko Výchozí měřítko, režim Celá obrazovka, kolečko myši posouvá osu do stran po kliknutí do osy,
+  Ctrl + kolečko mění měřítko, body Jungovy křivky mají popisek a otevírají epochu. Na mobilu jsou vrstvy
+  Duchové času a Křivka Jung na začátku vypnuté (dají se zapnout).
+- Mapa světa: přiblížení + / −, Ctrl + kolečko, dva prsty, posun tažením; body mají stálou velikost.
+- Rychlý přehled ukazuje nejdřív 8 řádků (tlačítko Zobrazit celý přehled), při hledání vše.
+- Nová sekce 07 · Procvičování: studijní kartičky (epochy nebo obrazové ukázky), kvíz o 10 otázkách
+  s vyhodnocením a porovnání dvou epoch vedle sebe. Vše se skládá z dat epoch automaticky.
+- Tlačítko „nahoru“ vpravo dole, sjednocená tlačítka na úvodu, opravené ořezávání obrázků v kolečkách.
+- Každá epocha má nejméně 6 obrazových ukázek (doplněno z Wikimedia Commons, viz zdroje-obrazku.txt);
+  velké obrázky byly přeuloženy (delší strana max. 1400 px, nové 1280 px), aby web zůstal pod 100 MB.
+
 Univerzální vyhledávání
 -----------------------
 Lupa v hlavičce, klávesa Ctrl+K (Cmd+K) nebo lomítko „/“ otevře hledání odkudkoli – i z otevřené karty epochy

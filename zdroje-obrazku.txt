@@ -325,3 +325,1067 @@ img/zelezo_msecke_zehrovice.jpg
 Ostatní ukázky pocházejí z výukového archivu předmětu dějiny umění na SPŠE a VOŠ Pardubice.
 Deset ukázek autorsky chráněných děl 20. století (Dalí, Toyen, Rothko, Warhol, Lichtenstein, Beuys, Kovanda, Basquiat) a fotografie gombíku
 a Grandhotelu Pardubice byly doplněny ze zdrojů vyučujícího (složka img/doplneni) – slouží výhradně k výuce.
+
+--- Doplněno 11/2026 (po betatestování) ---
+
+img/mezolit_sigirsky_idol.jpg
+   zdroj: File:Shigir Idol (May 2024) - 1.jpg
+   autor: Vyacheslav Bukharov
+   licence: CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File%3AShigir_Idol_%28May_2024%29_-_1.jpg
+
+img/mezolit_lepenski_vir.jpg
+   zdroj: File:Lepenski Vir Head.JPG
+   autor: Mazbln
+   licence: GFDL / CC BY-SA 3.0 / CC BY-SA 2.5
+   https://commons.wikimedia.org/wiki/File%3ALepenski_Vir_Head.JPG
+
+img/mezolit_star_carr.jpg
+   zdroj: File:Star Carr headdress.jpg
+   autor: Jonathan Cardy
+   licence: CC BY-SA 3.0
+   https://commons.wikimedia.org/wiki/File%3AStar_Carr_headdress.jpg
+
+img/mezolit_azil_oblazky.jpg
+   zdroj: File:Azilian painted pebbles from the cave of Le Mas d'Azil. Wellcome M0015173.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: CC BY 4.0
+   https://commons.wikimedia.org/wiki/File%3AAzilian_painted_pebbles_from_the_cave_of_Le_Mas_d%27Azil._Wellcome_M0015173.jpg
+
+img/neolit_myslitel_hamangia.jpg
+   zdroj: File:Bucharest - The Thinker of Cernavoda - img.jpg
+   autor: Chainwit.
+   licence: CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File%3ABucharest_-_The_Thinker_of_Cernavoda_-_img.jpg
+
+img/neolit_skara_brae.jpg
+   zdroj: File:Skara Brae - geograph.org.uk - 3912232.jpg
+   autor: Stuart Wilding
+   licence: CC BY-SA 2.0
+   https://commons.wikimedia.org/wiki/File%3ASkara_Brae_-_geograph.org.uk_-_3912232.jpg
+
+img/eneolit_varna_zlato.jpg
+   zdroj: File:Gold treasure, 4600-4200 BC, AM Varna, Varm24.jpg
+   autor: Zde
+   licence: CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File%3AGold_treasure%2C_4600-4200_BC%2C_AM_Varna%2C_Varm24.jpg
+
+img/eneolit_carnac.jpg
+   zdroj: File:Alignement Menec Carnac.jpg
+   autor: Myrabella
+   licence: CC BY-SA 3.0 / GFDL
+   https://commons.wikimedia.org/wiki/File%3AAlignement_Menec_Carnac.jpg
+
+img/eneolit_cucuteni.jpg
+   zdroj: File:Two painted pottery jar. Cucuteni-Tripolje culture. Neues Museum.jpg
+   autor: Ismoon ( talk )
+   licence: GFDL / CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File%3ATwo_painted_pottery_jar._Cucuteni-Tripolje_culture._Neues_Museum.jpg
+
+img/eneolit_zvoncovity_pohar.jpg
+   zdroj: File:020210828 Vessels, Corded Ware Culture 5, Bell Beaker Culture 6, early neolithic artifacts in Silesia, Opole.jpg
+   autor: Silar
+   licence: CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File%3A020210828_Vessels%2C_Corded_Ware_Culture_5%2C_Bell_Beaker_Culture_6%2C_early_neolithic_artifacts_in_Silesia%2C_Opole.jpg
+
+img/bronz_zlaty_klobouk.jpg
+   zdroj: File:Neues Museum Berlin gold hat 0125.jpg
+   autor: Dosseman
+   licence: CC BY-SA 4.0
+   https://commons.wikimedia.org/wiki/File%3ANeues_Museum_Berlin_gold_hat_0125.jpg
+
+img/bronz_tanum.jpg
+   zdroj: File:Tanumshede 2005 rock carvings 7.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATanumshede_2005_rock_carvings_7.jpg
+
+img/bronz_lury.jpg
+   zdroj: File:Nationalmuseet - lur - 1020004.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ANationalmuseet_-_lur_-_1020004.jpg
+
+img/zelezo_byci_skala.jpg
+   zdroj: File:Býčí skála Cave predsin.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AB%C3%BD%C4%8D%C3%AD_sk%C3%A1la_Cave_predsin.JPG
+
+img/zelezo_gundestrup.jpg
+   zdroj: File:Gundestrup cauldron 2005.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AGundestrup_cauldron_2005.jpg
+
+img/zelezo_vix_krater.jpg
+   zdroj: File:Châtillon-sur-Seine (21) Musée du Pays Châtillonnais - Cratère de Vix - 01.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ACh%C3%A2tillon-sur-Seine_%2821%29_Mus%C3%A9e_du_Pays_Ch%C3%A2tillonnais_-_Crat%C3%A8re_de_Vix_-_01.jpg
+
+img/mezopotamie_standarta_ur.jpg
+   zdroj: File:Standard of Ur - War.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AStandard_of_Ur_-_War.jpg
+
+img/mezopotamie_lamassu.jpg
+   zdroj: File:Lamassu du palais de Khorsabad, Musée du Louvre.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALamassu_du_palais_de_Khorsabad%2C_Mus%C3%A9e_du_Louvre.jpg
+
+img/mezopotamie_lov_lvu.jpg
+   zdroj: File:Ashurbanipal's lion-hunt scene, wall relief, 7th century BC, from Nineveh, the British Museum.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAshurbanipal%27s_lion-hunt_scene%2C_wall_relief%2C_7th_century_BC%2C_from_Nineveh%2C_the_British_Museum.jpg
+
+img/egejske_kykladsky_idol.jpg
+   zdroj: File:Marble cycladic figurine N°5107, NAMAthens, Greece.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMarble_cycladic_figurine_N%C2%B05107%2C_NAMAthens%2C_Greece.jpg
+
+img/egejske_hadi_bohyne.jpg
+   zdroj: File:Snake Goddess Crete 1600BC.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ASnake_Goddess_Crete_1600BC.jpg
+
+img/egejske_knossos_palac.jpg
+   zdroj: File:Knossos north entrance, Crete 001.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AKnossos_north_entrance%2C_Crete_001.JPG
+
+img/etruskove_apollon_veje.jpg
+   zdroj: File:Apollo di Veio - Museo di Villa Giulia 1.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AApollo_di_Veio_-_Museo_di_Villa_Giulia_1.jpg
+
+img/etruskove_chimera.jpg
+   zdroj: File:Chimera of Arezzo Copy.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AChimera_of_Arezzo_Copy.JPG
+
+img/etruskove_vlcice.jpg
+   zdroj: File:Lupa Capitolina, Rome.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALupa_Capitolina%2C_Rome.jpg
+
+img/etruskove_banditaccia.jpg
+   zdroj: File:Banditaccia (Cerveteri)DSCF6681.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABanditaccia_%28Cerveteri%29DSCF6681.jpg
+
+img/rim_augustus_prima_porta.jpg
+   zdroj: File:Augustus of Prima Porta (inv. 2290).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAugustus_of_Prima_Porta_%28inv._2290%29.jpg
+
+img/rim_villa_misteri.jpg
+   zdroj: File:Villa of the Mysteries (Pompeii) - Hall of the Mysteries-North east corner.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AVilla_of_the_Mysteries_%28Pompeii%29_-_Hall_of_the_Mysteries-North_east_corner.jpg
+
+img/krestanska_galla_placidia.jpg
+   zdroj: File:Mausoleum of Galla Placidia ceiling mosaics.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMausoleum_of_Galla_Placidia_ceiling_mosaics.jpg
+
+img/krestanska_junius_bassus.jpg
+   zdroj: File:Sarcophagus of Junius Bassus - Cast in Rome.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ASarcophagus_of_Junius_Bassus_-_Cast_in_Rome.jpg
+
+img/krestanska_katakomby.jpg
+   zdroj: File:Catacomb of Priscilla - Annunciation.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ACatacomb_of_Priscilla_-_Annunciation.jpg
+
+img/rany_sutton_hoo.jpg
+   zdroj: File:Replica of Sutton Hoo helmet - geograph.org.uk - 7020637.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AReplica_of_Sutton_Hoo_helmet_-_geograph.org.uk_-_7020637.jpg
+
+img/rany_lindisfarne.jpg
+   zdroj: File:Meister des Book of Lindisfarne 002 2.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMeister_des_Book_of_Lindisfarne_002_2.jpg
+
+img/romansky_bayeux.jpg
+   zdroj: File:Bayeux Tapestry scene57 Harold death.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABayeux_Tapestry_scene57_Harold_death.jpg
+
+img/romansky_pisa.jpg
+   zdroj: File:Here it is, The Piazza dei Miracoli! Pisa, Italy.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHere_it_is%2C_The_Piazza_dei_Miracoli%21_Pisa%2C_Italy.jpg
+
+img/romansky_rotunda_martin.jpg
+   zdroj: File:Praha, rotunda svatého Martina (2012).JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APraha%2C_rotunda_svat%C3%A9ho_Martina_%282012%29.JPG
+
+img/romansky_vysehradsky_kodex.jpg
+   zdroj: File:Codex Vyssegradensis facsimile.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ACodex_Vyssegradensis_facsimile.jpg
+
+img/gotika_madona_veveri.jpg
+   zdroj: File:Madona z Veveří.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMadona_z_Veve%C5%99%C3%AD.JPG
+
+img/gotika_velislavova_bible.jpg
+   zdroj: File:Stvorenisveta velislav.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AStvorenisveta_velislav.jpg
+
+img/renesance_veronese_kana.jpg
+   zdroj: File:Les Noces de Cana - Paolo Veronese - Musée du Louvre Peintures INV 142 ; MR 384.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALes_Noces_de_Cana_-_Paolo_Veronese_-_Mus%C3%A9e_du_Louvre_Peintures_INV_142_%3B_MR_384.jpg
+
+img/renesance_bellini_svatek.jpg
+   zdroj: File:Giovanni Bellini and Titian - The Feast of the Gods - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AGiovanni_Bellini_and_Titian_-_The_Feast_of_the_Gods_-_Google_Art_Project.jpg
+
+img/baroko_velazquez_meniny.jpg
+   zdroj: File:Las Meninas, by Diego Velázquez, from Prado in Google Earth.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALas_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg
+
+img/baroko_zurbaran_agnus.jpg
+   zdroj: File:Agnus Dei Zurbarán.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAgnus_Dei_Zurbar%C3%A1n.jpg
+
+img/rokoko_watteau_kythera.jpg
+   zdroj: File:L'Embarquement pour Cythère, by Antoine Watteau, from C2RMF retouched.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AL%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg
+
+img/rokoko_boucher_pompadour.jpg
+   zdroj: File:François Boucher Madame de Pompadour Munich 26102016 5.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AFran%C3%A7ois_Boucher_Madame_de_Pompadour_Munich_26102016_5.jpg
+
+img/rokoko_wieskirche.jpg
+   zdroj: File:Wieskirche 12.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AWieskirche_12.jpg
+
+img/klasicismus_canova_amor.jpg
+   zdroj: File:Psyché ranimée par le baiser de l'Amour, Louvre.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APsych%C3%A9_ranim%C3%A9e_par_le_baiser_de_l%27Amour%2C_Louvre.jpg
+
+img/klasicismus_ingres_odaliska.jpg
+   zdroj: File:Ingre, Grande Odalisque.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AIngre%2C_Grande_Odalisque.jpg
+
+img/klasicismus_stavovske.jpg
+   zdroj: File:Praha Stavovské divadlo 1.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APraha_Stavovsk%C3%A9_divadlo_1.jpg
+
+img/romantismus_gericault_vor.jpg
+   zdroj: File:Théodore Géricault "The raft of the Medusa".jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATh%C3%A9odore_G%C3%A9ricault_%22The_raft_of_the_Medusa%22.jpg
+
+img/romantismus_goya_3kveten.jpg
+   zdroj: File:El Tres de Mayo, by Francisco de Goya, from Prado thin black margin.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AEl_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg
+
+img/romantismus_manes_josefina.jpg
+   zdroj: File:Josefina, Josef Mánes.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AJosefina%2C_Josef_M%C3%A1nes.jpg
+
+img/historismus_westminster.jpg
+   zdroj: File:Palace of Westminster, London - Feb 2007.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APalace_of_Westminster%2C_London_-_Feb_2007.jpg
+
+img/historismus_neuschwanstein.jpg
+   zdroj: File:Neuschwanstein Castle 2024-02.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ANeuschwanstein_Castle_2024-02.jpg
+
+img/historismus_narodni_muzeum.jpg
+   zdroj: File:Národní muzeum, Praha (01).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AN%C3%A1rodn%C3%AD_muzeum%2C_Praha_%2801%29.jpg
+
+img/historismus_myslbek_vaclav.jpg
+   zdroj: File:Pomník svatého Václava a Národní muzeum.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APomn%C3%ADk_svat%C3%A9ho_V%C3%A1clava_a_N%C3%A1rodn%C3%AD_muzeum.jpg
+
+img/realismus_millet_sberacky.jpg
+   zdroj: File:Jean-François Millet - Gleaners - Google Art Project 2.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AJean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg
+
+img/realismus_courbet_ornans.jpg
+   zdroj: File:Gustave Courbet - A Burial at Ornans - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AGustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg
+
+img/realismus_daumier_vagon.jpg
+   zdroj: File:Honoré Daumier (French, Marseilles 1808–1879 Valmondois) - The Third-Class Carriage - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHonor%C3%A9_Daumier_%28French%2C_Marseilles_1808%E2%80%931879_Valmondois%29_-_The_Third-Class_Carriage_-_Google_Art_Project.jpg
+
+img/impresionismus_renoir_moulin.jpg
+   zdroj: File:Renoir, Pierre-Auguste - Dance at Le Moulin de la Galette, 1876.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ARenoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg
+
+img/impresionismus_degas_tridy.jpg
+   zdroj: File:Degas- La classe de danse 1874.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ADegas-_La_classe_de_danse_1874.jpg
+
+img/impresionismus_monet_lekniny.jpg
+   zdroj: File:Claude Monet - Water Lilies - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AClaude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg
+
+img/impresionismus_slavicek.jpg
+   zdroj: File:Antonín Slavíček - Eliscin Bridge.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAnton%C3%ADn_Slav%C3%AD%C4%8Dek_-_Eliscin_Bridge.JPG
+
+img/postimpresionismus_slunecnice.jpg
+   zdroj: File:Vincent van Gogh - Sunflowers (1888, National Gallery London).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AVincent_van_Gogh_-_Sunflowers_%281888%2C_National_Gallery_London%29.jpg
+
+img/postimpresionismus_gauguin.jpg
+   zdroj: File:Gauguin - Where Do We Come From? What Are We? Where Are We Going? (1897-98).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AGauguin_-_Where_Do_We_Come_From%3F_What_Are_We%3F_Where_Are_We_Going%3F_%281897-98%29.jpg
+
+img/postimpresionismus_seurat.jpg
+   zdroj: File:A Sunday on La Grande Jatte, Georges Seurat, 1884.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AA_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.jpg
+
+img/postimpresionismus_lautrec.jpg
+   zdroj: File:Moulin Rouge – La Goulue, by Henri de Toulouse-Lautrec.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMoulin_Rouge_%E2%80%93_La_Goulue%2C_by_Henri_de_Toulouse-Lautrec.jpg
+
+img/secese_horta_tassel.jpg
+   zdroj: File:Tassel House stairway.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATassel_House_stairway.JPG
+
+img/secese_wagner_majolika.jpg
+   zdroj: File:Majolikahaus, Wien, Otto Wagner.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMajolikahaus%2C_Wien%2C_Otto_Wagner.jpg
+
+img/secese_moreau_zjeveni.jpg
+   zdroj: File:Gustave Moreau - The Apparition - 1943.268 - Fogg Museum.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AGustave_Moreau_-_The_Apparition_-_1943.268_-_Fogg_Museum.jpg
+
+img/fauvismus_matisse_klobouk.jpg
+   zdroj: File:Henri Matisse, Woman with a Hat (Femme au chapeau), SFMOMA 01.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHenri_Matisse%2C_Woman_with_a_Hat_%28Femme_au_chapeau%29%2C_SFMOMA_01.jpg
+
+img/fauvismus_matisse_radost.jpg
+   zdroj: File:Le Bonheur de vivre Barnes (01c) - Flickr - rverc.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALe_Bonheur_de_vivre_Barnes_%2801c%29_-_Flickr_-_rverc.jpg
+
+img/fauvismus_derain_collioure.jpg
+   zdroj: File:Montagnes à Collioure, par André Derain.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMontagnes_%C3%A0_Collioure%2C_par_Andr%C3%A9_Derain.jpg
+
+img/fauvismus_derain_londyn.jpg
+   zdroj: File:Charing Cross Bridge by Andre Derain (52259664204).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ACharing_Cross_Bridge_by_Andre_Derain_%2852259664204%29.jpg
+
+img/fauvismus_dufy.jpg
+   zdroj: File:La Rue pavoisée.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALa_Rue_pavois%C3%A9e.jpg
+
+img/expresionismus_marc_kun.jpg
+   zdroj: File:Marc, Franz - Blue Horse I - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMarc%2C_Franz_-_Blue_Horse_I_-_Google_Art_Project.jpg
+
+img/expresionismus_schiele.jpg
+   zdroj: File:Egon Schiele - Self-Portrait with Physalis - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AEgon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg
+
+img/expresionismus_kirchner_zeny.jpg
+   zdroj: File:Kirchner - Fünf Frauen auf der Straße.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AKirchner_-_F%C3%BCnf_Frauen_auf_der_Stra%C3%9Fe.jpg
+
+img/kubismus_gris_picasso.jpg
+   zdroj: File:Juan Gris - Portrait of Pablo Picasso - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AJuan_Gris_-_Portrait_of_Pablo_Picasso_-_Google_Art_Project.jpg
+
+img/kubismus_chochol_dum.jpg
+   zdroj: File:Praha Cubist house Neklanova.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APraha_Cubist_house_Neklanova.jpg
+
+img/kubismus_lampa.jpg
+   zdroj: File:Praha, Nové Město, kubistická lampa II.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APraha%2C_Nov%C3%A9_M%C4%9Bsto%2C_kubistick%C3%A1_lampa_II.jpg
+
+img/abstrakce_kandinsky_kompozice.jpg
+   zdroj: File:Composition VII - Wassily Kandinsky, GAC.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AComposition_VII_-_Wassily_Kandinsky%2C_GAC.jpg
+
+img/abstrakce_mondrian.jpg
+   zdroj: File:Piet Mondriaan, 1930 - Mondrian Composition II in Red, Blue, and Yellow.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APiet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg
+
+img/abstrakce_klee.jpg
+   zdroj: File:Senecio (Baldgreis), Klee 1080998.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ASenecio_%28Baldgreis%29%2C_Klee_1080998.jpg
+
+img/futurismus_boccioni_mesto.jpg
+   zdroj: File:The City Rises by Umberto Boccioni 1910.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AThe_City_Rises_by_Umberto_Boccioni_1910.jpg
+
+img/futurismus_boccioni_stavy.jpg
+   zdroj: File:States of Mind- The Farewells by Umberto Boccioni, 1911.jpeg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AStates_of_Mind-_The_Farewells_by_Umberto_Boccioni%2C_1911.jpeg
+
+img/futurismus_russolo_auto.jpg
+   zdroj: File:Luigi Russolo dynamism-of-a-car-1913.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALuigi_Russolo_dynamism-of-a-car-1913.jpg
+
+img/futurismus_santelia.jpg
+   zdroj: File:Antonio sant'elia, la città nuova, via secondaria per pedoni, 1914 (coll. priv.).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAntonio_sant%27elia%2C_la_citt%C3%A0_nuova%2C_via_secondaria_per_pedoni%2C_1914_%28coll._priv.%29.jpg
+
+img/futurismus_marinetti.jpg
+   zdroj: File:Zang Tumb Tumb, 1912, Filippo Tommaso Marinetti, Tate Modern, London 03.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AZang_Tumb_Tumb%2C_1912%2C_Filippo_Tommaso_Marinetti%2C_Tate_Modern%2C_London_03.jpg
+
+img/dada_hugo_ball.jpg
+   zdroj: File:Hugo Ball Cabaret Voltaire.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHugo_Ball_Cabaret_Voltaire.jpg
+
+img/dada_cabaret_voltaire.jpg
+   zdroj: File:Zürich - Cabaret Voltaire (48687833078).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AZ%C3%BCrich_-_Cabaret_Voltaire_%2848687833078%29.jpg
+
+img/dada_picabia_oko.jpg
+   zdroj: File:Francis Picabia, 1921, L'oeil cacodylate, oil and collage on canvas, 148.6 x 117.4 cm, Musée National d'Art Moderne.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AFrancis_Picabia%2C_1921%2C_L%27oeil_cacodylate%2C_oil_and_collage_on_canvas%2C_148.6_x_117.4_cm%2C_Mus%C3%A9e_National_d%27Art_Moderne.jpg
+
+img/dada_taeuber_hlava.jpg
+   zdroj: File:Dada Head by Sophie Taeuber-Arp, 1920.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ADada_Head_by_Sophie_Taeuber-Arp%2C_1920.jpg
+
+img/dada_soiree.jpg
+   zdroj: File:Theo van Doesburg and Kurt Schwitters, Kleine Dada Soirée (Small Dada Evening), 1922, NGA 154076.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATheo_van_Doesburg_and_Kurt_Schwitters%2C_Kleine_Dada_Soir%C3%A9e_%28Small_Dada_Evening%29%2C_1922%2C_NGA_154076.jpg
+
+img/konstruktivismus_bauhaus.jpg
+   zdroj: File:Dessau Bauhaus-Gebäude asv2024-06 img1.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ADessau_Bauhaus-Geb%C3%A4ude_asv2024-06_img1.jpg
+
+img/konstruktivismus_lisickij.jpg
+   zdroj: File:Beat the Whites with the Red Wedge.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABeat_the_Whites_with_the_Red_Wedge.jpg
+
+img/konstruktivismus_rietveld.jpg
+   zdroj: File:Rietveld-SchroderhuisUtrechttheNetherlands.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ARietveld-SchroderhuisUtrechttheNetherlands.jpg
+
+img/parizska_modigliani.jpg
+   zdroj: File:Jeanne Hébuterne (1918) by Amedeo Modigliani (Norton Simon Museum).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AJeanne_H%C3%A9buterne_%281918%29_by_Amedeo_Modigliani_%28Norton_Simon_Museum%29.jpg
+
+img/parizska_modigliani_akt.jpg
+   zdroj: File:Amedeo Modigliani Reclining Nude The Metropolitan Museum of Art.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAmedeo_Modigliani_Reclining_Nude_The_Metropolitan_Museum_of_Art.jpg
+
+img/parizska_soutine.jpg
+   zdroj: File:Chaim Soutine - Carcass of Beef - 57.12 - Minneapolis Institute of Arts.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AChaim_Soutine_-_Carcass_of_Beef_-_57.12_-_Minneapolis_Institute_of_Arts.jpg
+
+img/parizska_rousseau_tygr.jpg
+   zdroj: File:Surprised-Rousseau.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ASurprised-Rousseau.jpg
+
+img/surrealismus_cahun.jpg
+   zdroj: File:Claude Cahun - I Am in Training Don't Kiss Me.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AClaude_Cahun_-_I_Am_in_Training_Don%27t_Kiss_Me.jpg
+
+img/surrealismus_nash.jpg
+   zdroj: File:Totes Meer (Dead Sea) 1940-1 Paul Nash.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATotes_Meer_%28Dead_Sea%29_1940-1_Paul_Nash.jpg
+
+img/surrealismus_las_pozas.jpg
+   zdroj: File:Xilitla Las Pozas 0407 036.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AXilitla_Las_Pozas_0407_036.jpg
+
+img/abstraktni_rothko_kaple.jpg
+   zdroj: File:Broken Obelisk in front of the Rothko Chapel -- Houston, Texas.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABroken_Obelisk_in_front_of_the_Rothko_Chapel_--_Houston%2C_Texas.jpg
+
+img/abstraktni_pollock_dum.jpg
+   zdroj: File:Pollock-Krasner House studio floor 2.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APollock-Krasner_House_studio_floor_2.jpg
+
+img/abstraktni_tapies.jpg
+   zdroj: File:Fundació Antoni Tàpies, Barcelona.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AFundaci%C3%B3_Antoni_T%C3%A0pies%2C_Barcelona.jpg
+
+img/popart_lichtenstein_hlava.jpg
+   zdroj: File:CAP de Barcelona - panoramio.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ACAP_de_Barcelona_-_panoramio.jpg
+
+img/popart_oldenburg_kornout.jpg
+   zdroj: File:Neumarkt-Galerie, Köln mit Skulptur Dropped Cone - Claes Oldenburg und Coosje van Bruggen-8364.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ANeumarkt-Galerie%2C_K%C3%B6ln_mit_Skulptur_Dropped_Cone_-_Claes_Oldenburg_und_Coosje_van_Bruggen-8364.jpg
+
+img/popart_oldenburg_lahev.jpg
+   zdroj: File:Bottle of Notes sculpture, Middlesbrough - geograph.org.uk - 5469140.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABottle_of_Notes_sculpture%2C_Middlesbrough_-_geograph.org.uk_-_5469140.jpg
+
+img/kineticke_calder.jpg
+   zdroj: File:Alexandre Calder, L'Homme, 1967 (8925599924).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAlexandre_Calder%2C_L%27Homme%2C_1967_%288925599924%29.jpg
+
+img/kineticke_tinguely.jpg
+   zdroj: File:Basel Fasnachtsbrunnen Jean Tinguely.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABasel_Fasnachtsbrunnen_Jean_Tinguely.JPG
+
+img/kineticke_tinguely_heureka.jpg
+   zdroj: File:Jean Tinguely - Heureka - Gesamtansicht - Zürich 2011.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AJean_Tinguely_-_Heureka_-_Gesamtansicht_-_Z%C3%BCrich_2011.jpg
+
+img/kineticke_agam.jpg
+   zdroj: File:PikiWiki Israel 8440 water-fire by yaacov agam.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APikiWiki_Israel_8440_water-fire_by_yaacov_agam.jpg
+
+img/performance_abramovic.jpg
+   zdroj: File:Marina Abramović, The Artist Is Present, 2010Marina Abramović, The Artist Is Present, 2010 (4422516908).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMarina_Abramovi%C4%87%2C_The_Artist_Is_Present%2C_2010Marina_Abramovi%C4%87%2C_The_Artist_Is_Present%2C_2010_%284422516908%29.jpg
+
+img/performance_beuys_duby.jpg
+   zdroj: File:Kunsthockhschule Kassel 2012 oak.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AKunsthockhschule_Kassel_2012_oak.JPG
+
+img/performance_fluxus.jpg
+   zdroj: File:Fluxus1964.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AFluxus1964.jpg
+
+img/performance_paik.jpg
+   zdroj: File:The More, the Better (다다익선(多多益善)) 백남준 PAIK Namjune(1932~2006).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AThe_More%2C_the_Better_%28%EB%8B%A4%EB%8B%A4%EC%9D%B5%EC%84%A0%28%E5%A4%9A%E5%A4%9A%E7%9B%8A%E5%96%84%29%29_%EB%B0%B1%EB%82%A8%EC%A4%80_PAIK_Namjune%281932~2006%29.jpg
+
+img/land_smithson_emmen.jpg
+   zdroj: File:Broken Circle - Spiral Hill, Robert Smithson - Q2867150 - 5.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABroken_Circle_-_Spiral_Hill%2C_Robert_Smithson_-_Q2867150_-_5.jpg
+
+img/land_goldsworthy.jpg
+   zdroj: File:Andy Goldsworthy-Fold2.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAndy_Goldsworthy-Fold2.jpg
+
+img/land_turrell_kielder.jpg
+   zdroj: File:Skyspace, Kielder Forest - geograph.org.uk - 599168.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ASkyspace%2C_Kielder_Forest_-_geograph.org.uk_-_599168.jpg
+
+img/land_christo_mastaba.jpg
+   zdroj: File:The Serpentine with "The Mastaba" massive temporary sculpture (geograph 5815020).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AThe_Serpentine_with_%22The_Mastaba%22_massive_temporary_sculpture_%28geograph_5815020%29.jpg
+
+img/postmoderna_venturi.jpg
+   zdroj: File:Vanna Venturi House in Chestnut Hill, Philadelphia, Pennsylvania LCCN2011631388.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AVanna_Venturi_House_in_Chestnut_Hill%2C_Philadelphia%2C_Pennsylvania_LCCN2011631388.jpg
+
+img/postmoderna_portland.jpg
+   zdroj: File:Portland Building 1982.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APortland_Building_1982.jpg
+
+img/postmoderna_bilbao.jpg
+   zdroj: File:Museo Guggenheim -- 2021 -- Bilbao, Euskadi, España.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMuseo_Guggenheim_--_2021_--_Bilbao%2C_Euskadi%2C_Espa%C3%B1a.jpg
+
+img/postmoderna_att.jpg
+   zdroj: File:550 Madison Avenue July2015.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3A550_Madison_Avenue_July2015.JPG
+
+img/svet_capivara.jpg
+   zdroj: File:Serra da Capivara - Several Paintings 1.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ASerra_da_Capivara_-_Several_Paintings_1.jpg
+
+img/svet_bhimbetka.jpg
+   zdroj: File:Rock painting, Bhimbetka, Raisen district, MP.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ARock_painting%2C_Bhimbetka%2C_Raisen_district%2C_MP.jpg
+
+img/svet_apollo11.jpg
+   zdroj: File:Apollo 11 Cave painting 1.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AApollo_11_Cave_painting_1.jpg
+
+img/svet_diepkloof.jpg
+   zdroj: File:Iziko engraving ostrich eggshell.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AIziko_engraving_ostrich_eggshell.JPG
+
+img/svet_gwion.jpg
+   zdroj: File:Bradshaw rock paintings.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABradshaw_rock_paintings.jpg
+
+img/svet_murujuga.jpg
+   zdroj: File:Nganjarli Murujuga Rock Art 01.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ANganjarli_Murujuga_Rock_Art_01.jpg
+
+img/svet_burrungkuy.jpg
+   zdroj: File:Aboriginal rock art, Nourlangie Rock, Kakadu - panoramio.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAboriginal_rock_art%2C_Nourlangie_Rock%2C_Kakadu_-_panoramio.jpg
+
+img/svet_laura.jpg
+   zdroj: File:Dingo painting, Split Rock, Australian Aboriginal Art site, Laura, North Queensland.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ADingo_painting%2C_Split_Rock%2C_Australian_Aboriginal_Art_site%2C_Laura%2C_North_Queensland.jpg
+
+img/svet_kura.jpg
+   zdroj: File:Unknown ARTIST - Kunwinjku people - Wambiddyer anteater - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AUnknown_ARTIST_-_Kunwinjku_people_-_Wambiddyer_anteater_-_Google_Art_Project.jpg
+
+img/svet_cina_zakazane_mesto.jpg
+   zdroj: File:Hall of Supreme Harmony (Forbidden City), Beijing - Jan 2016.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHall_of_Supreme_Harmony_%28Forbidden_City%29%2C_Beijing_-_Jan_2016.jpg
+
+img/svet_cina_ding.jpg
+   zdroj: File:Shang Bronze Tripod Ding 03.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AShang_Bronze_Tripod_Ding_03.jpg
+
+img/svet_cina_qingming.jpg
+   zdroj: File:Along the River During the Qingming Festival (detail of original).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AAlong_the_River_During_the_Qingming_Festival_%28detail_of_original%29.jpg
+
+img/svet_cina_mogao.jpg
+   zdroj: File:Mural - Mogao Caves, Dunhuang.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMural_-_Mogao_Caves%2C_Dunhuang.jpg
+
+img/svet_indie_knez.jpg
+   zdroj: File:Priest King (Sculpture) of Mohenjo-daro.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APriest_King_%28Sculpture%29_of_Mohenjo-daro.jpg
+
+img/svet_indie_sanchi.jpg
+   zdroj: File:Stupa 1, Sanchi 02.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AStupa_1%2C_Sanchi_02.jpg
+
+img/svet_indie_adzanta.jpg
+   zdroj: File:Bodhisattva Padmapani, cave 1, Ajanta, India.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABodhisattva_Padmapani%2C_cave_1%2C_Ajanta%2C_India.jpg
+
+img/svet_indie_khadzuraho.jpg
+   zdroj: File:The Kandariya Mahadeva Temple, Khajuraho, Madhya Pradesh.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AThe_Kandariya_Mahadeva_Temple%2C_Khajuraho%2C_Madhya_Pradesh.jpg
+
+img/svet_persie_behistun.jpg
+   zdroj: File:Behistun inscription reliefs.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ABehistun_inscription_reliefs.jpg
+
+img/svet_persie_pasargady.jpg
+   zdroj: File:Tomb of Cyrus the Great.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATomb_of_Cyrus_the_Great.jpg
+
+img/svet_persie_naks_rostam.jpg
+   zdroj: File:Tombs of Artaxerxes I and Darius I, with Sassanid-era bas-reliefs below - Naqsh-e Rustam, Iran.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATombs_of_Artaxerxes_I_and_Darius_I%2C_with_Sassanid-era_bas-reliefs_below_-_Naqsh-e_Rustam%2C_Iran.jpg
+
+img/svet_persie_lucistnici.jpg
+   zdroj: File:Archers frieze Darius 1st Palace Suse Louvre AOD 488 a.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AArchers_frieze_Darius_1st_Palace_Suse_Louvre_AOD_488_a.jpg
+
+img/svet_persie_ktesifon.jpg
+   zdroj: File:Ctesiphon, Iraq, 1932.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ACtesiphon%2C_Iraq%2C_1932.jpg
+
+img/islam_skalni_dom.jpg
+   zdroj: File:Jerusalem-2013-Temple Mount-Dome of the Rock & Chain 02.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AJerusalem-2013-Temple_Mount-Dome_of_the_Rock_%26_Chain_02.jpg
+
+img/islam_sulejmanie.jpg
+   zdroj: File:Süleymaniye Mosque, Istanbul, 20260606 0805 1307.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AS%C3%BCleymaniye_Mosque%2C_Istanbul%2C_20260606_0805_1307.jpg
+
+img/islam_lotfollah.jpg
+   zdroj: File:Isfahan Lotfollah mosque ceiling symmetric.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AIsfahan_Lotfollah_mosque_ceiling_symmetric.jpg
+
+img/islam_behzad.jpg
+   zdroj: File:Kamal-ud-din Bihzad - Construction of the fort of Kharnaq.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AKamal-ud-din_Bihzad_-_Construction_of_the_fort_of_Kharnaq.jpg
+
+img/svet_japonsko_horjudzi.jpg
+   zdroj: File:Horyu-ji46n3990.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHoryu-ji46n3990.jpg
+
+img/svet_japonsko_kinkakudzi.jpg
+   zdroj: File:Kinkaku-ji in November 2016 -02.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AKinkaku-ji_in_November_2016_-02.jpg
+
+img/svet_japonsko_hirosige.jpg
+   zdroj: File:Hiroshige, Sudden shower over Shin-Ōhashi bridge and Atake, 1857.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHiroshige%2C_Sudden_shower_over_Shin-%C5%8Chashi_bridge_and_Atake%2C_1857.jpg
+
+img/svet_japonsko_utamaro.jpg
+   zdroj: File:Kitagawa Utamaro - Toji san bijin (Three Beauties of the Present Day)From Bijin-ga (Pictures of Beautiful Women), published by Tsutaya Juzaburo - Google Art Project.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AKitagawa_Utamaro_-_Toji_san_bijin_%28Three_Beauties_of_the_Present_Day%29From_Bijin-ga_%28Pictures_of_Beautiful_Women%29%2C_published_by_Tsutaya_Juzaburo_-_Google_Art_Project.jpg
+
+img/svet_mezo_teotihuacan.jpg
+   zdroj: File:Pyramid of the Sun, Teotihuacan, from path to parking lot.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APyramid_of_the_Sun%2C_Teotihuacan%2C_from_path_to_parking_lot.jpg
+
+img/svet_mezo_palenque.jpg
+   zdroj: File:Temple of Inscriptions, Palenque (2088170629).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATemple_of_Inscriptions%2C_Palenque_%282088170629%29.jpg
+
+img/svet_mezo_kamen_slunce.jpg
+   zdroj: File:Monolito de la Piedra del Sol.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMonolito_de_la_Piedra_del_Sol.jpg
+
+img/svet_mezo_bonampak.jpg
+   zdroj: File:Room 1 - Replica of Bonampak Murals - Maya - National Museum of Antropology - Mexico 2024 (3).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ARoom_1_-_Replica_of_Bonampak_Murals_-_Maya_-_National_Museum_of_Antropology_-_Mexico_2024_%283%29.jpg
+
+img/svet_andy_brana_slunce.jpg
+   zdroj: File:Tiwanaku, Bolivia - Gate of the Sun, 2017.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ATiwanaku%2C_Bolivia_-_Gate_of_the_Sun%2C_2017.jpg
+
+img/svet_andy_moche.jpg
+   zdroj: File:Portrait Vessel of a Ruler, 100 BC - 500 AD, Moche, north coast of Peru, ceramic and pigment - Art Institute of Chicago - DSC00321.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3APortrait_Vessel_of_a_Ruler%2C_100_BC_-_500_AD%2C_Moche%2C_north_coast_of_Peru%2C_ceramic_and_pigment_-_Art_Institute_of_Chicago_-_DSC00321.JPG
+
+img/svet_andy_paracas.jpg
+   zdroj: File:Paracas textile, British Museum.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AParacas_textile%2C_British_Museum.jpg
+
+img/svet_andy_sacsayhuaman.jpg
+   zdroj: File:Sacsayhuaman-Inca wall.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ASacsayhuaman-Inca_wall.jpg
+
+img/svet_afrika_nok.jpg
+   zdroj: File:Head, Nok culture, terracotta, Honolulu Museum of Art, 8349.1.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AHead%2C_Nok_culture%2C_terracotta%2C_Honolulu_Museum_of_Art%2C_8349.1.JPG
+
+img/svet_afrika_zimbabwe.jpg
+   zdroj: File:Western Entrance to the Great Enclosure - Great Zimbabwe II (46698655045).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AWestern_Entrance_to_the_Great_Enclosure_-_Great_Zimbabwe_II_%2846698655045%29.jpg
+
+img/svet_afrika_lalibela.jpg
+   zdroj: File:Lalibela, san giorgio, esterno 24.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ALalibela%2C_san_giorgio%2C_esterno_24.jpg
+
+img/svet_afrika_djenne.jpg
+   zdroj: File:MaliDjennéMosquée.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMaliDjenn%C3%A9Mosqu%C3%A9e.JPG
+
+img/svet_asie_bayon.jpg
+   zdroj: File:20171127 Bayon Temple Angkor Thom 4754 DxO.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3A20171127_Bayon_Temple_Angkor_Thom_4754_DxO.jpg
+
+img/svet_asie_prambanan.jpg
+   zdroj: File:Yogyakarta Indonesia Prambanan-temple-complex-02.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AYogyakarta_Indonesia_Prambanan-temple-complex-02.jpg
+
+img/svet_asie_bagan.jpg
+   zdroj: File:Old Bagan, Myanmar, Golden Buddhist spire over Bagan plains, Ancient pagodas and temples.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AOld_Bagan%2C_Myanmar%2C_Golden_Buddhist_spire_over_Bagan_plains%2C_Ancient_pagodas_and_temples.jpg
+
+img/svet_asie_myson.jpg
+   zdroj: File:2024 - Mỹ Sơn Sanctuary Temple E7 - img 01.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3A2024_-_M%E1%BB%B9_S%C6%A1n_Sanctuary_Temple_E7_-_img_01.jpg
+
+img/svet_oceanie_nan_madol.jpg
+   zdroj: File:Nan madol.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3ANan_madol.jpg
+
+img/svet_oceanie_wharenui.jpg
+   zdroj: File:Whare Runanga poupou and tukutuku 2.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AWhare_Runanga_poupou_and_tukutuku_2.jpg
+
+img/svet_oceanie_malagan.jpg
+   zdroj: File:Malagan carvings.jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AMalagan_carvings.jpg
+
+img/svet_oceanie_bis.jpg
+   zdroj: File:Indonesia, jipimanam, pali di antenati bisj da papuasia occidentale, XX sec. 02.JPG
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AIndonesia%2C_jipimanam%2C_pali_di_antenati_bisj_da_papuasia_occidentale%2C_XX_sec._02.JPG
+
+img/svet_oceanie_ku.jpg
+   zdroj: File:Ku guardian statue (2).jpg
+   autor: viz stránka souboru (případně commons-protokol-3.csv)
+   licence: viz stránka souboru (případně commons-protokol-3.csv)
+   https://commons.wikimedia.org/wiki/File%3AKu_guardian_statue_%282%29.jpg

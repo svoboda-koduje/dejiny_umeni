@@ -52,7 +52,9 @@ EPOCHY.push(
     { img: "rany_book_of_kells.jpg", nazev: "Book of Kells (Irsko)", popis: "Iluminovaný evangeliář, cca 800 – pletence, spirály a zvířecí motivy irského mnišství." },
     { img: "rany_sankt_gallen.jpg", nazev: "Plán kláštera ze St. Gallen", popis: "Cca 820 – ideální klášter jako soběstačné město; nejstarší dochovaný architektonický plán středověku." },
     { img: "rany_cachy.jpg", nazev: "Palácová kaple v Cáchách", popis: "Osmiboká centrála Karla Velikého, 792–805." },
-    { img: "rany_gombik.jpg", nazev: "Velkomoravský gombík", popis: "Zlatý šperk z Mikulčic, 9. století." }
+    { img: "rany_gombik.jpg", nazev: "Velkomoravský gombík", popis: "Zlatý šperk z Mikulčic, 9. století." },
+    { img: "rany_sutton_hoo.jpg", nazev: "Přilba ze Sutton Hoo (Anglie)", popis: "Anglosaská královská přilba, 7. stol. – nález z lodního hrobu." },
+    { img: "rany_lindisfarne.jpg", nazev: "Evangeliář z Lindisfarne", popis: "Kobercová stránka iluminovaného rukopisu, cca 715 – propletené zvířecí ornamenty." }
   ],
   jung: { postoj: -0.6, nazevPostoje: "Introvertní ornament a klášterní kontemplace", funkce: "Intuice & cítění",
     text: "Chaos stěhování národů kompenzuje nekonečný, uzavřený ornament rukopisů – Worringerova abstrakce jako útočiště. Klášter je psychickou pevností, „temenos“ uprostřed nejistého světa." },
@@ -79,7 +81,11 @@ EPOCHY.push(
   pamatky: [
     { img: "romansky_znojmo.jpg", nazev: "Rotunda sv. Kateřiny ve Znojmě", popis: "Malby z roku 1134 s genealogií Přemyslovců – povolání Přemysla Oráče." },
     { img: "romansky_autun.jpg", nazev: "Tympanon v Autunu (Gislebertus)", popis: "Poslední soud, cca 1130 – expresivní stylizace těl." },
-    { img: "romansky_trebic.jpg", nazev: "Bazilika sv. Prokopa v Třebíči", popis: "Cca 1240–1260, přechod románsko-gotický, UNESCO." }
+    { img: "romansky_trebic.jpg", nazev: "Bazilika sv. Prokopa v Třebíči", popis: "Cca 1240–1260, přechod románsko-gotický, UNESCO." },
+    { img: "romansky_bayeux.jpg", nazev: "Tapiserie z Bayeux", popis: "Vyšívaný pás dlouhý 70 m, 11. stol. – dobytí Anglie roku 1066 jako „komiks“." },
+    { img: "romansky_pisa.jpg", nazev: "Pisa – katedrála a šikmá věž", popis: "Románský komplex Piazza dei Miracoli, 1063–1372; zvonice se naklonila už během stavby." },
+    { img: "romansky_rotunda_martin.jpg", nazev: "Rotunda sv. Martina (Vyšehrad)", popis: "Nejstarší dochovaná rotunda v Praze, 2. pol. 11. stol." },
+    { img: "romansky_vysehradsky_kodex.jpg", nazev: "Vyšehradský kodex", popis: "Iluminovaný evangelistář ke korunovaci Vratislava II., 1085 – nejcennější rukopis v ČR." }
   ],
   jung: { postoj: -0.6, nazevPostoje: "Introverze pevnosti", funkce: "Cítění & myšlení",
     text: "Kostel jako Boží hrad: tlusté zdi a šero chrání vnitřní svět před vnějším nebezpečím. Poslední soud na portálu = konfrontace se Stínem. Sochařství podřízené architektuře = jedinec podřízený řádu." },
@@ -115,7 +121,9 @@ EPOCHY.push(
     { img: "gotika_vysebrodsky.jpg", nazev: "Mistr Vyšebrodského oltáře", popis: "Kolem 1350, Národní galerie – devět desek s Kristovým životem." },
     { img: "gotika_karlstejn.jpg", nazev: "Kaple sv. Kříže na Karlštejně", popis: "Stěny z polodrahokamů a zlata, strop s nebem – nebeský Jeruzalém." },
     { img: "gotika_giotto.jpg", nazev: "Giotto: Setkání Jáchyma a Anny", popis: "Kaple Scrovegni v Padově, 1305 – objev citu, prostoru a objemu." },
-    { img: "gotika_van_eyck_arnolfini.jpg", nazev: "Jan van Eyck: Manželé Arnolfiniovi", popis: "1434, Londýn – olejomalba, zrcadlo, detail; „Jan van Eyck byl zde“." }
+    { img: "gotika_van_eyck_arnolfini.jpg", nazev: "Jan van Eyck: Manželé Arnolfiniovi", popis: "1434, Londýn – olejomalba, zrcadlo, detail; „Jan van Eyck byl zde“." },
+    { img: "gotika_madona_veveri.jpg", nazev: "Madona z Veveří", popis: "Desková malba, cca 1345–1350 – lyrická česká madona okruhu Mistra Vyšebrodského oltáře (Národní galerie)." },
+    { img: "gotika_velislavova_bible.jpg", nazev: "Velislavova bible", popis: "Obrázková bible, cca 1340 – kreslené příběhy s krátkými texty, gotická knižní malba z Prahy." }
   ],
   jung: { postoj: -0.4, nazevPostoje: "Introvertní duchovní osa v extravertním těle", funkce: "Cítění & intuice (Fi-Ni)",
     text: "Katedrála je vnitřní mystický prostor pro masové společenství. Rozetová okna jako mandaly integrují psýché směrem k božskému středu (Self); katedrála jako kontejner spásy – Velká Matka proměněná v Církev. Světlo = vědomí pronikající hmotou." },
@@ -138,7 +146,7 @@ EPOCHY.push(
   znaky: ["Lineární perspektiva, anatomie, proporce", "Návrat antických řádů, kupole, horizontalita", "Umělec jako individualita a vědec", "Olejomalba, sfumato, portrét, akt", "Sgrafito, arkádové nádvoří (u nás)"],
   oblasti: { architektura: "Brunelleschi (kupole, kaple Pazziů), Alberti, Bramante (Tempietto), Michelangelo (sv. Petr), Palladio (Villa Rotonda); Belveder, Hvězda, Litomyšl, Telč, Pardubice.", socharstvi: "Ghiberti (Rajská brána), Donatello (David, Gattamelata), Verrocchio, Michelangelo (David, Pieta, Mojžíš), Cellini, Giambologna, Adrien de Vries.", malirstvi: "Masaccio, Fra Angelico, Botticelli, Leonardo, Raffael, Michelangelo, Tizian, Dürer, Holbein, Bruegel, Bosch, El Greco; Mistr Litoměřického oltáře." },
   faze: [{ nazev: "Raná (quattrocento)", kdy: "1400–1500" }, { nazev: "Vrcholná", kdy: "1500–1520" }, { nazev: "Pozdní – manýrismus", kdy: "1520–1600" }],
-  osobnosti: ["Brunelleschi", "Donatello", "Botticelli", "Leonardo da Vinci", "Michelangelo", "Raffael", "Tizian", "Dürer", "Bruegel", "Palladio", "Arcimboldo"],
+  osobnosti: ["Brunelleschi", "Donatello", "Botticelli", "Leonardo da Vinci", "Michelangelo", "Raffael", "Tizian", "Dürer", "Bruegel", "Palladio", "Arcimboldo", "Giovanni Bellini", "Paolo Veronese", "Hieronymus Bosch"],
   cesko: "Tovačovský portál (1492), Vladislavský sál, Belveder (1538–63), letohrádek Hvězda, zámky Litomyšl, Telč, Bučovice, Jindřichův Hradec, Nelahozeves; Pardubice – Pernštejnské renesanční město a zámek; Rudolf II. a rudolfínští umělci.",
   pamatky: [
     { img: "renesance_botticelli_venuse.jpg", nazev: "Botticelli: Zrození Venuše", popis: "Cca 1485, Uffizi – antický mýtus, linie a půvab rané renesance." },
@@ -156,7 +164,9 @@ EPOCHY.push(
     { img: "renesance_bruegel_hostina.jpg", nazev: "Bruegel: Selská svatba", popis: "1567, Vídeň – žánr, každodennost, humor zaalpské renesance." },
     { img: "renesance_bosch.jpg", nazev: "Bosch: Zahrada pozemských rozkoší", popis: "Cca 1490–1510, Prado – vize a hybridní tvorové na prahu novověku." },
     { img: "renesance_arcimboldo.jpg", nazev: "Arcimboldo: Rudolf II. jako Vertumnus", popis: "1591 – manýristická hra u pražského dvora." },
-    { img: "renesance_belveder.jpg", nazev: "Letohrádek královny Anny (Belveder)", popis: "Praha, 1538–63 – nejčistší italská renesance severně od Alp." }
+    { img: "renesance_belveder.jpg", nazev: "Letohrádek královny Anny (Belveder)", popis: "Praha, 1538–63 – nejčistší italská renesance severně od Alp." },
+    { img: "renesance_veronese_kana.jpg", nazev: "Veronese: Svatba v Káni Galilejské", popis: "1563, Louvre – benátská renesance v monumentálním měřítku (6,8 × 9,9 m), visí naproti Moně Lise." },
+    { img: "renesance_bellini_svatek.jpg", nazev: "Bellini a Tizian: Svátek bohů", popis: "1514, National Gallery of Art – antičtí bohové hodují v krajině plné symbolů." }
   ],
   jung: { postoj: 0.8, nazevPostoje: "Dynamická extraverze", funkce: "Vnímání & myšlení (Se-Te)",
     text: "Aktivace archetypu Otce a Hrdiny: Adam probuzený Božím prstem = probuzení ega z nevědomého spánku přírody. Emancipace umělce jako originálního stvořitele; perspektiva = rozum ovládající prostor. Manýrismus je první únavou a stínem tohoto sebevědomí (Bosch, Arcimboldo)." },
@@ -178,7 +188,7 @@ EPOCHY.push(
   znaky: ["Dynamika, pohyb, elipsa, křivka", "Iluzivní malba, světlo a stín (šerosvit)", "Gesamtkunstwerk – prolnutí umění", "Emotivnost, extáze, patos, protireformace", "Stavby komponované do krajiny, zahrady s osou"],
   oblasti: { architektura: "Bernini (kolonáda sv. Petra), Borromini (San Carlo), Versailles (barokní klasicismus); Dientzenhoferové (sv. Mikuláš na Malé Straně), Santini (Zelená hora, Kladruby), Fischer von Erlach, Alliprandi (Kuks).", socharstvi: "Bernini (Apollón a Dafné, Extáze sv. Terezie), Puget; Braun (Ctnosti a Neřesti v Kuksu), Brokoff (Karlův most), morové sloupy.", malirstvi: "Caravaggio, Rubens, Rembrandt, Vermeer, Velázquez, Poussin, Tiepolo; Škréta, Brandl, Kupecký, Reiner (fresky), Hollar (grafika)." },
   faze: [{ nazev: "Rané", kdy: "1600–1650" }, { nazev: "Vrcholné", kdy: "1650–1720" }, { nazev: "Pozdní (přechod k rokoku)", kdy: "1720–1750" }],
-  osobnosti: ["Caravaggio", "Bernini", "Borromini", "Rubens", "Rembrandt", "Vermeer", "Velázquez", "Dientzenhoferové", "Santini", "Braun", "Brandl"],
+  osobnosti: ["Caravaggio", "Bernini", "Borromini", "Rubens", "Rembrandt", "Vermeer", "Velázquez", "Dientzenhoferové", "Santini", "Braun", "Brandl", "Francisco de Zurbarán"],
   cesko: "Sv. Mikuláš na Malé Straně, Klementinum, Kuks, Zelená hora (Santini), Karlův most (sochy), Valdštejnský palác, poutní krajina; Pardubice – kostel sv. Bartoloměje a Zelená brána v barokních úpravách, Kunětická hora.",
   pamatky: [
     { img: "baroko_bernini_terezie.jpg", nazev: "Bernini: Extáze sv. Terezie", popis: "Řím, Santa Maria della Vittoria, 1647–52 – mramor jako světlo a cit." },
@@ -187,7 +197,9 @@ EPOCHY.push(
     { img: "baroko_vermeer.jpg", nazev: "Vermeer: Dívka s perlou", popis: "Cca 1665, Haag – ticho a světlo holandského baroka." },
     { img: "baroko_mikulas.jpg", nazev: "Sv. Mikuláš na Malé Straně (interiér)", popis: "K. I. Dientzenhofer, 1703–1755 – vrchol pražského baroka; varhany, na něž hrál Mozart." },
     { img: "baroko_kuks.jpg", nazev: "Braun: Kuks – Ctnosti a Neřesti", popis: "1718–1720, hrabě Špork – barokní alegorie v krajině." },
-    { img: "experiment_baroko.jpg", nazev: "Žákovský malířský experiment: baroko", popis: "Kája a Áďa – parafráze barokní malby (projekt Malířský experiment, SPŠE Pardubice)." }
+    { img: "experiment_baroko.jpg", nazev: "Žákovský malířský experiment: baroko", popis: "Kája a Áďa – parafráze barokní malby (projekt Malířský experiment, SPŠE Pardubice)." },
+    { img: "baroko_velazquez_meniny.jpg", nazev: "Velázquez: Dvorní dámy (Las Meninas)", popis: "1656, Prado – hra pohledů, zrcadla a malíře v obraze." },
+    { img: "baroko_zurbaran_agnus.jpg", nazev: "Zurbarán: Agnus Dei", popis: "Cca 1635–1640, Prado – svázaný beránek jako minimalistický symbol oběti." }
   ],
   jung: { postoj: -0.3, nazevPostoje: "Introvertní cit v extravertní formě", funkce: "Cítění & intuice (Fi-Ni)",
     text: "Transcendentní a krizový cyklus: kompenzace válek, moru a chladu obratem k nebeskému spasení. Iluzivní kupole jako mandala, extáze jako setkání ega s Bytostným Já; šerosvit = vědomí uprostřed nevědomé temnoty. Zároveň extravertní okázalost moci (Versailles)." },
@@ -209,12 +221,15 @@ EPOCHY.push(
   znaky: ["Rokaj, asymetrický ornament", "Pastelové barvy, bílá a zlatá", "Intimní měřítko, salon, boudoir", "Galantní témata, hravost, erotika", "Porcelán, nábytek, móda"],
   oblasti: { architektura: "Amalienburg (Mnichov), Sanssouci (Postupim), Wies (Bavorsko), hotel de Soubise (Paříž); u nás zámek Dobříš, Nové Hrady u Litomyšle („české Versailles“).", socharstvi: "Falconet, Clodion; porcelánová plastika (Kändler, Míšeň); Ignác František Platzer.", malirstvi: "Watteau, Boucher, Fragonard, Chardin, Tiepolo, Gainsborough; Norbert Grund." },
   faze: [{ nazev: "Régence", kdy: "1715–1730" }, { nazev: "Rokoko Ludvíka XV.", kdy: "1730–1770" }, { nazev: "Doznívání", kdy: "1770–1790" }],
-  osobnosti: ["Watteau", "Boucher", "Fragonard", "Chardin", "madame de Pompadour", "Norbert Grund"],
+  osobnosti: ["Watteau", "Boucher", "Fragonard", "Chardin", "madame de Pompadour", "Norbert Grund", "Dominikus Zimmermann"],
   cesko: "Zámek Nové Hrady u Litomyšle (1774–77), Dobříš, interiéry Pražského hradu (Marie Terezie), Norbert Grund, Platzerova dílna.",
   pamatky: [
     { img: "rokoko_fragonard.jpg", nazev: "Fragonard: Houpačka", popis: "1767, Wallace Collection – galantní hravost rokoka." },
     { img: "rokoko_nove_hrady.jpg", nazev: "Zámek Nové Hrady", popis: "1774–1777, „české Versailles“ – rokokový zámek u Litomyšle." },
-    { img: "experiment_rokoko.jpg", nazev: "Žákovský malířský experiment: rokoko", popis: "Adam Bartoníček – parafráze rokokového portrétu (SPŠE Pardubice)." }
+    { img: "experiment_rokoko.jpg", nazev: "Žákovský malířský experiment: rokoko", popis: "Adam Bartoníček – parafráze rokokového portrétu (SPŠE Pardubice)." },
+    { img: "rokoko_watteau_kythera.jpg", nazev: "Watteau: Pouť na ostrov Kythéru", popis: "1717, Louvre – „fête galante“, zakladatelské dílo rokokové malby." },
+    { img: "rokoko_boucher_pompadour.jpg", nazev: "Boucher: Madame de Pompadour", popis: "1756, Alte Pinakothek – mecenáška rokoka v hedvábných šatech." },
+    { img: "rokoko_wieskirche.jpg", nazev: "Poutní kostel ve Wies (Bavorsko)", popis: "Dominikus Zimmermann, 1745–1754 – bílo-zlatý rokokový interiér (UNESCO)." }
   ],
   jung: { postoj: 0.4, nazevPostoje: "Extravertní cítění", funkce: "Cítění & vnímání",
     text: "Vysoce konvenční, společenské umění: emoce, které jsou v kultuře žádoucí – půvab, flirt, úsměv. Persona (společenská maska) aristokracie na vrcholu; potlačený Stín se vrátí v revoluci." },
@@ -241,7 +256,10 @@ EPOCHY.push(
   pamatky: [
     { img: "klasicismus_pantheon.jpg", nazev: "Pantheon (Paříž)", popis: "Soufflot, 1758–1790 – původně kostel sv. Jenovéfy, od revoluce hrobka velikánů." },
     { img: "klasicismus_kapitol.jpg", nazev: "Kapitol (Washington)", popis: "Od 1793 – antika jako výraz nové republiky." },
-    { img: "klasicismus_david_horatiove.jpg", nazev: "David: Přísaha Horatiů", popis: "1784, Louvre – manifest klasicismu: řád, ctnost, jasná kompozice." }
+    { img: "klasicismus_david_horatiove.jpg", nazev: "David: Přísaha Horatiů", popis: "1784, Louvre – manifest klasicismu: řád, ctnost, jasná kompozice." },
+    { img: "klasicismus_canova_amor.jpg", nazev: "Canova: Amor a Psyché", popis: "Mramor, 1787–1793, Louvre – chladná dokonalost a jemný cit klasicistní sochy." },
+    { img: "klasicismus_ingres_odaliska.jpg", nazev: "Ingres: Velká odaliska", popis: "1814, Louvre – ladná linie důležitější než anatomická přesnost." },
+    { img: "klasicismus_stavovske.jpg", nazev: "Stavovské divadlo (Praha)", popis: "1781–1783 – klasicistní divadlo, kde měl roku 1787 premiéru Mozartův Don Giovanni." }
   ],
   jung: { postoj: 0.6, nazevPostoje: "Extravertní myšlení", funkce: "Myšlení & vnímání (Te-Se)",
     text: "Vláda rozumu (osvícenství) a objektivního řádu; potlačený cit a fantazie se vrátí v romantismu jako kompenzace. Apollonský princip po dionýském baroku." },

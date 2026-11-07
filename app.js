@@ -20,6 +20,21 @@ const SVET = EPOCHY.filter(e => e.vrstva === "svet").sort((a, b) => a.od - b.od)
 const IKONY_TYP = { klima: "i-klima", astro: "i-astro", dejiny: "i-dejiny" };
 const TYP_NAZEV = { klima: "klima", astro: "astronomie", dejiny: "dějiny" };
 const zkratka = n => n.split(/[\s–-]+/).slice(0, 2).map(w => w[0]).join("").toUpperCase();
+const MAC = /Mac|iPhone|iPad|iPod/i.test(navigator.platform || navigator.userAgent || "");
+const MOBIL = window.matchMedia("(max-width: 700px)").matches;
+const zamichej = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const nahodny = a => a[Math.floor(Math.random() * a.length)];
+
+/* ---------- historie prohlížeče: tlačítko Zpět zavírá karty a okna ----------
+   Každé otevřené okno (karta epochy, galerie, hledání, profil) má vlastní záznam v historii,
+   takže šipka Zpět v prohlížeči nebo na telefonu vrací o krok zpět a neopouští aplikaci. */
+const hs = () => history.state || {};
+function hPush(st, url) { st.d = (hs().d || 0) + 1; try { history.pushState(st, "", url || location.href); } catch (err) { /* nevadí */ } }
+function hReplace(st, url) { st.d = hs().d || 0; try { history.replaceState(st, "", url || location.href); } catch (err) { /* nevadí */ } }
+function stavModal(m) { const st = { ep: $("#detail").open ? aktualni : null, m }; if (hs().m) hReplace(st); else hPush(st); }
+function zavriTise(d) { if (d && d.open) { d.dataset.tichy = "1"; d.close(); } }
+function lockUpdate() { document.documentElement.classList.toggle("lock", $$("dialog").some(d => d.open) || !!$(".osa-box.fs")); }
+let poPop = null;
 
 function kolecko(e, cls = "circ") {
   const o = OBD[e.obdobi];
@@ -169,7 +184,7 @@ function renderOsa() {
     });
     html += `<div class="osa-layer" style="top:${y}px;height:${H}px"><span class="lane-label" style="position:sticky">Postoj · Jung</span>`;
     html += `<svg class="curve" width="${W}" height="${H}" style="top:0"><line class="zero" x1="0" y1="${H / 2}" x2="${W}" y2="${H / 2}"/><path d="${d}"/>`;
-    pts.forEach(p => html += `<circle cx="${p.x}" cy="${p.y}" r="4"><title>${esc(p.e.nazev)}: ${esc(p.e.jung.nazevPostoje)}</title></circle>`);
+    pts.forEach(p => html += `<circle cx="${p.x}" cy="${p.y}" r="${MOBIL ? 6 : 4.5}" data-ep="${p.e.id}" data-tip="${esc(p.e.nazev)} · ${esc(p.e.jung.nazevPostoje)}"><title>${esc(p.e.nazev)}: ${esc(p.e.jung.nazevPostoje)}</title></circle>`);
     html += `</svg><span class="curve-lbl" style="top:${H / 2 - 30}px">↑ extraverze · vcítění</span><span class="curve-lbl" style="top:${H / 2 + 18}px">↓ introverze · abstrakce</span></div>`;
     y += H + 6;
   }
@@ -179,6 +194,16 @@ function renderOsa() {
   // mřížka podle období
   OBDOBI.forEach(o => can.insertAdjacentHTML("beforeend", `<div class="grid-line" style="left:${xRok(o.od)}px"></div>`));
   $$(".bar", can).forEach(b => b.addEventListener("click", () => otevriEpochu(b.dataset.ep)));
+  $$(".curve circle[data-ep]", can).forEach(c => {
+    c.addEventListener("click", () => otevriEpochu(c.dataset.ep));
+    c.addEventListener("mouseenter", () => {
+      const lay = c.closest(".osa-layer"); const tip = document.createElement("div");
+      tip.className = "osa-tip"; tip.textContent = c.dataset.tip;
+      tip.style.left = c.getAttribute("cx") + "px"; tip.style.top = (lay.offsetTop + +c.getAttribute("cy")) + "px";
+      can.appendChild(tip);
+    });
+    c.addEventListener("mouseleave", () => $$(".osa-tip", can).forEach(t => t.remove()));
+  });
   posunPopisky();
   $$(".ev", can).forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); popUdalost(b); }));
   $$(".pales-blk", can).forEach(b => b.addEventListener("click", () => { vyberDucha(b.dataset.duch); $("#psychologie").scrollIntoView({ behavior: "smooth" }); setTimeout(() => $("#kolo-svg").scrollIntoView({ behavior: "smooth", block: "center" }), 350); }));
@@ -226,19 +251,41 @@ function initOsa() {
     b.innerHTML = `<span class="dot"></span>${esc(o.nazev)}`;
     b.addEventListener("click", () => skokNaObdobi(o.id)); jump.appendChild(b);
   });
+  // na telefonu začíná osa zjednodušená (duchové času a Jungova křivka se dají zapnout)
+  if (MOBIL) { vrstvy.pales = false; vrstvy.krivka = false; }
   ["udalosti", "pales", "svet", "krivka"].forEach(k => {
     const lab = $("#tg-" + k), inp = $("input", lab);
+    inp.checked = vrstvy[k]; lab.classList.toggle("on", vrstvy[k]);
     inp.addEventListener("change", () => { vrstvy[k] = inp.checked; lab.classList.toggle("on", inp.checked); renderOsa(); });
   });
   $("#zoom-in").addEventListener("click", () => setZoom(zoom * 1.35));
   $("#zoom-out").addEventListener("click", () => setZoom(zoom / 1.35));
-  const sc = $("#osa-scroll");
-  let drag = null;
-  sc.addEventListener("mousedown", ev => { if (ev.button !== 0 || ev.target.closest("button,.pop")) return; drag = { x: ev.clientX, s: sc.scrollLeft }; sc.classList.add("drag"); });
+  $("#zoom-reset").addEventListener("click", () => setZoom(1));
+  const sc = $("#osa-scroll"), box = $("#osa-box"), fsBtn = $("#osa-fs");
+  const fs = on => {
+    box.classList.toggle("fs", on); lockUpdate();
+    fsBtn.innerHTML = on ? `<svg><use href="#i-shrink"/></svg><span>Zavřít celou obrazovku</span>` : `<svg><use href="#i-expand"/></svg><span>Celá obrazovka</span>`;
+    if (!on) $("#osa").scrollIntoView({ block: "start" });
+  };
+  fsBtn.addEventListener("click", () => fs(!box.classList.contains("fs")));
+  document.addEventListener("keydown", ev => { if (ev.key === "Escape" && box.classList.contains("fs") && !$$("dialog").some(d => d.open)) fs(false); });
+  let drag = null, aktivni = false;
+  const aktivuj = on => { aktivni = on; sc.classList.toggle("aktiv", on); };
+  sc.addEventListener("pointerdown", () => aktivuj(true));
+  $(".osa-frame").addEventListener("pointerleave", () => aktivuj(false));
+  sc.addEventListener("mousedown", ev => { if (ev.button !== 0 || ev.target.closest("button,.pop,circle")) return; drag = { x: ev.clientX, s: sc.scrollLeft }; sc.classList.add("drag"); });
   window.addEventListener("mousemove", ev => { if (drag) sc.scrollLeft = drag.s - (ev.clientX - drag.x); });
   window.addEventListener("mouseup", () => { drag = null; sc.classList.remove("drag"); });
   let raf = 0; sc.addEventListener("scroll", () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; posunPopisky(); }); }, { passive: true });
-  sc.addEventListener("wheel", ev => { if (ev.shiftKey || Math.abs(ev.deltaX) > Math.abs(ev.deltaY)) return; if (ev.ctrlKey) { ev.preventDefault(); setZoom(zoom * (ev.deltaY < 0 ? 1.15 : 1 / 1.15)); } }, { passive: false });
+  sc.addEventListener("wheel", ev => {
+    if (ev.ctrlKey || ev.metaKey) { ev.preventDefault(); setZoom(zoom * (ev.deltaY < 0 ? 1.15 : 1 / 1.15)); return; }
+    if (ev.shiftKey || Math.abs(ev.deltaX) > Math.abs(ev.deltaY)) return;
+    // svislé kolečko posouvá osu do stran, jen když s ní uživatel pracuje (klik do osy) nebo je na celou obrazovku
+    if (!aktivni && !box.classList.contains("fs")) return;
+    const max = sc.scrollWidth - sc.clientWidth;
+    if ((ev.deltaY < 0 && sc.scrollLeft > 0) || (ev.deltaY > 0 && sc.scrollLeft < max - 1)) { ev.preventDefault(); sc.scrollLeft += ev.deltaY * (ev.deltaMode === 1 ? 32 : 1); }
+  }, { passive: false });
+  if (MAC) $("#osa-hint").innerHTML = $("#osa-hint").innerHTML.replace("Ctrl + kolečkem", "⌘ / Ctrl + kolečkem (na touchpadu sevřením prstů)");
   $("#osa-legend").innerHTML = `<span><i style="background:var(--deep)"></i>klimatická událost</span><span><i style="background:#E0A020"></i>astronomická událost</span><span><i style="background:var(--clay)"></i>dějinná událost</span><span><i style="border:2px dashed var(--ink-soft);background:transparent"></i>umění mimo Evropu</span><span>− před letopočtem (př. n. l.)</span>`;
   renderOsa();
   sc.scrollLeft = xRok(1400) - 40;
@@ -270,12 +317,18 @@ const iconBtn = e => `<button type="button" class="icon-btn" data-ep="${e.id}">$
 
 /* ---------- rychlý přehled ---------- */
 function renderPrehled() {
-  const box = $("#prehled-rows"), q = $("#q");
+  const box = $("#prehled-rows"), q = $("#q"), more = $("#prehled-more");
   const all = EVROPA.concat(SVET);
+  let vse = false;
+  more.addEventListener("click", () => { vse = !vse; draw(); if (!vse) $("#prehled").scrollIntoView({ behavior: "smooth" }); });
   const draw = () => {
-    const t = q.value.trim().toLowerCase();
-    const hit = all.filter(e => !t || JSON.stringify([e.nazev, e.podtitul, e.strucne, e.osobnosti, e.znaky, e.cesko, e.text]).toLowerCase().includes(t));
+    const t = norm(q.value.trim());
+    const hit = all.filter(e => !t || norm(JSON.stringify([e.nazev, e.podtitul, e.strucne, e.osobnosti, e.znaky, e.cesko, e.text])).includes(t));
     $("#q-count").textContent = `${hit.length} z ${all.length}`;
+    const sbalit = !t && !vse && hit.length > 8;
+    box.classList.toggle("collapsed", sbalit);
+    more.parentElement.hidden = !!t || hit.length <= 8;
+    more.textContent = vse ? "Sbalit přehled" : `Zobrazit celý přehled (${hit.length})`;
     box.innerHTML = hit.map(e => {
       const o = OBD[e.obdobi]; const p = ((e.jung?.postoj ?? 0) + 1) / 2;
       return `<button type="button" class="row" data-ep="${e.id}">${kolecko(e)}<span class="n">${esc(e.nazev)}<small>${esc(o.nazev)}${e.vrstva === "svet" ? " · mimo Evropu" : ""}</small></span><span class="d">${esc(e.datace)}</span><span class="s">${esc(e.strucne)}</span><span class="j" title="${esc(e.jung?.nazevPostoje || "")}">${e.jung?.postoj < -0.15 ? "intro" : e.jung?.postoj > 0.15 ? "extra" : "střed"}<i style="--p:${p}"></i></span></button>`;
@@ -289,6 +342,8 @@ function renderPrehled() {
 const MAPA_W = 1000, MAPA_H = 520, LAT_TOP = 84, LAT_BOT = -58;
 const proj = (lon, lat) => [((lon + 180) / 360 * MAPA_W).toFixed(1), ((LAT_TOP - lat) / (LAT_TOP - LAT_BOT) * MAPA_H).toFixed(1)];
 let mapaFiltr = null;
+// přiblížení mapy: mění se viewBox, body a popisky si drží stejnou velikost na obrazovce
+const mv = { s: 1, x: 0, y: 0 };
 function renderMapa() {
   const svg = $("#mapa-svg");
   svg.innerHTML = `<rect class="sea" width="${MAPA_W}" height="${MAPA_H}"/><g class="land">${MAPA_SVG}</g><g id="mapa-body"></g>`;
@@ -296,7 +351,69 @@ function renderMapa() {
   f.innerHTML = `<button type="button" class="chip on" data-era="">Vše</button>` + OBDOBI.map(o => `<button type="button" class="chip" data-era="${o.id}" style="--c:${o.barva}"><span class="dot"></span>${esc(o.nazev)}</button>`).join("");
   $$(".chip", f).forEach(b => b.addEventListener("click", () => { mapaFiltr = b.dataset.era || null; $$(".chip", f).forEach(x => x.classList.toggle("on", x === b)); kresliBody(); }));
   kresliBody();
-  ukazBod("athens", $('#mapa-body .pt[data-id="athens"]'));
+  ukazBod("athens", $('#mapa-body .pt[data-id="athens"]'), true);
+  initMapaZoom(svg);
+}
+function mapaK() { const svg = $("#mapa-svg"); return (svg.clientWidth || 600) / (MAPA_W / mv.s); }
+function nastavMapu() {
+  const w = MAPA_W / mv.s, h = MAPA_H / mv.s;
+  mv.x = Math.max(0, Math.min(MAPA_W - w, mv.x)); mv.y = Math.max(0, Math.min(MAPA_H - h, mv.y));
+  $("#mapa-svg").setAttribute("viewBox", `${mv.x.toFixed(1)} ${mv.y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`);
+  velikostBodu();
+}
+function velikostBodu() {
+  const k = mapaK(), r = MOBIL ? 9 : 7.5;
+  $$("#mapa-body .pt").forEach(g => {
+    const c = $("circle", g), t = $("text", g), on = g.classList.contains("on");
+    const rr = (on ? r * 1.45 : r) / k;
+    c.setAttribute("r", rr.toFixed(2)); c.setAttribute("stroke-width", (2 / k).toFixed(2));
+    t.setAttribute("font-size", ((MOBIL ? 13 : 12) / k).toFixed(2)); t.setAttribute("stroke-width", (3 / k).toFixed(2));
+    t.setAttribute("y", (+c.getAttribute("cy") - rr - 5 / k).toFixed(1));
+  });
+}
+function zoomMapu(f, cx, cy) {
+  const s2 = Math.max(1, Math.min(8, mv.s * f));
+  if (cx == null) { cx = mv.x + MAPA_W / mv.s / 2; cy = mv.y + MAPA_H / mv.s / 2; }
+  mv.x = cx - (cx - mv.x) * mv.s / s2; mv.y = cy - (cy - mv.y) * mv.s / s2; mv.s = s2;
+  nastavMapu();
+}
+function initMapaZoom(svg) {
+  const bodSvg = (clientX, clientY) => { const r = svg.getBoundingClientRect(); return [mv.x + (clientX - r.left) / mapaK(), mv.y + (clientY - r.top) / mapaK()]; };
+  $("#map-in").addEventListener("click", () => zoomMapu(1.6));
+  $("#map-out").addEventListener("click", () => zoomMapu(1 / 1.6));
+  $("#map-reset").addEventListener("click", () => { mv.s = 1; mv.x = 0; mv.y = 0; nastavMapu(); });
+  svg.addEventListener("wheel", ev => {
+    if (!(ev.ctrlKey || ev.metaKey)) return;
+    ev.preventDefault(); const [cx, cy] = bodSvg(ev.clientX, ev.clientY); zoomMapu(ev.deltaY < 0 ? 1.25 : 1 / 1.25, cx, cy);
+  }, { passive: false });
+  const ptr = new Map(); let pinch = null, posun = null;
+  svg.addEventListener("pointerdown", ev => {
+    ptr.set(ev.pointerId, [ev.clientX, ev.clientY]);
+    if (ptr.size === 2) { const [a, b] = [...ptr.values()]; pinch = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), s: mv.s }; posun = null; }
+    else { posun = { x: ev.clientX, y: ev.clientY, mx: mv.x, my: mv.y, moved: false }; }
+  });
+  svg.addEventListener("pointermove", ev => {
+    if (!ptr.has(ev.pointerId)) return;
+    ptr.set(ev.pointerId, [ev.clientX, ev.clientY]);
+    if (pinch && ptr.size === 2) {
+      const [a, b] = [...ptr.values()]; const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+      const [cx, cy] = bodSvg((a[0] + b[0]) / 2, (a[1] + b[1]) / 2); zoomMapu(pinch.s * d / pinch.d / mv.s, cx, cy); return;
+    }
+    if (posun) {
+      const dx = ev.clientX - posun.x, dy = ev.clientY - posun.y;
+      if (!posun.moved && Math.hypot(dx, dy) < 6) return;
+      if (!posun.moved) { posun.moved = true; svg.classList.add("drag"); try { svg.setPointerCapture(ev.pointerId); } catch (err) { /* nevadí */ } }
+      mv.x = posun.mx - dx / mapaK(); mv.y = posun.my - dy / mapaK(); nastavMapu();
+    }
+  });
+  const konec = ev => {
+    ptr.delete(ev.pointerId); if (ptr.size < 2) pinch = null;
+    if (posun && posun.moved) { svg.dataset.tazeno = "1"; setTimeout(() => delete svg.dataset.tazeno, 50); }
+    if (!ptr.size) { posun = null; svg.classList.remove("drag"); }
+  };
+  svg.addEventListener("pointerup", konec); svg.addEventListener("pointercancel", konec);
+  let t; window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(velikostBodu, 120); });
+  nastavMapu();
 }
 function kresliBody() {
   const g = $("#mapa-body");
@@ -305,16 +422,20 @@ function kresliBody() {
     return `<g class="pt" data-id="${b.id}" tabindex="0" role="button" aria-label="${esc(b.nazev)}"><circle cx="${x}" cy="${y}" r="8" fill="${o.barva}"><title>${esc(b.nazev)} · ${esc(b.kdy)}</title></circle><text class="lb" x="${x}" y="${+y - 14}" text-anchor="middle">${esc(b.nazev.split(",")[0])}</text></g>`;
   }).join("");
   $$(".pt", g).forEach(p => {
-    const go = () => ukazBod(p.dataset.id, p);
+    const go = () => { if ($("#mapa-svg").dataset.tazeno) return; ukazBod(p.dataset.id, p); };
     p.addEventListener("click", go);
     p.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); go(); } });
   });
+  velikostBodu();
 }
-function ukazBod(id, el) {
+function ukazBod(id, el, tichy) {
   $$("#mapa-body .pt").forEach(p => p.classList.toggle("on", p === el));
+  if (el) el.parentNode.appendChild(el); // vybraný bod navrch
+  velikostBodu();
   const b = MAPA_BODY.find(x => x.id === id), o = OBD[b.obdobi], e = b.epocha && EP[b.epocha];
   $("#mapa-card").innerHTML = `<span class="pill" style="background:${o.svetla};color:${o.barva}">${esc(o.nazev)}</span><h3 style="margin-top:8px">${esc(b.nazev)}</h3><div class="kdy">${esc(b.kdy)}</div><p>${esc(b.popis)}</p>${e ? `<button type="button" class="btn" data-ep="${e.id}">Otevřít kartu: ${esc(e.nazev)}</button>` : ""}`;
   const btn = $("#mapa-card button"); if (btn) btn.addEventListener("click", () => otevriEpochu(btn.dataset.ep));
+  if (!tichy && window.matchMedia("(max-width: 900px)").matches) $("#mapa-card").scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 /* ---------- psychologie ---------- */
@@ -380,6 +501,7 @@ function renderPsych() {
 function vyberDucha(id) {
   const d = DUCHOVE.find(x => x.id === id);
   $$("#kolo-svg .seg7").forEach(g => g.classList.toggle("on", g.dataset.id === id));
+  $("#kolo-svg").classList.add("sel");
   const per = obdobiDuchu(-7700, 2600).filter(p => p.duch.id === id);
   const pan = $("#duch-panel"); pan.style.setProperty("--c", d.barva);
   pan.innerHTML = `<span class="pill" style="background:${d.barva};color:#fff">${esc(d.symbol)} ${esc(d.planeta)}</span><h3 style="margin-top:8px">${esc(d.jmeno)}</h3><p><em>${esc(d.heslo)}</em></p><p>${esc(d.charakter)}</p><h4>V umění a kultuře</h4><p>${esc(d.umeni)}</p><h4>Období vlády (354 let)</h4><div class="per">${per.map(p => `<span>${esc(fmtRokKratky(p.od))} – ${esc(fmtRokKratky(p.do))}</span>`).join("")}</div>`;
@@ -392,9 +514,23 @@ function renderKlima() {
 }
 
 /* ---------- detail epochy ---------- */
-let aktualni = null;
-function otevriEpochu(id) {
+let aktualni = null, aktualniGal = [];
+function galerieEpochy(e) {
+  const gal = [];
+  e.pamatky.forEach((pm, pi) => { const d = doplnit(pm.popis); const s = pm.img || d.soubor; if (s) gal.push({ pi, img: s, nazev: pm.nazev, popis: d.text }); });
+  return gal;
+}
+// mode: undefined = automaticky (nový záznam v historii, nebo výměna, je-li karta už otevřená), "none" = bez zásahu do historie
+function otevriEpochu(id, mode) {
   const e = EP[id]; if (!e) return;
+  const dlg = $("#detail");
+  let zpet = false;
+  if (mode !== "none") {
+    const st = hs();
+    // okno (profil, hledání) otevřené nad touto kartou: stačí krok zpět, aby v historii nezůstala stejná karta dvakrát
+    if (st.m && st.ep === id && dlg.open) { zpet = true; history.back(); }
+    else if (dlg.open || st.m) hReplace({ ep: id }, "#" + id); else hPush({ ep: id }, "#" + id);
+  }
   aktualni = id;
   const o = OBD[e.obdobi];
   const seznam = e.vrstva === "svet" ? SVET : EVROPA;
@@ -402,12 +538,15 @@ function otevriEpochu(id) {
   const prev = seznam[i - 1], next = seznam[i + 1];
   const duchove = obdobiDuchu(e.od, e.do).filter(p => p.do - p.od > 0);
   const p = ((e.jung?.postoj ?? 0) + 1) / 2;
+  aktualniGal = galerieEpochy(e);
   const det = $("#det");
+  const DMAX = 3;
   det.innerHTML = `
     <div class="det-top">
-      <span class="tools"><button type="button" class="home" id="det-close"><svg><use href="#i-home"/></svg>Domů</button><button type="button" class="home" id="det-search" title="Hledat v celé aplikaci (Ctrl+K)"><svg><use href="#i-search"/></svg>Hledat</button></span>
+      <span class="tools"><button type="button" class="home" id="det-close" title="Zpět (zavřít kartu)"><svg><use href="#i-back"/></svg>Zpět</button><button type="button" class="home" id="det-search" title="Hledat v celé aplikaci"><svg><use href="#i-search"/></svg><span class="txt-h">Hledat</span></button></span>
       <span class="obd" style="--c:${o.barva}"><i></i>${esc(o.nazev)}${e.vrstva === "svet" ? " · mimo Evropu" : ""}</span>
       <span class="dat">${esc(e.datace)}</span>
+      <button type="button" class="x-close" id="det-x" aria-label="Zavřít kartu" title="Zavřít kartu">×</button>
     </div>
     <div class="det-head">
       ${kolecko(e)}
@@ -425,49 +564,187 @@ function otevriEpochu(id) {
         <h4>Architektura</h4><p>${esc(e.oblasti.architektura)}</p>
         <h4>Sochařství</h4><p>${esc(e.oblasti.socharstvi)}</p>
         <h4>Malířství</h4><p>${esc(e.oblasti.malirstvi)}</p>
-        ${e.osobnosti && e.osobnosti.length ? `<h4>Osobnosti</h4><div class="chips">${e.osobnosti.map(x => `<span>${esc(x)}</span>`).join("")}</div>` : ""}
+        ${e.osobnosti && e.osobnosti.length ? `<h4>Osobnosti</h4><div class="chips">${e.osobnosti.map(x => `<button type="button" class="os" data-os="${esc(norm(jmenoOsoby(x)))}"><svg><use href="#i-person"/></svg>${esc(x)}</button>`).join("")}</div><p class="os-note">Kliknutím na jméno zobrazíte díla a další epochy osobnosti.</p>` : ""}
         ${e.cesko && e.cesko !== "—" ? `<h4>U nás</h4><p>${esc(e.cesko)}</p>` : ""}
       </div>
     </div>
-    <div class="det-gal"><h3>Obrazové ukázky</h3><div class="gal">${e.pamatky.map((pm, pi) => {
+    <div class="det-gal"><h3>Obrazové ukázky${aktualniGal.length > 1 ? ` <span class="pill">${aktualniGal.length}</span>` : ""}</h3><div class="gal">${e.pamatky.map((pm, pi) => {
       const d = doplnit(pm.popis);
       const soubor = pm.img || d.soubor;
+      const gi = aktualniGal.findIndex(g => g.pi === pi);
       const ph = `<div class="ph"><svg><use href="#i-img"/></svg>Ukázka k doplnění${d.soubor ? `<code>img/${esc(d.soubor)}</code>` : ""}</div>`;
-      return `<figure data-pm="${pi}">${soubor ? `<button type="button" class="im" data-img="${esc(soubor)}" data-cap="${esc(pm.nazev)} – ${esc(d.text)}"><img src="img/thumb/${esc(soubor)}" alt="${esc(pm.nazev)}" loading="lazy" data-full="img/${esc(soubor)}"></button>` : ph}<figcaption><b>${esc(pm.nazev)}</b>${esc(d.text)}</figcaption></figure>`;
+      return `<figure data-pm="${pi}">${soubor ? `<button type="button" class="im" data-gi="${gi}" aria-label="Zvětšit: ${esc(pm.nazev)}"><img src="img/thumb/${esc(soubor)}" alt="${esc(pm.nazev)}" loading="lazy" data-full="img/${esc(soubor)}"></button>` : ph}<figcaption><b>${esc(pm.nazev)}</b>${esc(d.text)}</figcaption></figure>`;
     }).join("")}</div></div>
     <div class="det-links"><h3>Souvislosti</h3><div class="three">
       <div class="card" style="--c:var(--deep)"><h3>Hlubinná psychologie</h3><span class="pill">${esc(e.jung.nazevPostoje)}</span><div class="gauge" style="--p:${p}"></div><div class="gauge-lbl"><span>introverze</span><span>extraverze</span></div><p><b>Funkce:</b> ${esc(e.jung.funkce)}</p><p>${esc(e.jung.text)}</p></div>
-      <div class="card" style="--c:var(--moss)"><h3>Klima a dějiny</h3><p>${esc(e.klima)}</p>${e.udalosti && e.udalosti.length ? `<div class="chips">${e.udalosti.map(u => UD[u] ? `<button type="button" class="lnk ud" data-ud="${u}" style="--c:${u && UD[u].typ === "astro" ? "#E0A020" : UD[u].typ === "klima" ? "var(--deep)" : "var(--clay)"}"><i></i>${esc(UD[u].nazev)}</button>` : "").join("")}</div>` : ""}</div>
-      <div class="card" style="--c:${duchove[0] ? duchove[0].duch.barva : "var(--dry)"}"><h3>Duch času · Páleš</h3>${duchove.length ? `<div class="chips">${duchove.map(d => `<span style="border-color:${d.duch.barva}">${esc(d.duch.symbol)} ${esc(d.duch.jmeno)} · ${esc(fmtRokKratky(d.od))}–${esc(fmtRokKratky(d.do))}</span>`).join("")}</div>` : ""}<p style="margin-top:8px">${esc(e.pales === "—" ? "Období předchází rytmu duchů času, který Páleš sleduje od starověku." : e.pales)}</p></div>
+      <div class="card" style="--c:var(--moss)"><h3>Klima a dějiny</h3><p>${esc(e.klima)}</p>${e.udalosti && e.udalosti.length ? `<div class="chips">${e.udalosti.map(u => UD[u] ? `<button type="button" class="lnk ud" data-ud="${u}" style="--c:${UD[u].typ === "astro" ? "#E0A020" : UD[u].typ === "klima" ? "var(--deep)" : "var(--clay)"}"><i></i>${esc(UD[u].nazev)}</button>` : "").join("")}</div>` : ""}</div>
+      <div class="card" style="--c:${duchove[0] ? duchove[0].duch.barva : "var(--dry)"}"><h3>Duch času · Páleš</h3>${duchove.length ? `<div class="chips">${duchove.map((d, k) => `<span style="border-color:${d.duch.barva}"${k >= DMAX ? " hidden" : ""}>${esc(d.duch.symbol)} ${esc(d.duch.jmeno)} · ${esc(fmtRokKratky(d.od))}–${esc(fmtRokKratky(d.do))}</span>`).join("")}${duchove.length > DMAX ? `<button type="button" class="more" id="duch-more">+ ${duchove.length - DMAX} další</button>` : ""}</div>` : ""}<p style="margin-top:8px">${esc(e.pales === "—" ? "Období předchází rytmu duchů času, který Páleš sleduje od starověku." : e.pales)}</p></div>
     </div></div>
     <div class="det-nav">
       ${prev ? `<button type="button" data-ep="${prev.id}"><svg><use href="#i-left"/></svg><span><small>Předchozí</small>${esc(prev.nazev)}</span></button>` : "<span></span>"}
       ${next ? `<button type="button" data-ep="${next.id}"><span><small>Další</small>${esc(next.nazev)}</span><svg><use href="#i-right"/></svg></button>` : "<span></span>"}
     </div>`;
-  const dlg = $("#detail");
   if (!dlg.open) dlg.showModal();
+  lockUpdate();
   det.scrollTop = 0;
   $("#det-close").addEventListener("click", () => dlg.close());
+  $("#det-x").addEventListener("click", () => dlg.close());
   $("#det-search").addEventListener("click", () => otevriHledani());
   $$(".det-nav button", det).forEach(b => b.addEventListener("click", () => otevriEpochu(b.dataset.ep)));
-  $$(".im", det).forEach(b => b.addEventListener("click", () => lightbox(b.dataset.img, b.dataset.cap)));
+  $$(".im", det).forEach(b => b.addEventListener("click", () => lightbox(aktualniGal, +b.dataset.gi)));
+  $$(".os", det).forEach(b => b.addEventListener("click", () => otevriProfil(b.dataset.os)));
+  const dm = $("#duch-more", det); if (dm) dm.addEventListener("click", () => { $$("[hidden]", dm.parentElement).forEach(x => x.hidden = false); dm.remove(); });
   // chybějící soubor: nejdřív zkusit plnou velikost (bez náhledu), pak zobrazit rámeček k doplnění
   $$(".im img", det).forEach(im => im.addEventListener("error", () => {
     if (im.dataset.full && im.src.indexOf("/thumb/") > -1) { im.src = im.dataset.full; return; }
-    const fig = im.closest("figure"), btn = im.closest(".im"), soubor = btn.dataset.img;
+    const btn = im.closest(".im"), soubor = im.dataset.full.replace(/^img\//, "");
     btn.replaceWith(Object.assign(document.createElement("div"), { className: "ph", innerHTML: `<svg><use href="#i-img"/></svg>Ukázka k doplnění<code>img/${esc(soubor)}</code>` }));
   }));
-  $$(".lnk.ud", det).forEach(b => b.addEventListener("click", () => { dlg.close(); $("#klima").scrollIntoView({ behavior: "smooth" }); }));
-  try { history.replaceState(null, "", "#" + id); } catch (err) { /* nevadí */ }
+  $$(".lnk.ud", det).forEach(b => b.addEventListener("click", () => naSekci("klima", () => bliknout($("#ud-" + b.dataset.ud)))));
+  return zpet;
 }
-function lightbox(img, cap) {
+
+/* ---------- galerie (lightbox) se šipkami, přiblížením a tažením ---------- */
+let lbList = [], lbI = 0;
+function lightbox(list, i) {
+  if (!list || !list.length || i < 0) return;
+  lbList = list; lbI = i;
+  kresliLb();
   const lb = $("#lb");
-  $("#lb-in").innerHTML = `<img src="img/${esc(img)}" alt=""><p>${esc(cap)}</p>`;
-  lb.showModal();
+  if (!lb.open) { lb.showModal(); stavModal("lb"); }
+  lockUpdate();
 }
-$("#lb-in").addEventListener("click", () => $("#lb").close());
+function kresliLb() {
+  const it = lbList[lbI], n = lbList.length;
+  $("#lb-in").innerHTML = `<button type="button" class="lb-x" aria-label="Zavřít">×</button>
+    ${n > 1 ? `<button type="button" class="lb-nav lb-prev" aria-label="Předchozí obrázek"><svg><use href="#i-left"/></svg></button>` : ""}
+    <div class="lb-stage"><img src="img/${esc(it.img)}" alt="${esc(it.nazev)}" draggable="false"></div>
+    ${n > 1 ? `<button type="button" class="lb-nav lb-next" aria-label="Další obrázek"><svg><use href="#i-right"/></svg></button>` : ""}
+    <p class="lb-cap"><b>${esc(it.nazev)}</b>${esc(it.popis || "")}${n > 1 ? `<span class="cnt">${lbI + 1} / ${n}</span>` : ""}<span class="tip">Klepnutím na obrázek ho přiblížíte${n > 1 ? " · šipky ← → nebo přejetí prstem listují" : ""} · Esc zavře</span></p>`;
+}
+function lbPosun(k) { if (lbList.length < 2) return; lbI = (lbI + k + lbList.length) % lbList.length; kresliLb(); }
+(function initLb() {
+  const lb = $("#lb"), inn = $("#lb-in");
+  let sw = null, pan = null;
+  inn.addEventListener("click", ev => {
+    if (ev.target.closest(".lb-x")) { lb.close(); return; }
+    if (ev.target.closest(".lb-prev")) { lbPosun(-1); return; }
+    if (ev.target.closest(".lb-next")) { lbPosun(1); return; }
+    const st = ev.target.closest(".lb-stage");
+    if (ev.target.tagName === "IMG" && st) {
+      if (st.dataset.tazeno) return;
+      const zoomOn = !st.classList.contains("zoom");
+      const img = ev.target, r = img.getBoundingClientRect(), fx = (ev.clientX - r.left) / r.width, fy = (ev.clientY - r.top) / r.height;
+      st.classList.toggle("zoom", zoomOn);
+      if (zoomOn) requestAnimationFrame(() => { st.scrollLeft = fx * st.scrollWidth - st.clientWidth / 2; st.scrollTop = fy * st.scrollHeight - st.clientHeight / 2; });
+      return;
+    }
+    if (ev.target === inn || ev.target === st) lb.close();
+  });
+  inn.addEventListener("pointerdown", ev => {
+    const st = ev.target.closest(".lb-stage"); if (!st) return;
+    if (st.classList.contains("zoom") && ev.pointerType === "mouse") { pan = { st, x: ev.clientX, y: ev.clientY, l: st.scrollLeft, t: st.scrollTop, moved: false }; ev.preventDefault(); }
+    else if (!st.classList.contains("zoom")) sw = { x: ev.clientX, y: ev.clientY };
+  });
+  window.addEventListener("pointermove", ev => {
+    if (!pan) return; const dx = ev.clientX - pan.x, dy = ev.clientY - pan.y;
+    if (Math.hypot(dx, dy) > 4) pan.moved = true;
+    pan.st.scrollLeft = pan.l - dx; pan.st.scrollTop = pan.t - dy;
+  });
+  window.addEventListener("pointerup", ev => {
+    if (pan) { if (pan.moved) { pan.st.dataset.tazeno = "1"; const s2 = pan.st; setTimeout(() => delete s2.dataset.tazeno, 60); } pan = null; }
+    if (sw) { const dx = ev.clientX - sw.x, dy = ev.clientY - sw.y; sw = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) lbPosun(dx < 0 ? 1 : -1); }
+  });
+  document.addEventListener("keydown", ev => { if (!lb.open) return; if (ev.key === "ArrowLeft") lbPosun(-1); else if (ev.key === "ArrowRight") lbPosun(1); });
+})();
 $("#detail").addEventListener("click", ev => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
-$("#detail").addEventListener("close", () => { aktualni = null; try { history.replaceState(null, "", location.pathname + location.search); } catch (err) { /* nevadí */ } });
+// zavření okna uživatelem (křížek, Esc, kliknutí vedle) vrátí historii o krok, aby šipka Zpět dál fungovala přirozeně
+["detail", "lb", "hledat", "profil"].forEach(id => {
+  const d = $("#" + id);
+  d.addEventListener("close", () => {
+    const tichy = d.dataset.tichy; delete d.dataset.tichy;
+    if (id === "detail") aktualni = null;
+    lockUpdate();
+    if (tichy) return;
+    const st = hs();
+    if (id === "detail" ? (st.ep && !st.m) : st.m === id) history.back();
+  });
+});
+window.addEventListener("popstate", () => {
+  const st = hs();
+  ["lb", "hledat", "profil"].forEach(id => { const d = $("#" + id); if (d.open && st.m !== id) zavriTise(d); });
+  const hashEp = EP[location.hash.slice(1)] ? location.hash.slice(1) : null;
+  const ep = st.ep || (st.m ? null : hashEp);
+  if (ep) { if (!$("#detail").open || aktualni !== ep) otevriEpochu(ep, "none"); }
+  else zavriTise($("#detail"));
+  lockUpdate();
+  if (poPop) { const f = poPop; poPop = null; setTimeout(f, 40); }
+});
+
+/* ---------- profil osobnosti (sestaven automaticky z karet epoch) ---------- */
+const OSOBY = new Map();
+function jmenoOsoby(raw) { return String(raw).replace(/\s*\(.*?\)\s*/g, " ").replace(/\s+/g, " ").trim(); }
+const tokenyJmena = jm => norm(jm).split(/[\s\-–,]+/).filter(w => w.length >= 4 && !/^(mistr|anonymni|anonym|kultura|knize|svaty)$/.test(w) && !/^[ivx]+\.?$/.test(w));
+const kmenJmena = w => w.length >= 6 ? w.slice(0, -1) : w;
+function sestavOsoby() {
+  if (OSOBY.size) return;
+  EPOCHY.forEach(e => (e.osobnosti || []).forEach(raw => {
+    const jm = jmenoOsoby(raw); if (!jm) return;
+    const k = norm(jm);
+    if (!OSOBY.has(k)) OSOBY.set(k, { klic: k, jmeno: jm, pozn: [], epochy: [] });
+    const o = OSOBY.get(k), pz = (String(raw).match(/\((.*?)\)/) || [])[1];
+    if (pz && !o.pozn.includes(pz)) o.pozn.push(pz);
+    if (!o.epochy.includes(e.id)) o.epochy.push(e.id);
+  }));
+}
+function dilaOsoby(o) {
+  const tok = tokenyJmena(o.jmeno); if (!tok.length) return [];
+  const pk = kmenJmena(tok[tok.length - 1]);
+  const re = new RegExp("(^|[^a-z])" + pk.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const out = [];
+  EPOCHY.forEach(e => e.pamatky.forEach((pm, pi) => {
+    const d = doplnit(pm.popis), soubor = pm.img || d.soubor, nz = norm(pm.nazev);
+    const autor = nz.includes(":") ? nz.split(":")[0] : "";
+    let hit = autor.split(/[\s\-–]+/).filter(w => w.length >= 4).some(w => tok.some(t => w.startsWith(kmenJmena(t))));
+    if (!hit) hit = re.test(nz) || (o.epochy.includes(e.id) && re.test(norm(d.text)));
+    if (hit) out.push({ e, pi, nazev: pm.nazev, soubor, popis: d.text });
+  }));
+  return out;
+}
+function zminkyOsoby(o) {
+  const tok = tokenyJmena(o.jmeno); if (!tok.length) return [];
+  const re = new RegExp("(^|[^a-z])" + kmenJmena(tok[tok.length - 1]).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  return EPOCHY.filter(e => !o.epochy.includes(e.id) && re.test(norm([e.text, e.oblasti && Object.values(e.oblasti), e.cesko, e.strucne].flat(2).join(" ")))).map(e => e.id);
+}
+function otevriProfil(k) {
+  sestavOsoby();
+  const o = OSOBY.get(k); if (!o) return;
+  zavriTise($("#hledat"));
+  const dila = dilaOsoby(o), zm = zminkyOsoby(o);
+  const lnk = id => `<button type="button" class="lnk" data-ep="${id}" style="--c:${OBD[EP[id].obdobi].barva}"><i></i>${esc(EP[id].nazev)} <small style="color:var(--ink-faint)">${esc(EP[id].datace.replace(/^cca /, ""))}</small></button>`;
+  $("#profil-box").innerHTML = `<div class="prof-head"><span class="ico"><svg><use href="#i-person"/></svg></span><div><h3>${esc(o.jmeno)}</h3>${o.pozn.length ? `<p>${esc(o.pozn.join(" · "))}</p>` : ""}</div><button type="button" class="x" id="prof-x">Zavřít</button></div>
+    <div class="prof-body">
+      <h4>Epochy a směry</h4><div class="links">${o.epochy.map(lnk).join("")}</div>
+      <h4>Díla v aplikaci${dila.length ? ` (${dila.length})` : ""}</h4>
+      ${dila.length ? `<div class="prof-gal">${dila.map((x, i) => `<button type="button" data-i="${i}">${x.soubor ? `<img src="img/thumb/${esc(x.soubor)}" alt="" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='img/${esc(x.soubor)}'}">` : ""}<span>${esc(x.nazev)}<small>${esc(x.e.nazev)}</small></span></button>`).join("")}</div>` : `<p>V aplikaci zatím není obrazová ukázka této osobnosti – otevřete kartu epochy, kde je popsána.</p>`}
+      ${zm.length ? `<h4>Zmínky také v</h4><div class="links">${zm.slice(0, 10).map(lnk).join("")}</div>` : ""}
+      <p class="prof-note">Profil se skládá automaticky z karet epoch: díla se vyhledávají podle jména autora v názvech a popisech ukázek.</p>
+    </div>`;
+  const d = $("#profil");
+  if (!d.open) { d.showModal(); stavModal("profil"); }
+  lockUpdate();
+  $("#prof-x").addEventListener("click", () => d.close());
+  $$("#profil-box .lnk").forEach(b => b.addEventListener("click", () => { zavriTise(d); otevriEpochu(b.dataset.ep); }));
+  $$("#profil-box .prof-gal button").forEach(b => b.addEventListener("click", () => { const x = dila[+b.dataset.i]; zavriTise(d); otevriDilo(x.e.id, x.pi); }));
+  $("#profil-box .prof-body").scrollTop = 0;
+}
+function otevriDilo(epId, pi) {
+  const zpet = otevriEpochu(epId);
+  const gi = aktualniGal.findIndex(g => g.pi === pi);
+  const go = () => { bliknout($(`#det figure[data-pm="${pi}"]`)); if (gi > -1) lightbox(aktualniGal, gi); };
+  if (zpet) poPop = go; else setTimeout(go, 120);
+}
+$("#profil").addEventListener("click", ev => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
 
 /* ---------- univerzální vyhledávání (Ctrl+K nebo /) ----------
    Prohledává epochy, obrazové ukázky, osobnosti, události, body na mapě,
@@ -483,7 +760,10 @@ const SEKCE = [
   { id: "zdroje", nazev: "Zdroje a literatura", popis: "Použité knihy a odkazy." }
 ];
 let INDEX = null;
+const AUTORI = new Map(); // "epocha|index ukázky" → jména autorů (aby šlo dílo najít i podle křestního jména)
 function sestavIndex() {
+  sestavOsoby();
+  if (!AUTORI.size) OSOBY.forEach(os => dilaOsoby(os).forEach(x => { const k = x.e.id + "|" + x.pi; if (!AUTORI.has(k)) AUTORI.set(k, []); AUTORI.get(k).push(os.jmeno); }));
   const ix = [];
   const push = o => { o.hay = norm(o.hayRaw); delete o.hayRaw; ix.push(o); };
   EPOCHY.forEach(e => {
@@ -492,10 +772,11 @@ function sestavIndex() {
       hayRaw: [e.nazev, e.podtitul, e.datace, o.nazev, e.strucne, e.text, e.znaky, e.oblasti && Object.values(e.oblasti), (e.faze || []).map(f => f.nazev + " " + f.kdy), e.osobnosti, e.cesko, e.jung && e.jung.text, e.jung && e.jung.nazevPostoje, e.klima, e.pales].flat(3).filter(Boolean).join(" | "), primar: norm([e.nazev, e.podtitul].join(" ")) });
     (e.pamatky || []).forEach((pm, i) => {
       const d = doplnit(pm.popis); const soubor = pm.img || d.soubor;
-      push({ typ: "dilo", skupina: "Obrazové ukázky", id: e.id, pm: i, titul: pm.nazev, sub: `${e.nazev} · ${d.text}`, barva: o.barva, ikona: soubor ? `img/thumb/${soubor}` : null, zkr: "obr", vaha: 2, hayRaw: [pm.nazev, d.text].join(" | "), primar: norm(pm.nazev) });
+      const autori = (AUTORI.get(e.id + "|" + i) || []).join(" ");
+      push({ typ: "dilo", skupina: "Obrazové ukázky", id: e.id, pm: i, titul: pm.nazev, sub: `${e.nazev} · ${d.text}`, barva: o.barva, ikona: soubor ? `img/thumb/${soubor}` : null, zkr: "obr", vaha: 2, hayRaw: [pm.nazev, d.text, autori].join(" | "), primar: norm(pm.nazev + " " + autori) });
     });
-    (e.osobnosti || []).forEach(os => push({ typ: "osoba", skupina: "Osobnosti", id: e.id, titul: os, sub: `${e.nazev} · ${e.datace}`, barva: o.barva, ikona: null, zkr: "os", vaha: 2, hayRaw: os, primar: norm(os) }));
   });
+  OSOBY.forEach(os => push({ typ: "osoba", skupina: "Osobnosti", id: os.klic, titul: os.jmeno, sub: `Osobnost · ${os.epochy.map(id => EP[id].nazev).join(", ")}${os.pozn.length ? " · " + os.pozn.join(", ") : ""}`, barva: OBD[EP[os.epochy[0]].obdobi].barva, ikona: null, zkr: "os", vaha: 2.5, hayRaw: os.jmeno + " | " + os.pozn.join(" "), primar: norm(os.jmeno) }));
   UDALOSTI.forEach(u => push({ typ: "udalost", skupina: "Klima, astronomie a dějiny", id: u.id, titul: u.nazev, sub: `${fmtRokKratky(u.rok)} · ${u.kdy} – ${u.popis}`, barva: u.typ === "astro" ? "#E0A020" : u.typ === "klima" ? "var(--deep)" : "var(--clay)", ikona: null, zkr: TYP_NAZEV[u.typ].slice(0, 3), vaha: 2, hayRaw: [u.nazev, u.kdy, u.popis, u.umeni, TYP_NAZEV[u.typ]].join(" | "), primar: norm(u.nazev) }));
   MAPA_BODY.forEach(b => push({ typ: "misto", skupina: "Místa na mapě světa", id: b.id, titul: b.nazev, sub: `${b.kdy} – ${b.popis}`, barva: OBD[b.obdobi] ? OBD[b.obdobi].barva : null, ikona: null, zkr: "map", vaha: 2, hayRaw: [b.nazev, b.kdy, b.popis].join(" | "), primar: norm(b.nazev) }));
   DUCHOVE.forEach(d => push({ typ: "duch", skupina: "Duchové času (Páleš)", id: d.id, titul: `${d.symbol} ${d.jmeno} – ${d.planeta}`, sub: `${d.heslo} · ${d.obdobi}`, barva: d.barva, ikona: null, zkr: d.symbol, vaha: 1.5, hayRaw: [d.jmeno, d.planeta, d.heslo, d.charakter, d.umeni, d.obdobi].join(" | "), primar: norm(d.jmeno + " " + d.planeta) }));
@@ -581,24 +862,25 @@ function nastavAkt(i, scroll = true) {
 function otevriHledani(predvyplnit) {
   const dlg = $("#hledat"), inp = $("#srch-q");
   if (typeof predvyplnit === "string") inp.value = predvyplnit;
-  if (!dlg.open) dlg.showModal();
+  if (!dlg.open) { dlg.showModal(); stavModal("hledat"); }
+  lockUpdate();
   vykresliHledani();
   inp.focus(); inp.select();
 }
 function zavriHledani() { const dlg = $("#hledat"); if (dlg.open) dlg.close(); }
-function zavriDetail() { const d = $("#detail"); if (d.open) d.close(); }
 function naSekci(id, fn) {
-  zavriDetail(); zavriHledani();
-  const el = document.getElementById(id); if (!el) return;
-  el.scrollIntoView({ behavior: "smooth", block: "start" });
-  if (fn) setTimeout(fn, 400);
+  const jdi = () => { const el = document.getElementById(id); if (!el) return; el.scrollIntoView({ behavior: "smooth", block: "start" }); if (fn) setTimeout(fn, 400); };
+  $$("dialog").forEach(zavriTise); lockUpdate();
+  const d = hs().d || 0;
+  if (d > 0) { poPop = jdi; history.go(-d); } else jdi();
 }
 function bliknout(el) { if (!el) return; el.classList.add("hl"); el.scrollIntoView({ behavior: "smooth", block: "center" }); setTimeout(() => el.classList.remove("hl"), 2600); }
 function vyberVysledek(i) {
   const it = srchHits[i]; if (!it) return;
   switch (it.typ) {
-    case "epocha": case "osoba": zavriHledani(); otevriEpochu(it.id); break;
-    case "dilo": zavriHledani(); otevriEpochu(it.id); setTimeout(() => bliknout($(`#det figure[data-pm="${it.pm}"]`)), 120); break;
+    case "epocha": zavriTise($("#hledat")); otevriEpochu(it.id); break;
+    case "osoba": otevriProfil(it.id); break;
+    case "dilo": zavriTise($("#hledat")); otevriDilo(it.id, it.pm); break;
     case "udalost": naSekci("klima", () => bliknout($("#ud-" + it.id))); break;
     case "misto": naSekci("mapa", () => { mapaFiltr = null; $$("#mapa-filters .chip").forEach(x => x.classList.toggle("on", !x.dataset.era)); kresliBody(); ukazBod(it.id, $(`#mapa-body .pt[data-id="${it.id}"]`)); bliknout($("#mapa-card")); }); break;
     case "duch": naSekci("psychologie", () => { vyberDucha(it.id); const k = $("#kolo-svg"); if (k) k.scrollIntoView({ behavior: "smooth", block: "center" }); }); break;
@@ -625,6 +907,131 @@ function initHledani() {
   });
 }
 
+/* ---------- procvičování: kartičky, kvíz, porovnání ----------
+   Vše se skládá z dat epoch, nové epochy a ukázky se do procvičování dostanou samy. */
+function initProcvic() {
+  const box = $("#pr-box"), filtr = $("#pr-filtr"), typ = $("#pr-typ");
+  const VSE = EVROPA.concat(SVET);
+  filtr.innerHTML = `<option value="">všechna</option>` + OBDOBI.map(o => `<option value="${o.id}">${esc(o.nazev)}</option>`).join("") + `<option value="svet">umění mimo Evropu</option>`;
+  let tab = "karticky";
+  const pool = () => { const f = filtr.value; return VSE.filter(e => !f || (f === "svet" ? e.vrstva === "svet" : e.obdobi === f && e.vrstva === "evropa")); };
+  const ukazky = eps => eps.flatMap(e => galerieEpochy(e).map(g => ({ e, ...g })));
+  const lnkEp = e => `<button type="button" class="lnk" data-ep="${e.id}" style="--c:${OBD[e.obdobi].barva}"><i></i>Otevřít kartu: ${esc(e.nazev)}</button>`;
+  const navazLinky = el => $$(".lnk[data-ep]", el).forEach(b => b.addEventListener("click", ev => { ev.stopPropagation(); otevriEpochu(b.dataset.ep); }));
+
+  /* kartičky */
+  let deck = [], ki = 0;
+  function novyBalicek() { deck = zamichej(typ.value === "dila" ? ukazky(pool()) : pool()); ki = 0; }
+  function kresliKarticku() {
+    if (!deck.length) { box.innerHTML = `<p>Pro zvolené období nejsou žádné kartičky.</p>`; return; }
+    const x = deck[ki], e = typ.value === "dila" ? x.e : x, o = OBD[e.obdobi];
+    let f, b;
+    if (typ.value === "dila") {
+      f = `<img src="img/thumb/${esc(x.img)}" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='img/${esc(x.img)}'}"><p class="hint">Jak se dílo jmenuje, ke kterému slohu patří a co je pro ně typické?<br>Klepnutím kartu otočíte.</p>`;
+      b = `<h3>${esc(x.nazev)}</h3><p><span class="pill" style="background:${o.svetla};color:${o.barva}">${esc(e.nazev)}</span> <span style="color:var(--ink-soft);font-size:14px">${esc(e.datace)}</span></p><p>${esc(x.popis)}</p><p>${lnkEp(e)}</p>`;
+    } else {
+      f = `<span class="pill" style="background:${o.svetla};color:${o.barva}">${esc(o.nazev)}${e.vrstva === "svet" ? " · mimo Evropu" : ""}</span><h3>${esc(e.nazev)}</h3><p style="color:var(--ink-soft)">${esc(e.podtitul || "")}</p><p class="hint">Vybav si dataci, hlavní znaky, dvě díla a osobnosti.<br>Klepnutím kartu otočíte.</p>`;
+      const g = galerieEpochy(e);
+      b = `<h3>${esc(e.nazev)}</h3><p><b>${esc(e.datace)}</b> – ${esc(e.strucne)}</p><ul>${e.znaky.slice(0, 5).map(z => `<li>${esc(z)}</li>`).join("")}</ul>${g.length ? `<p><b>Díla:</b> ${g.slice(0, 4).map(x => esc(x.nazev)).join(" · ")}</p>` : ""}${e.osobnosti && e.osobnosti.length ? `<p><b>Osobnosti:</b> ${e.osobnosti.slice(0, 5).map(esc).join(", ")}</p>` : ""}<p>${lnkEp(e)}</p>`;
+    }
+    box.innerHTML = `<div class="flash" id="flash"><div class="flash-in" role="button" tabindex="0" aria-label="Otočit kartičku"><div class="flash-f" style="--c:${o.barva}">${f}</div><div class="flash-b" style="--c:${o.barva}">${b}</div></div></div>
+      <div class="flash-ctl"><button type="button" class="btn" id="fl-prev"><svg><use href="#i-left"/></svg>Předchozí</button><button type="button" class="btn" id="fl-flip">Otočit</button><span class="cnt">${ki + 1} / ${deck.length}</span><button type="button" class="btn" id="fl-next">Další<svg><use href="#i-right"/></svg></button><button type="button" class="btn" id="fl-mix">Zamíchat</button></div>`;
+    const fl = $("#flash"), otoc = () => fl.classList.toggle("flip");
+    $(".flash-in", fl).addEventListener("click", otoc);
+    $(".flash-in", fl).addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); otoc(); } });
+    $("#fl-flip").addEventListener("click", otoc);
+    $("#fl-prev").addEventListener("click", () => { ki = (ki - 1 + deck.length) % deck.length; kresliKarticku(); });
+    $("#fl-next").addEventListener("click", () => { ki = (ki + 1) % deck.length; kresliKarticku(); });
+    $("#fl-mix").addEventListener("click", () => { novyBalicek(); kresliKarticku(); });
+    navazLinky(box);
+  }
+
+  /* kvíz */
+  const N = 10;
+  let otazky = [], qi = 0, body = 0, chyby = [];
+  const blizke = (e, n = 3) => zamichej(VSE.filter(x => x.id !== e.id && x.vrstva === e.vrstva).sort((a, b) => Math.abs(a.od - e.od) - Math.abs(b.od - e.od)).slice(0, 9)).slice(0, n);
+  function otazka(e) {
+    const druhy = ["znak", "datace", "popis"];
+    const g = galerieEpochy(e); if (g.length) druhy.push("dilo", "dilo");
+    const os = (e.osobnosti || []).filter(x => !/anonym|kultura|komunit|stavitel/i.test(x));
+    if (os.length) druhy.push("osoba");
+    const druh = nahodny(druhy), dis = blizke(e);
+    const moznosti = (spravna, spatne) => zamichej([{ t: spravna, ok: true }, ...spatne.map(t => ({ t, ok: false }))]);
+    switch (druh) {
+      case "dilo": { const x = nahodny(g); return { e, q: "Ke které epoše nebo slohu patří toto dílo?", img: x.img, meta: "", opts: moznosti(e.nazev, dis.map(d => d.nazev)), vysvetleni: `${x.nazev} – ${e.nazev} (${e.datace}).` }; }
+      case "osoba": { const o1 = nahodny(os); return { e, q: `Ke které epoše nebo směru patří osobnost ${jmenoOsoby(o1)}?`, opts: moznosti(e.nazev, dis.map(d => d.nazev)), vysvetleni: `${jmenoOsoby(o1)} – ${e.nazev}.` }; }
+      case "datace": return { e, q: `Kdy se datuje ${e.nazev}?`, opts: moznosti(e.datace, dis.map(d => d.datace).filter(d => d !== e.datace)), vysvetleni: `${e.nazev}: ${e.datace}.` };
+      case "popis": {
+        const slova = norm(e.nazev).split(/[\s\-–]+/).filter(w => w.length > 3).map(w => w.slice(0, Math.max(4, w.length - 2)));
+        let t = e.strucne; slova.forEach(w => { t = t.split(/(\s+)/).map(tok => norm(tok).startsWith(w) ? "…" : tok).join(""); });
+        return { e, q: "Kterou epochu nebo sloh popisuje věta?", meta: `„${t}“`, opts: moznosti(e.nazev, dis.map(d => d.nazev)), vysvetleni: `${e.nazev} – ${e.strucne}` };
+      }
+      default: {
+        const z = nahodny(e.znaky), spatne = dis.map(d => nahodny(d.znaky)).filter(x => x !== z);
+        return { e, q: `Který znak je typický pro ${e.nazev}?`, opts: moznosti(z, spatne), vysvetleni: `Typické pro ${e.nazev}: ${e.znaky.slice(0, 3).join("; ")}.` };
+      }
+    }
+  }
+  function novyKviz() { const p = zamichej(pool()); otazky = []; for (let i = 0; i < N && p.length; i++) otazky.push(otazka(p[i % p.length])); qi = 0; body = 0; chyby = []; }
+  function kresliKviz() {
+    if (!otazky.length) { box.innerHTML = `<p>Pro zvolené období nejsou žádné otázky.</p>`; return; }
+    if (qi >= otazky.length) {
+      const pr = Math.round(body / otazky.length * 100);
+      box.innerHTML = `<div class="quiz"><div class="quiz-card"><p class="quiz-meta">Výsledek kvízu</p><p class="quiz-score">${body} / ${otazky.length} <small style="font-size:.45em;color:var(--ink-soft)">(${pr} %)</small></p><p>${pr >= 90 ? "Výborně – tohle k maturitě umíš." : pr >= 70 ? "Dobrá práce, zopakuj si chybné otázky." : pr >= 50 ? "Polovina je za tebou – projdi si karty epoch, kde jsi chyboval/a." : "Zkus si nejdřív projít kartičky a pak kvíz zopakuj."}</p>
+        ${chyby.length ? `<h4 style="margin:14px 0 4px;font:700 12.5px var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--deep)">Co si zopakovat</h4><ul class="quiz-wrong">${chyby.map(c => `<li>${esc(c.vysvetleni)} ${lnkEp(c.e)}</li>`).join("")}</ul>` : ""}
+        <div class="quiz-foot"><span></span><button type="button" class="btn" id="qz-new">Nový kvíz</button></div></div></div>`;
+      $("#qz-new").addEventListener("click", () => { novyKviz(); kresliKviz(); });
+      navazLinky(box); return;
+    }
+    const q = otazky[qi];
+    box.innerHTML = `<div class="quiz"><div class="quiz-prog"><i style="width:${qi / otazky.length * 100}%"></i></div><div class="quiz-card">
+      <p class="quiz-meta">Otázka ${qi + 1} z ${otazky.length} · body ${body}</p><p class="quiz-q">${esc(q.q)}</p>${q.meta ? `<p>${esc(q.meta)}</p>` : ""}
+      ${q.img ? `<img class="quiz-img" src="img/thumb/${esc(q.img)}" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='img/${esc(q.img)}'}">` : ""}
+      <div class="quiz-opts">${q.opts.map((o, i) => `<button type="button" data-i="${i}">${esc(o.t)}</button>`).join("")}</div>
+      <p class="quiz-fb" id="qz-fb" hidden></p>
+      <div class="quiz-foot"><button type="button" class="btn" id="qz-restart">Začít znovu</button><button type="button" class="btn" id="qz-next" hidden>${qi + 1 < otazky.length ? "Další otázka" : "Vyhodnotit"}<svg><use href="#i-right"/></svg></button></div></div></div>`;
+    $$(".quiz-opts button", box).forEach(b => b.addEventListener("click", () => {
+      const o = q.opts[+b.dataset.i];
+      $$(".quiz-opts button", box).forEach((x, i) => { x.disabled = true; if (q.opts[i].ok) x.classList.add("ok"); });
+      if (o.ok) body++; else { b.classList.add("bad"); chyby.push(q); }
+      const fb = $("#qz-fb"); fb.hidden = false; fb.innerHTML = `<b>${o.ok ? "Správně." : "Chyba."}</b> ${esc(q.vysvetleni)}`;
+      $("#qz-next").hidden = false; $("#qz-next").focus({ preventScroll: true });
+    }));
+    $("#qz-next").addEventListener("click", () => { qi++; kresliKviz(); });
+    $("#qz-restart").addEventListener("click", () => { novyKviz(); kresliKviz(); });
+  }
+
+  /* porovnání dvou epoch */
+  let cmpA = "baroko", cmpB = "klasicismus";
+  function kresliPorovnani() {
+    const opt = sel => OBDOBI.map(o => `<optgroup label="${esc(o.nazev)}">${EVROPA.filter(e => e.obdobi === o.id).map(e => `<option value="${e.id}"${e.id === sel ? " selected" : ""}>${esc(e.nazev)}</option>`).join("")}</optgroup>`).join("") + `<optgroup label="Mimo Evropu">${SVET.map(e => `<option value="${e.id}"${e.id === sel ? " selected" : ""}>${esc(e.nazev)}</option>`).join("")}</optgroup>`;
+    const A = EP[cmpA] || EVROPA[0], B = EP[cmpB] || EVROPA[1];
+    const radek = (lab, fn) => `<div class="lab">${lab}</div><div class="e0">${fn(A)}</div><div>${fn(B)}</div>`;
+    const ul = a => `<ul>${(a || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+    const jung = e => { const p = ((e.jung?.postoj ?? 0) + 1) / 2; return `<b>${esc(e.jung.nazevPostoje)}</b><div class="gauge" style="--p:${p}"></div><div class="gauge-lbl"><span>intro</span><span>extra</span></div>${esc(e.jung.funkce)}`; };
+    box.innerHTML = `<div class="pr-bar"><label>Epocha A <select id="cmp-a">${opt(A.id)}</select></label><label>Epocha B <select id="cmp-b">${opt(B.id)}</select></label></div>
+      <div class="cmp">${`<div class="lab"></div><div class="hd e0" style="--c:${OBD[A.obdobi].barva}">${esc(A.nazev)}</div><div class="hd" style="--c:${OBD[B.obdobi].barva}">${esc(B.nazev)}</div>`}
+      ${radek("Datace", e => esc(e.datace))}${radek("Stručně", e => esc(e.strucne))}${radek("Hlavní znaky", e => ul(e.znaky))}
+      ${radek("Architektura", e => esc(e.oblasti.architektura))}${radek("Sochařství", e => esc(e.oblasti.socharstvi))}${radek("Malířství", e => esc(e.oblasti.malirstvi))}
+      ${radek("Osobnosti", e => esc((e.osobnosti || []).join(", ")))}${radek("Jung – postoj a funkce", jung)}${radek("Klima a dějiny", e => esc(e.klima))}
+      ${radek("", e => lnkEp(e))}</div>`;
+    $("#cmp-a").addEventListener("change", ev => { cmpA = ev.target.value; kresliPorovnani(); });
+    $("#cmp-b").addEventListener("change", ev => { cmpB = ev.target.value; kresliPorovnani(); });
+    navazLinky(box);
+  }
+
+  function kresli() {
+    $$("#pr-tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === tab));
+    $("#pr-typ-lab").hidden = tab !== "karticky";
+    $("#pr-filtr-lab").hidden = tab === "porovnani";
+    if (tab === "karticky") kresliKarticku(); else if (tab === "kviz") kresliKviz(); else kresliPorovnani();
+  }
+  $$("#pr-tabs button").forEach(b => b.addEventListener("click", () => { tab = b.dataset.t; if (tab === "kviz" && !otazky.length) novyKviz(); kresli(); }));
+  filtr.addEventListener("change", () => { novyBalicek(); novyKviz(); kresli(); });
+  typ.addEventListener("change", () => { novyBalicek(); kresli(); });
+  novyBalicek(); kresli();
+}
+
 /* ---------- inicializace ---------- */
 function init() {
   initHledani();
@@ -632,9 +1039,15 @@ function init() {
   const tg = $(".nav-toggle"), nav = $("#menu");
   tg.addEventListener("click", () => { const o = nav.classList.toggle("open"); tg.setAttribute("aria-expanded", o); });
   $$("a", nav).forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
-  renderHero(); initOsa(); renderSeznam(); renderPrehled(); renderMapa(); renderPsych(); renderKlima();
+  renderHero(); initOsa(); renderSeznam(); renderPrehled(); renderMapa(); renderPsych(); renderKlima(); initProcvic();
+  const soc = $(".topbar .social"); if (soc) $("#nav-social").innerHTML = soc.innerHTML;
+  if (MAC) $("#srch-kb").innerHTML = `<kbd>⌘</kbd>+<kbd>K</kbd> nebo <kbd>/</kbd> otevře hledání odkudkoli`;
+  $("#btn-hledat").title = `Hledat v celé aplikaci (${MAC ? "⌘" : "Ctrl"}+K nebo /)`;
+  const up = $("#to-top");
+  up.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  window.addEventListener("scroll", () => up.classList.toggle("on", window.scrollY > 900), { passive: true });
   const h = location.hash.replace("#", "");
-  if (h && EP[h]) setTimeout(() => otevriEpochu(h), 200);
+  if (h && EP[h]) { try { history.replaceState(null, "", location.pathname + location.search); } catch (err) { /* nevadí */ } setTimeout(() => otevriEpochu(h), 200); }
   let t; window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(renderOsa, 150); });
 }
 document.addEventListener("DOMContentLoaded", init);

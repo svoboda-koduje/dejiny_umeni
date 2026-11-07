@@ -16,7 +16,11 @@ EPOCHY.push(
   cesko: "—",
   pamatky: [
     { img: "pravek_migrace_mapa.jpg", nazev: "Šíření člověka z Afriky", popis: "Mapa migrací Homo sapiens – umění vzniká souběžně na několika kontinentech." },
-    { img: "svet_sulawesi.jpg", nazev: "Jeskyně Leang Tedongnge (Sulawesi)", popis: "V této jeskyni je malba prasete bradavičnatého stará cca 45 500 let – nejstarší datovaná figurální malba světa." }
+    { img: "svet_sulawesi.jpg", nazev: "Jeskyně Leang Tedongnge (Sulawesi)", popis: "V této jeskyni je malba prasete bradavičnatého stará cca 45 500 let – nejstarší datovaná figurální malba světa." },
+    { img: "svet_capivara.jpg", nazev: "Serra da Capivara (Brazílie)", popis: "Skalní malby lovců a zvířat, nejstarší přes 10 000 let – největší soubor pravěkého umění Ameriky (UNESCO)." },
+    { img: "svet_bhimbetka.jpg", nazev: "Skalní úkryty Bhimbetka (Indie)", popis: "Malby od paleolitu po středověk – lovci, zvířata a tance (UNESCO)." },
+    { img: "svet_apollo11.jpg", nazev: "Jeskyně Apollo 11 (Namibie)", popis: "Malované kamenné destičky se zvířaty, cca 27 000 let – nejstarší figurální umění Afriky." },
+    { img: "svet_diepkloof.jpg", nazev: "Ryté pštrosí skořápky (Diepkloof, JAR)", popis: "Cca 60 000 let – nádoby na vodu zdobené opakovaným vzorem." }
   ],
   jung: { postoj: -0.9, nazevPostoje: "Uroboros", funkce: "Intuice & vnímání", text: "Počáteční stadium nediferencovaného vědomí, splynutí s přírodou – totéž ve všech kulturách." },
   klima: "Doba ledová; migrace člověka z Afriky (před 70–50 tisíci lety), kolonizace Austrálie (před 65–50 tisíci lety) a Ameriky (před 20–15 tisíci lety).",
@@ -37,7 +41,12 @@ EPOCHY.push(
   faze: [], osobnosti: ["Emily Kame Kngwarreye", "Albert Namatjira", "Clifford Possum"],
   cesko: "—",
   pamatky: [
-    { img: "svet_kakadu.jpg", nazev: "Rentgenový styl (Ubirr, Kakadu)", popis: "Arnhemská země – postavy a ryby malované tak, že jsou vidět kosti a vnitřní orgány skrz tělo." }
+    { img: "svet_kakadu.jpg", nazev: "Rentgenový styl (Ubirr, Kakadu)", popis: "Arnhemská země – postavy a ryby malované tak, že jsou vidět kosti a vnitřní orgány skrz tělo." },
+    { img: "svet_gwion.jpg", nazev: "Malby Gwion Gwion (Kimberley)", popis: "Štíhlé postavy se střapci a ozdobami, zřejmě přes 12 000 let staré." },
+    { img: "svet_murujuga.jpg", nazev: "Rytiny Murujuga (Burrup)", popis: "Až milion petroglyfů v západní Austrálii, nejstarší přes 40 000 let." },
+    { img: "svet_burrungkuy.jpg", nazev: "Burrungkuy – Nourlangie (Kakadu)", popis: "Skalní galerie s duchy a předky ze Snového času." },
+    { img: "svet_laura.jpg", nazev: "Split Rock u Laury (Queensland)", popis: "Malby dinga, lidí a duchů Quinkan – galerie Yalanjiů ve skalním převisu." },
+    { img: "svet_kura.jpg", nazev: "Malba na kůře (Arnhemská země)", popis: "Tradiční malba okrem na eukalyptové kůře s „rentgenovými“ zvířaty." }
   ],
   jung: { postoj: -0.8, nazevPostoje: "Participation mystique", funkce: "Intuice", text: "Snění jako živé kolektivní nevědomí: krajina, mýtus a obraz jsou jedno." },
   klima: "Vysychání australského vnitrozemí po době ledové; zatopení šíje k Nové Guineji.",
@@ -61,7 +70,11 @@ EPOCHY.push(
   cesko: "Sbírky asijského umění Národní galerie (palác Kinských), Náprstkovo muzeum.",
   pamatky: [
     { img: "svet_cina_terakota.jpg", nazev: "Terakotová armáda (Si-an)", popis: "Cca 210 př. n. l., 8 000 vojáků v životní velikosti." },
-    { img: "svet_cina_fankuan.jpg", nazev: "Fan Kchuan: Cestovatelé mezi horami a potoky", popis: "Cca 1000, Tchaj-pej – monumentální tušová krajina." }
+    { img: "svet_cina_fankuan.jpg", nazev: "Fan Kchuan: Cestovatelé mezi horami a potoky", popis: "Cca 1000, Tchaj-pej – monumentální tušová krajina." },
+    { img: "svet_cina_zakazane_mesto.jpg", nazev: "Zakázané město (Peking)", popis: "1406–1420 – císařský palác se 980 budovami a symbolickou žlutou střechou." },
+    { img: "svet_cina_ding.jpg", nazev: "Bronzová nádoba ding (dynastie Šang)", popis: "Obřadní trojnožka, cca 1300–1046 př. n. l., s maskou tchao-tchie." },
+    { img: "svet_cina_qingming.jpg", nazev: "Čang Ce-tuan: Na řece o svátku Čching-ming", popis: "Detail svitku z 12. stol. – pětimetrový obraz s tisíci postavami městského života dynastie Sung." },
+    { img: "svet_cina_mogao.jpg", nazev: "Jeskyně Mo-kao (Tun-chuang)", popis: "Buddhistické malby a sochy v 492 jeskyních, 4.–14. stol." }
   ],
   jung: { postoj: -0.5, nazevPostoje: "Introvertní intuice a prázdno", funkce: "Intuice & cítění", text: "Taoistická krajina: člověk je malý, příroda je celek; prázdno jako obraz nevědomí. Jung studoval I-ťing a čínskou alchymii (Tajemství zlatého květu)." },
   klima: "Monzunové cykly a povodně Žluté řeky určují dynastické cykly; sucho a chlad ve 3. a 17. století (pád Ming 1644) souvisí s malou dobou ledovou.",
@@ -84,7 +97,11 @@ EPOCHY.push(
   cesko: "Sbírky Náprstkova muzea a Národní galerie; indolog Vincenc Lesný, cestovatel Otakar Feistmantel.",
   pamatky: [
     { img: "svet_indie_tadz.jpg", nazev: "Tádž Mahal (Ágra)", popis: "1632–1653, mauzoleum Mumtáz Mahal – bílý mramor, symetrie, zahrada." },
-    { img: "svet_indie_siva.jpg", nazev: "Šiva Natarádža", popis: "Bronz Čóla, 11. století – kosmický tanec stvoření a zániku." }
+    { img: "svet_indie_siva.jpg", nazev: "Šiva Natarádža", popis: "Bronz Čóla, 11. století – kosmický tanec stvoření a zániku." },
+    { img: "svet_indie_knez.jpg", nazev: "Kněz-král z Mohendžodára", popis: "Steatit, cca 2000 př. n. l. – nejslavnější sochařské dílo harappské civilizace." },
+    { img: "svet_indie_sanchi.jpg", nazev: "Velká stúpa v Sánčí", popis: "3. stol. př. n. l. – 1. stol., buddhistická polokoule s reliéfními branami." },
+    { img: "svet_indie_adzanta.jpg", nazev: "Jeskyně Adžanta", popis: "Buddhistické nástěnné malby, 2. stol. př. n. l. – 6. stol. (UNESCO)." },
+    { img: "svet_indie_khadzuraho.jpg", nazev: "Chrámy v Khadžuráhu", popis: "Cca 950–1050 – hinduistické chrámy pokryté tisíci soch." }
   ],
   jung: { postoj: -0.4, nazevPostoje: "Mandala a celistvost", funkce: "Intuice & cítění", text: "Jung převzal pojem mandaly z indické tradice: chrámový půdorys i obraz jsou mapou psýché směřující ke středu (Self)." },
   klima: "Monzun jako osud: sucho 4,2 tisíce let zničilo Harappu; mughalský rozkvět v 17. století uprostřed malé doby ledové.",
@@ -106,7 +123,12 @@ EPOCHY.push(
   osobnosti: ["Kýros II.", "Dareios I.", "Chosrau I."],
   cesko: "—",
   pamatky: [
-    { img: "svet_persie_persepolis.jpg", nazev: "Apadana v Persepoli", popis: "Reliéfy poddaných národů, 5. stol. př. n. l." }
+    { img: "svet_persie_persepolis.jpg", nazev: "Apadana v Persepoli", popis: "Reliéfy poddaných národů, 5. stol. př. n. l." },
+    { img: "svet_persie_behistun.jpg", nazev: "Behistunský nápis", popis: "Dareios I., cca 520 př. n. l. – reliéf a nápis ve třech jazycích klíčem k rozluštění klínopisu." },
+    { img: "svet_persie_pasargady.jpg", nazev: "Kýrova hrobka (Pasargady)", popis: "6. stol. př. n. l. – prostá kamenná stavba zakladatele perské říše." },
+    { img: "svet_persie_naks_rostam.jpg", nazev: "Nakš-e Rostam", popis: "Skalní hrobky achaimenovských králů a sásánovské reliéfy u Persepole." },
+    { img: "svet_persie_lucistnici.jpg", nazev: "Vlys lučištníků (Súsy)", popis: "Glazované cihly, cca 510 př. n. l., Louvre – „nesmrtelní“ královské gardy." },
+    { img: "svet_persie_ktesifon.jpg", nazev: "Taq Kasra (Ktésifón)", popis: "6. stol. – obří cihlová klenba sásánovského paláce." }
   ],
   jung: { postoj: 0.4, nazevPostoje: "Řád říše", funkce: "Myšlení & cítění", text: "Zoroastrovský dualismus světla a tmy je podle Junga jedním z kořenů představy Stínu a psychických protikladů." },
   klima: "Suché náhorní plošiny; kanáty (podzemní kanály) jako odpověď na nedostatek vody.",
@@ -130,7 +152,11 @@ EPOCHY.push(
   cesko: "Islámské sbírky Náprstkova muzea; maurský sloh v 19. století (Jubilejní synagoga v Praze).",
   pamatky: [
     { img: "svet_islam_alhambra.jpg", nazev: "Alhambra – Lví dvůr", popis: "Granada, 14. století – muqarnas, štuk, voda a ornament." },
-    { img: "svet_islam_cordoba.jpg", nazev: "Mešita v Córdobě", popis: "Od 785 – 856 sloupů s pruhovanými oblouky." }
+    { img: "svet_islam_cordoba.jpg", nazev: "Mešita v Córdobě", popis: "Od 785 – 856 sloupů s pruhovanými oblouky." },
+    { img: "islam_skalni_dom.jpg", nazev: "Skalní dóm (Jeruzalém)", popis: "691 – nejstarší dochovaná islámská stavba se zlatou kupolí a mozaikami." },
+    { img: "islam_sulejmanie.jpg", nazev: "Sinan: mešita Süleymaniye (Istanbul)", popis: "1550–1557 – vrchol osmanské architektury." },
+    { img: "islam_lotfollah.jpg", nazev: "Mešita šejcha Lotfolláha (Isfahán)", popis: "1603–1619 – kupole pokrytá glazovanými dlaždicemi." },
+    { img: "islam_behzad.jpg", nazev: "Behzád: Stavba pevnosti Charnak", popis: "Cca 1494, miniatura k Nizámího Chamse – herátská škola, živé postavy při práci." }
   ],
   jung: { postoj: -0.7, nazevPostoje: "Introvertní abstrakce", funkce: "Myšlení & intuice", text: "Worringerova abstrakce v nejčistší podobě: nekonečný geometrický vzor jako kompenzace pouště a jako obraz transcendentna. Ornament = mandala bez středu." },
   klima: "Poušť a oázy; středověké optimum umožnilo rozkvět Bagdádu a Córdoby; osmanský rozmach za malé doby ledové.",
@@ -154,7 +180,11 @@ EPOCHY.push(
   cesko: "Japonské dřevořezy ve sbírce Národní galerie (Joe Hloucha), Emil Orlik v Japonsku (1900), vliv na Muchu.",
   pamatky: [
     { img: "japonsko_hokusai.jpg", nazev: "Hokusai: Velká vlna u Kanagawy", popis: "Cca 1831, dřevořez – vlna jako pohlcující nevědomí, Fudži jako Self." },
-    { img: "svet_japonsko_ryoanji.jpg", nazev: "Rjóandži – zenová zahrada", popis: "Kjóto, cca 1500 – 15 kamenů v hrabaném štěrku." }
+    { img: "svet_japonsko_ryoanji.jpg", nazev: "Rjóandži – zenová zahrada", popis: "Kjóto, cca 1500 – 15 kamenů v hrabaném štěrku." },
+    { img: "svet_japonsko_horjudzi.jpg", nazev: "Chrám Hórjúdži (Nara)", popis: "Kolem 700 – nejstarší dřevěné stavby světa." },
+    { img: "svet_japonsko_kinkakudzi.jpg", nazev: "Zlatý pavilon Kinkakudži (Kjóto)", popis: "1397 (obnoven 1955) – zenový chrám odrážející se v jezírku." },
+    { img: "svet_japonsko_hirosige.jpg", nazev: "Hirošige: Náhlá přeháňka nad mostem Ohaši", popis: "1857 – dřevořez ze série Sto pohledů na Edo, inspiroval Van Gogha." },
+    { img: "svet_japonsko_utamaro.jpg", nazev: "Utamaro: portrét krásky", popis: "90. léta 18. stol. – ukijo-e, japonský dřevořez „pomíjivého světa“." }
   ],
   jung: { postoj: -0.6, nazevPostoje: "Introvertní reflexe přírody", funkce: "Intuice & vnímání (Ni-Se)", text: "Umění jako cesta k vnitřnímu klidu a harmonii s kosmem: Velká vlna – srážka ega s nevědomím; hora Fudži – neochvějný střed (Self). Prázdno zenu odpovídá Jungovu zájmu o východní meditaci." },
   klima: "Zemětřesení, tsunami a sopka Fudži (erupce 1707) jako stálá hrozba; izolace za období Edo; malá doba ledová a hladomory.",
@@ -178,7 +208,11 @@ EPOCHY.push(
   cesko: "Sbírky Náprstkova muzea; Alberto Vojtěch Frič (sběratel a cestovatel).",
   pamatky: [
     { img: "svet_maya_chichen.jpg", nazev: "El Castillo (Chichén Itzá)", popis: "Kukulkánova pyramida, 9.–12. stol. – o rovnodennosti se po schodišti „plazí had“ ze stínů." },
-    { img: "svet_olmek_hlava.jpg", nazev: "Olmécká kolosální hlava", popis: "San Lorenzo, cca 900 př. n. l., čedič, 2–3 m." }
+    { img: "svet_olmek_hlava.jpg", nazev: "Olmécká kolosální hlava", popis: "San Lorenzo, cca 900 př. n. l., čedič, 2–3 m." },
+    { img: "svet_mezo_teotihuacan.jpg", nazev: "Teotihuacán – Pyramida Slunce", popis: "Cca 200 – největší město předkolumbovské Ameriky." },
+    { img: "svet_mezo_palenque.jpg", nazev: "Palenque – Chrám nápisů", popis: "7. stol. – mayská pyramida s hrobkou krále Pakala." },
+    { img: "svet_mezo_kamen_slunce.jpg", nazev: "Aztécký Kámen slunce", popis: "Cca 1500, Mexiko – kamenný disk s kosmologickými symboly." },
+    { img: "svet_mezo_bonampak.jpg", nazev: "Fresky v Bonampaku", popis: "Cca 790 – mayské nástěnné malby slavností a bitvy (na snímku replika v Národním antropologickém muzeu v Mexiku)." }
   ],
   jung: { postoj: 0.4, nazevPostoje: "Kolektivní řád a oběť", funkce: "Myšlení & cítění", text: "Monumentální regulace davu podobná Egyptu; kult krve a Slunce jako archetyp hrdiny živícího kosmos (Neumann: patriarchální vědomí)." },
   klima: "Mayský kolaps (800–950) způsobilo série suchých období; Aztékové stavěli město na jezeře s plovoucími zahradami (chinampy).",
@@ -201,7 +235,11 @@ EPOCHY.push(
   cesko: "—",
   pamatky: [
     { img: "svet_andy_machupicchu.jpg", nazev: "Machu Picchu", popis: "Cca 1450, Peru – incké město v Andách." },
-    { img: "svet_andy_nazca.jpg", nazev: "Kolibřík z Nazca", popis: "Geoglyf dlouhý 93 m, cca 200 př. n. l. – 600 n. l." }
+    { img: "svet_andy_nazca.jpg", nazev: "Kolibřík z Nazca", popis: "Geoglyf dlouhý 93 m, cca 200 př. n. l. – 600 n. l." },
+    { img: "svet_andy_brana_slunce.jpg", nazev: "Brána Slunce (Tiwanaku)", popis: "Cca 500–1000, Bolívie – monolitický portál s reliéfem božstva." },
+    { img: "svet_andy_moche.jpg", nazev: "Portrétní nádoba kultury Moche", popis: "Cca 100–800, Peru – keramika s realistickými lidskými tvářemi." },
+    { img: "svet_andy_paracas.jpg", nazev: "Textilie z Paracasu", popis: "Cca 200 př. n. l. – vyšívané pohřební pláště s postavami šamanů." },
+    { img: "svet_andy_sacsayhuaman.jpg", nazev: "Sacsayhuamán (Cusco)", popis: "15. stol. – incké hradby z obřích, přesně spasovaných kamenů." }
   ],
   jung: { postoj: 0.2, nazevPostoje: "Řád v krajině", funkce: "Myšlení & vnímání", text: "Geoglyfy jsou určeny bohům, ne lidem – obraz jako rituál v měřítku krajiny (paralela s land artem)." },
   klima: "El Niño – periodické záplavy a sucha – ničilo pobřežní kultury (Moche kolem 600); terasy Inků jako adaptace na hory.",
@@ -225,7 +263,11 @@ EPOCHY.push(
   cesko: "Náprstkovo muzeum (sbírky Emila Holuba), sbírka afrického umění Národní galerie.",
   pamatky: [
     { img: "svet_afrika_ife.jpg", nazev: "Hlava krále z Ife", popis: "Bronz, 12.–14. století – naturalistický portrét." },
-    { img: "svet_afrika_benin.jpg", nazev: "Beninský bronzový reliéf", popis: "16.–17. století, Britské muzeum." }
+    { img: "svet_afrika_benin.jpg", nazev: "Beninský bronzový reliéf", popis: "16.–17. století, Britské muzeum." },
+    { img: "svet_afrika_nok.jpg", nazev: "Terakota kultury Nok (Nigérie)", popis: "Cca 500 př. n. l. – 200 n. l. – nejstarší figurální sochy subsaharské Afriky." },
+    { img: "svet_afrika_zimbabwe.jpg", nazev: "Velké Zimbabwe", popis: "11.–15. stol. – kamenné hradby bez malty, centrum obchodní říše." },
+    { img: "svet_afrika_lalibela.jpg", nazev: "Lalibela – kostel sv. Jiří (Etiopie)", popis: "Cca 1200 – kostel ve tvaru kříže vytesaný do skály." },
+    { img: "svet_afrika_djenne.jpg", nazev: "Velká mešita v Djenné (Mali)", popis: "1907 na základech ze 13. stol. – největší stavba z nepálených cihel na světě." }
   ],
   jung: { postoj: -0.3, nazevPostoje: "Maska a rituál", funkce: "Intuice & cítění", text: "Maska jako Persona a zároveň nástroj setkání s duchy (nevědomím); evropská avantgarda si v ní vypůjčila přímý přístup k archetypu." },
   klima: "Vysychání Sahary oddělilo subsaharskou Afriku; Sahel a obchodní cesty zlata; Velké Zimbabwe zaniklo pravděpodobně vyčerpáním půdy a suchem.",
@@ -248,7 +290,11 @@ EPOCHY.push(
   cesko: "—",
   pamatky: [
     { img: "svet_angkor.jpg", nazev: "Angkor Vat", popis: "Kambodža, 12. století – pět věží hory Méru." },
-    { img: "svet_borobudur.jpg", nazev: "Borobudur", popis: "Jáva, cca 800 – stupňovitá mandala." }
+    { img: "svet_borobudur.jpg", nazev: "Borobudur", popis: "Jáva, cca 800 – stupňovitá mandala." },
+    { img: "svet_asie_bayon.jpg", nazev: "Bayon (Angkor Thom)", popis: "Kolem 1200 – chrám s 216 obřími kamennými tvářemi." },
+    { img: "svet_asie_prambanan.jpg", nazev: "Prambanan (Jáva)", popis: "9. stol. – hinduistický chrámový komplex se štíhlými věžemi." },
+    { img: "svet_asie_bagan.jpg", nazev: "Bagan (Myanmar)", popis: "11.–13. stol. – pláň s více než 2000 buddhistickými chrámy." },
+    { img: "svet_asie_myson.jpg", nazev: "Mỹ Sơn (Vietnam)", popis: "4.–13. stol. – cihlové chrámy čamského království." }
   ],
   jung: { postoj: -0.5, nazevPostoje: "Mandala v krajině", funkce: "Intuice & myšlení", text: "Chrám jako mandala, jíž se prochází: architektura individuace od okraje ke středu." },
   klima: "Středověké optimum umožnilo Angkor; monzunové sucho a povodně ve 14.–15. století (doložené letokruhy) zničily zavlažování a vedly k opuštění města (1431).",
@@ -270,7 +316,12 @@ EPOCHY.push(
   osobnosti: [],
   cesko: "Sbírky Náprstkova muzea.",
   pamatky: [
-    { img: "svet_oceanie_moai.jpg", nazev: "Moai na Rapa Nui", popis: "1250–1500 – sochy předků z tufu, až 10 m." }
+    { img: "svet_oceanie_moai.jpg", nazev: "Moai na Rapa Nui", popis: "1250–1500 – sochy předků z tufu, až 10 m." },
+    { img: "svet_oceanie_nan_madol.jpg", nazev: "Nan Madol (Pohnpei)", popis: "Cca 1200–1600 – město na umělých ostrůvcích z čedičových sloupů." },
+    { img: "svet_oceanie_wharenui.jpg", nazev: "Maorský dům setkání (wharenui)", popis: "Dřevořezby předků s perleťovýma očima – Nový Zéland." },
+    { img: "svet_oceanie_malagan.jpg", nazev: "Maska malagan (Nové Irsko)", popis: "Malovaná dřevěná řezba k obřadům za zemřelé." },
+    { img: "svet_oceanie_bis.jpg", nazev: "Kůly bis (Asmatové, Nová Guinea)", popis: "Vyřezávané kůly předků, vysoké až 6 m." },
+    { img: "svet_oceanie_ku.jpg", nazev: "Havajský bůh Kū", popis: "Dřevěná socha boha války, cca 1790–1810, Britské muzeum." }
   ],
   jung: { postoj: -0.4, nazevPostoje: "Předkové a mana", funkce: "Intuice & cítění", text: "Moai jako zhmotnění archetypu Otce-předka strážícího komunitu; kolaps ostrova jako varování před jednostranností." },
   klima: "Odlesnění Rapa Nui a malá doba ledová; El Niño a hurikány.",

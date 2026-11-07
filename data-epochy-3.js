@@ -20,7 +20,10 @@ EPOCHY.push(
   pamatky: [
     { img: "romantismus_friedrich.jpg", nazev: "C. D. Friedrich: Poutník nad mořem mlhy", popis: "1818, Hamburk – jedinec před nekonečnem; obraz individuace." },
     { img: "romantismus_delacroix.jpg", nazev: "Delacroix: Svoboda vede lid na barikády", popis: "1830, Louvre – červencová revoluce, barva a pohyb." },
-    { img: "romantismus_turner.jpg", nazev: "Turner: Déšť, pára a rychlost", popis: "1844, Londýn – železnice v mlze; předchůdce impresionismu." }
+    { img: "romantismus_turner.jpg", nazev: "Turner: Déšť, pára a rychlost", popis: "1844, Londýn – železnice v mlze; předchůdce impresionismu." },
+    { img: "romantismus_gericault_vor.jpg", nazev: "Géricault: Vor Medúzy", popis: "1818–1819, Louvre – skutečná námořní tragédie jako monumentální drama." },
+    { img: "romantismus_goya_3kveten.jpg", nazev: "Goya: 3. květen 1808", popis: "1814, Prado – poprava povstalců jako výkřik proti válce." },
+    { img: "romantismus_manes_josefina.jpg", nazev: "Josef Mánes: Josefina", popis: "1855, Národní galerie – romantický ideál české dívky." }
   ],
   jung: { postoj: -0.7, nazevPostoje: "Introvertní cítění a intuice", funkce: "Cítění & intuice (Fi-Ni)",
     text: "Kompenzace osvícenského rozumu: návrat citu, nevědomí a přírody. Poutník zády k divákovi = absence Persony, hledání Self v mlze nevědomí. Objev snu, šílenství a Stínu (Goya)." },
@@ -45,7 +48,11 @@ EPOCHY.push(
   cesko: "Národní divadlo (1868–83), Národní muzeum, Rudolfinum, dostavba sv. Víta (1873–1929); Pardubice – novorenesanční radnice (Jan Vejrych, 1894) a Zelená brána.",
   pamatky: [
     { img: "historismus_narodni_divadlo.jpg", nazev: "Národní divadlo v Praze", popis: "Josef Zítek, 1868–1881 (po požáru znovu 1883) – novorenesance, „zlatá kaplička“." },
-    { img: "historismus_pardubice_radnice.jpg", nazev: "Pardubická radnice", popis: "Jan Vejrych, 1892–1894 – novorenesance se sgrafity." }
+    { img: "historismus_pardubice_radnice.jpg", nazev: "Pardubická radnice", popis: "Jan Vejrych, 1892–1894 – novorenesance se sgrafity." },
+    { img: "historismus_westminster.jpg", nazev: "Westminsterský palác (Londýn)", popis: "Charles Barry a A. W. N. Pugin, 1840–1870 – novogotické sídlo parlamentu." },
+    { img: "historismus_neuschwanstein.jpg", nazev: "Neuschwanstein (Bavorsko)", popis: "1869–1886 – romantický hrad krále Ludvíka II., kulisa středověkého snu." },
+    { img: "historismus_narodni_muzeum.jpg", nazev: "Národní muzeum (Praha)", popis: "Josef Schulz, 1885–1891 – novorenesanční palác na Václavském náměstí." },
+    { img: "historismus_myslbek_vaclav.jpg", nazev: "Myslbek: pomník sv. Václava", popis: "1887–1924, Václavské náměstí – národní symbol v podobě jezdecké sochy." }
   ],
   jung: { postoj: 0.3, nazevPostoje: "Extravertní cítění (konvence)", funkce: "Cítění & vnímání",
     text: "Persona 19. století: fasáda tradice skrývá průmyslovou realitu. Kompenzací je únik do idealizované minulosti; nevědomí se ohlásí v symbolismu a expresionismu." },
@@ -71,7 +78,10 @@ EPOCHY.push(
   pamatky: [
     { img: "realismus_marak.jpg", nazev: "Julius Mařák: Šumavský prales", popis: "Cca 1890 – česká krajinomalba realismu." },
     { img: "realismus_manes_orloj.jpg", nazev: "Josef Mánes: kalendárium orloje", popis: "1866, Staroměstský orloj – měsíce jako výjevy z venkovského života." },
-    { img: "realismus_courbet.jpg", nazev: "Courbet: Kameníci", popis: "1849 (zničeno 1945) – dělníci v životní velikosti." }
+    { img: "realismus_courbet.jpg", nazev: "Courbet: Kameníci", popis: "1849 (zničeno 1945) – dělníci v životní velikosti." },
+    { img: "realismus_millet_sberacky.jpg", nazev: "Millet: Sběračky klasů", popis: "1857, Musée d'Orsay – těžká práce venkovských žen bez idealizace." },
+    { img: "realismus_courbet_ornans.jpg", nazev: "Courbet: Pohřeb v Ornans", popis: "1849–1850, Musée d'Orsay – obyčejný venkovský pohřeb v měřítku historické malby." },
+    { img: "realismus_daumier_vagon.jpg", nazev: "Daumier: Vagon třetí třídy", popis: "Cca 1862–1864 – chudí cestující průmyslové doby." }
   ],
   jung: { postoj: 0.7, nazevPostoje: "Extravertní vnímání", funkce: "Vnímání & myšlení (Se-Te)",
     text: "Fakta bez hodnocení: mimořádná citlivost na materiální realitu. Pozitivismus jako vědomý postoj; kompenzací bude symbolismus a expresionismus." },
@@ -97,7 +107,11 @@ EPOCHY.push(
   pamatky: [
     { img: "impresionismus_manet_bar.jpg", nazev: "Manet: Bar ve Folies-Bergère", popis: "1882, Londýn – zrcadlo, moderní život, poslední Manetovo velké dílo." },
     { img: "experiment_impresionismus.jpg", nazev: "Žákovský malířský experiment: impresionismus", popis: "Kája Samková – parafráze Manetova Baru (SPŠE Pardubice)." },
-    { img: "impresionismus_monet_imprese.jpg", nazev: "Monet: Imprese, východ slunce", popis: "1872, Musée Marmottan – obraz, který dal směru jméno." }
+    { img: "impresionismus_monet_imprese.jpg", nazev: "Monet: Imprese, východ slunce", popis: "1872, Musée Marmottan – obraz, který dal směru jméno." },
+    { img: "impresionismus_renoir_moulin.jpg", nazev: "Renoir: Bál v Moulin de la Galette", popis: "1876, Musée d'Orsay – sluneční skvrny na tanečnících montmartrské zahrady." },
+    { img: "impresionismus_degas_tridy.jpg", nazev: "Degas: Taneční hodina", popis: "1874, Musée d'Orsay – baletky zachycené jako náhodný výsek okamžiku." },
+    { img: "impresionismus_monet_lekniny.jpg", nazev: "Monet: Lekníny", popis: "Pozdní série ze zahrady v Giverny – světlo a odraz se mění v téměř abstraktní plochu." },
+    { img: "impresionismus_slavicek.jpg", nazev: "Antonín Slavíček: Eliščin most", popis: "Kolem 1906 – Praha ve světle a vzduchu, český impresionismus v rychlých tazích štětce." }
   ],
   jung: { postoj: 0.9, nazevPostoje: "Extravertní vnímání", funkce: "Vnímání (Se) & cítění",
     text: "Cele zaměřeno na vnější svět, přijímaný bez filtru: mistrovství prchavého okamžiku světla. Jednostrannost však vede k hledání hloubky – postimpresionismus a symbolismus jako kompenzace." },
@@ -123,7 +137,11 @@ EPOCHY.push(
   pamatky: [
     { img: "postimpresionismus_van_gogh.jpg", nazev: "Van Gogh: Hvězdná noc", popis: "1889, MoMA – expresivní tahy, nebe jako vír." },
     { img: "postimpresionismus_cezanne.jpg", nazev: "Cézanne: Hora Sainte-Victoire", popis: "1890–1906 – stavba obrazu z barevných ploch." },
-    { img: "postimpresionismus_munch.jpg", nazev: "Munch: Výkřik", popis: "1893, Oslo – úzkost moderního člověka; rudá obloha (možná Krakatoa)." }
+    { img: "postimpresionismus_munch.jpg", nazev: "Munch: Výkřik", popis: "1893, Oslo – úzkost moderního člověka; rudá obloha (možná Krakatoa)." },
+    { img: "postimpresionismus_slunecnice.jpg", nazev: "Van Gogh: Slunečnice", popis: "1888 – série zátiší pro Gauguinův pokoj v Arles; žlutá jako barva přátelství." },
+    { img: "postimpresionismus_gauguin.jpg", nazev: "Gauguin: Odkud přicházíme? Kdo jsme? Kam jdeme?", popis: "1897–1898 – filozofický obraz o lidském životě z Tahiti." },
+    { img: "postimpresionismus_seurat.jpg", nazev: "Seurat: Nedělní odpoledne na ostrově La Grande Jatte", popis: "1884–1886, Art Institute of Chicago – pointilismus z tisíců barevných teček." },
+    { img: "postimpresionismus_lautrec.jpg", nazev: "Toulouse-Lautrec: Moulin Rouge – La Goulue", popis: "Plakát, 1891 – plochá barva a silná linie, předzvěst moderní grafiky." }
   ],
   jung: { postoj: -0.5, nazevPostoje: "Obrat k introverzi", funkce: "Intuice & cítění / myšlení (Cézanne)",
     text: "Barva a tvar přestávají popisovat objekt a stávají se nositeli vnitřního stavu subjektu – začátek introvertního proudu moderny. Van Gogh: setkání ega s přívalem nevědomí; Cézanne: introvertní myšlení hledá strukturu za jevy." },
@@ -144,13 +162,16 @@ EPOCHY.push(
   znaky: ["Vlnící se linie, ornament, plošnost", "Stylizace rostlin, žena, vlasy", "Nové materiály: sklo, litina, keramika", "Užité umění, plakát, reklama", "Gesamtkunstwerk – jednotný styl života"],
   oblasti: { architektura: "Horta (dům Tassel), Guimard (metro), Gaudí (Sagrada Família, Casa Batlló), Wagner, Olbrich (Secese ve Vídni), Obecní dům v Praze, Fantova hala hlavního nádraží, Kotěra.", socharstvi: "František Bílek, Stanislav Sucharda, Ladislav Šaloun (pomník Jana Husa), Jan Štursa.", malirstvi: "Klimt, Mucha, Beardsley, Preisler, Švabinský, Toulouse-Lautrec (plakát), Munch (symbolismus)." },
   faze: [{ nazev: "Raná (Arts and Crafts)", kdy: "1880–1895" }, { nazev: "Vrcholná", kdy: "1895–1905" }, { nazev: "Pozdní – geometrická (Wagner, Hoffmann)", kdy: "1905–1914" }],
-  osobnosti: ["Alfons Mucha", "Gustav Klimt", "Antoni Gaudí", "Victor Horta", "Otto Wagner", "Jan Kotěra", "František Bílek"],
+  osobnosti: ["Alfons Mucha", "Gustav Klimt", "Antoni Gaudí", "Victor Horta", "Otto Wagner", "Jan Kotěra", "František Bílek", "Gustave Moreau (symbolismus)"],
   cesko: "Obecní dům (1912), Fantova hala, hotel Central a Evropa, Kotěra (Národní dům v Prostějově), Mucha (okno ve sv. Vítu, Slovanská epopej); Pardubice – secesní domy na třídě Míru, Kotěrovo dílo v Hradci Králové.",
   pamatky: [
     { img: "secese_mucha.jpg", nazev: "Mucha: plakát Gismonda", popis: "1894, litografie pro Sarah Bernhardt – „styl Mucha“ zrozen přes noc." },
     { img: "secese_klimt.jpg", nazev: "Klimt: Polibek", popis: "1907–08, Vídeň – zlato, ornament, symbol." },
     { img: "secese_gaudi.jpg", nazev: "Gaudí: Sagrada Família", popis: "Barcelona, od 1882 – organická architektura." },
-    { img: "secese_obecni_dum.jpg", nazev: "Obecní dům v Praze", popis: "Balšánek a Polívka, 1905–1912 – vrchol české secese." }
+    { img: "secese_obecni_dum.jpg", nazev: "Obecní dům v Praze", popis: "Balšánek a Polívka, 1905–1912 – vrchol české secese." },
+    { img: "secese_horta_tassel.jpg", nazev: "Horta: Hôtel Tassel (Brusel)", popis: "1893–1894 – první secesní dům: železné „rostliny“ na schodišti." },
+    { img: "secese_wagner_majolika.jpg", nazev: "Otto Wagner: Majolikový dům (Vídeň)", popis: "1898–1899 – fasáda z keramických obkladů s květinovým vzorem." },
+    { img: "secese_moreau_zjeveni.jpg", nazev: "Gustave Moreau: Zjevení (Salome)", popis: "1876 – symbolismus: Salome vidí zjevení hlavy Jana Křtitele." }
   ],
   jung: { postoj: -0.2, nazevPostoje: "Vyrovnaná náladovost", funkce: "Cítění & vnímání",
     text: "Secesní linie se vyhýbá citovým výkyvům i silnému vypětí vůle – kompenzace strojového světa organickým ornamentem a archetypem ženy-přírody (Anima). Symbolismus otevírá dveře nevědomí." },
@@ -174,7 +195,12 @@ EPOCHY.push(
   osobnosti: ["Henri Matisse", "André Derain", "Maurice de Vlaminck", "Raoul Dufy"],
   cesko: "Vliv fauvismu na skupinu Osma (Kubišta, Filla, Procházka) po roce 1907.",
   pamatky: [
-    { img: "fauvismus_matisse_tanec.jpg", nazev: "Matisse: Tanec", popis: "1910, Ermitáž – tři barvy, kruh, energie." }
+    { img: "fauvismus_matisse_tanec.jpg", nazev: "Matisse: Tanec", popis: "1910, Ermitáž – tři barvy, kruh, energie." },
+    { img: "fauvismus_matisse_klobouk.jpg", nazev: "Matisse: Žena s kloboukem", popis: "1905 – portrét manželky, který na Podzimním salonu odstartoval skandál „divokých šelem“." },
+    { img: "fauvismus_matisse_radost.jpg", nazev: "Matisse: Radost ze života", popis: "1905–1906, Barnes Foundation – idylická krajina v čistých barvách." },
+    { img: "fauvismus_derain_collioure.jpg", nazev: "Derain: Přístav v Collioure", popis: "1905 – letní malování s Matissem, barva rozložená do mozaiky skvrn." },
+    { img: "fauvismus_derain_londyn.jpg", nazev: "Derain: Most Charing Cross", popis: "1906 – Londýn v nepřirozených, zářivých barvách." },
+    { img: "fauvismus_dufy.jpg", nazev: "Dufy: Ulice ozdobená vlajkami", popis: "1906 – národní svátek v Le Havru, tricolóry jako barevný rytmus." }
   ],
   jung: { postoj: 0.5, nazevPostoje: "Extravertní cítění a vnímání", funkce: "Cítění & vnímání",
     text: "Dionýská radost barvy: smyslové splynutí s objektem (Einfühlung), ale už osvobozené od jeho popisu." },
@@ -200,7 +226,10 @@ EPOCHY.push(
   pamatky: [
     { img: "kubismus_filla.jpg", nazev: "Emil Filla: Zátiší (1914)", popis: "Člen Osmy na cestě od expresionismu ke kubismu." },
     { img: "expresionismus_kirchner.jpg", nazev: "Kirchner: Ulice, Berlín", popis: "1913, MoMA – nervozita velkoměsta." },
-    { img: "expresionismus_kubista.jpg", nazev: "Kubišta: Sv. Šebestián", popis: "1912, Národní galerie – autoportrét jako mučedník." }
+    { img: "expresionismus_kubista.jpg", nazev: "Kubišta: Sv. Šebestián", popis: "1912, Národní galerie – autoportrét jako mučedník." },
+    { img: "expresionismus_marc_kun.jpg", nazev: "Franz Marc: Modrý kůň I", popis: "1911, Lenbachhaus – zvíře jako duchovní symbol; skupina Modrý jezdec." },
+    { img: "expresionismus_schiele.jpg", nazev: "Egon Schiele: Autoportrét s mochyní", popis: "1912, Leopold Museum – nervní linie a sebezpytující pohled vídeňského expresionismu." },
+    { img: "expresionismus_kirchner_zeny.jpg", nazev: "Kirchner: Pět žen na ulici", popis: "1913 – velkoměsto jako ostré, zelenavé siluety; skupina Die Brücke." }
   ],
   jung: { postoj: -0.8, nazevPostoje: "Introvertní cítění", funkce: "Cítění & intuice (Fi-Ni)",
     text: "Deformace vnějšího světa dává průchod vnitřnímu výkřiku úzkosti traumatizované duše. Kompenzace odcizeného industriálního světa; setkání se Stínem války." },
@@ -221,12 +250,15 @@ EPOCHY.push(
   znaky: ["Geometrický rozklad tvaru, fasety", "Více pohledů najednou", "Potlačená barva (analytický), koláž (syntetický)", "Obraz jako konstrukce, ne iluze", "Český kubismus v architektuře a designu"],
   oblasti: { architektura: "Josef Gočár (U Černé Matky Boží, lázně Bohdaneč), Pavel Janák, Josef Chochol (domy pod Vyšehradem) – jediná kubistická architektura na světě.", socharstvi: "Picasso (Hlava ženy 1909), Archipenko, Lipchitz; Otto Gutfreund.", malirstvi: "Picasso, Braque, Gris, Léger, Delaunay (orfismus); Filla, Kubišta, Čapek, Kupka (cesta k abstrakci)." },
   faze: [{ nazev: "Protokubismus", kdy: "1907–1909" }, { nazev: "Analytický", kdy: "1909–1912" }, { nazev: "Syntetický", kdy: "1912–1919" }],
-  osobnosti: ["Pablo Picasso", "Georges Braque", "Juan Gris", "Emil Filla", "Otto Gutfreund", "Josef Gočár", "Pavel Janák"],
+  osobnosti: ["Pablo Picasso", "Georges Braque", "Juan Gris", "Emil Filla", "Otto Gutfreund", "Josef Gočár", "Pavel Janák", "Josef Chochol"],
   cesko: "Dům U Černé Matky Boží (1912), Kovařovicova vila (Chochol), lázeňský dům v Lázních Bohdaneč u Pardubic (Gočár 1913), kubistický nábytek (Artěl), Gutfreundova Úzkost.",
   pamatky: [
     { img: "kubismus_picasso.jpg", nazev: "Picasso: Tři hudebníci", popis: "1921, MoMA – syntetický kubismus: plošné tvary jako koláž. (Avignonské slečny z r. 1907, jimiž kubismus začal, jsou dosud autorsky chráněné.)" },
     { img: "kubismus_gocar.jpg", nazev: "Gočár: dům U Černé Matky Boží", popis: "Praha, 1911–12 – kubistická architektura." },
-    { img: "kubismus_bohdanec.jpg", nazev: "Gočár: lázeňský dům v Bohdanči", popis: "1913 – kubismus u Pardubic." }
+    { img: "kubismus_bohdanec.jpg", nazev: "Gočár: lázeňský dům v Bohdanči", popis: "1913 – kubismus u Pardubic." },
+    { img: "kubismus_gris_picasso.jpg", nazev: "Juan Gris: Portrét Pabla Picassa", popis: "1912, Art Institute of Chicago – syntetický kubismus jako pocta příteli." },
+    { img: "kubismus_chochol_dum.jpg", nazev: "Josef Chochol: kubistický dům pod Vyšehradem", popis: "1913–1914, Praha – tvar fasády rozložený do krystalických ploch." },
+    { img: "kubismus_lampa.jpg", nazev: "Kubistická lampa (Praha)", popis: "Emil Králíček, 1913, Jungmannovo náměstí – jediná kubistická pouliční lampa na světě." }
   ],
   jung: { postoj: -0.6, nazevPostoje: "Introvertní myšlení", funkce: "Myšlení & intuice (Ti-Ni)",
     text: "Podrobení vnější reality myšlenkové dekonstrukci: konceptuální umění redukované na esenciální struktury. Odpovídá nové fyzice (relativita, atom) – rozklad hmoty na struktury." },
@@ -246,10 +278,15 @@ EPOCHY.push(
   znaky: ["Pohyb, rychlost, simultánnost", "Stroj, automobil, město, elektřina", "Silové linie, rozfázování pohybu", "Manifesty, provokace, typografie", "Oslava války a techniky"],
   oblasti: { architektura: "Antonio Sant'Elia (vize Città Nuova, 1914) – nerealizované návrhy.", socharstvi: "Umberto Boccioni (Jedinečné formy kontinuity v prostoru).", malirstvi: "Boccioni, Balla, Carrà, Severini, Russolo." },
   faze: [{ nazev: "Manifest", kdy: "1909" }, { nazev: "Vrchol", kdy: "1910–1915" }, { nazev: "Druhý futurismus", kdy: "1918–1930" }],
-  osobnosti: ["F. T. Marinetti", "Umberto Boccioni", "Giacomo Balla", "Antonio Sant'Elia"],
+  osobnosti: ["F. T. Marinetti", "Umberto Boccioni", "Giacomo Balla", "Antonio Sant'Elia", "Luigi Russolo"],
   cesko: "Kubišta (Vlak v horách), Kupka (Klávesy piana), Devětsil a poetismus přejímají fascinaci technikou.",
   pamatky: [
-    { img: "futurismus_boccioni.jpg", nazev: "Boccioni: Jedinečné formy kontinuity v prostoru", popis: "1913, bronz – pohyb ztělesněný." }
+    { img: "futurismus_boccioni.jpg", nazev: "Boccioni: Jedinečné formy kontinuity v prostoru", popis: "1913, bronz – pohyb ztělesněný." },
+    { img: "futurismus_boccioni_mesto.jpg", nazev: "Boccioni: Město vstává", popis: "1910, MoMA – energie stavby nového města, kůň a lidé v pohybu." },
+    { img: "futurismus_boccioni_stavy.jpg", nazev: "Boccioni: Stavy mysli – Loučení", popis: "1911 – kubistický rozklad tvaru spojený s pohybem a nádražním ruchem." },
+    { img: "futurismus_russolo_auto.jpg", nazev: "Russolo: Dynamismus automobilu", popis: "1912–1913, Centre Pompidou – rychlost znázorněná opakovanými klíny." },
+    { img: "futurismus_santelia.jpg", nazev: "Sant'Elia: Nové město", popis: "1914 – kresby futuristické metropole s mrakodrapy, výtahy a mosty." },
+    { img: "futurismus_marinetti.jpg", nazev: "Marinetti: Zang Tumb Tumb", popis: "1914 – „osvobozená slova“: typografie jako zvuk války." }
   ],
   jung: { postoj: 0.9, nazevPostoje: "Hyper-extraverze", funkce: "Vnímání & myšlení (Se-Te)",
     text: "Extravertní proud moderny: plné ztotožnění s technologickou realitou a její dynamikou. Stín – oslava války – ukazuje nebezpečí jednostrannosti bez vnitřní reflexe." },
@@ -275,7 +312,10 @@ EPOCHY.push(
   pamatky: [
     { img: "abstrakce_af_klint.jpg", nazev: "Hilma af Klint: Labuť č. 17", popis: "1915 – kruh jako mandala sjednocující protiklady; dílo utajené až do 80. let." },
     { img: "abstrakce_kupka.jpg", nazev: "Kupka: Amorfa – Dvoubarevná fuga", popis: "1912, Národní galerie – první veřejně vystavená abstrakce." },
-    { img: "abstrakce_malevic.jpg", nazev: "Malevič: Černý čtverec", popis: "1915, Petrohrad – „nula formy“, ikona nové doby." }
+    { img: "abstrakce_malevic.jpg", nazev: "Malevič: Černý čtverec", popis: "1915, Petrohrad – „nula formy“, ikona nové doby." },
+    { img: "abstrakce_kandinsky_kompozice.jpg", nazev: "Kandinskij: Kompozice VII", popis: "1913, Treťjakovská galerie – barva a tvar jako hudba bez předmětu." },
+    { img: "abstrakce_mondrian.jpg", nazev: "Mondrian: Kompozice s červenou, modrou a žlutou", popis: "1930 – neoplasticismus: pravý úhel a tři základní barvy." },
+    { img: "abstrakce_klee.jpg", nazev: "Paul Klee: Senecio", popis: "1922, Kunstmuseum Basel – hlava složená z barevných ploch, dětsky hravá geometrie." }
   ],
   jung: { postoj: -0.9, nazevPostoje: "Introvertní intuice a myšlení", funkce: "Intuice & myšlení (Ni-Ti)",
     text: "Rezignace na vnější objekt ve prospěch čistých duchovních sil – archetyp kosmického řádu. Kruhy a mřížky fungují jako mandaly integrující protiklady v době totální destrukce vnějších hodnot (válka)." },
@@ -296,10 +336,15 @@ EPOCHY.push(
   znaky: ["Anti-umění, nonsens, náhoda", "Ready-made, koláž, fotomontáž", "Performance, kabaret, manifest", "Ironie a provokace", "Reakce na válku"],
   oblasti: { architektura: "—", socharstvi: "Duchamp (Fontána, Kolo od bicyklu), Arp (biomorfní reliéfy), Schwitters (Merzbau).", malirstvi: "Picabia, Ernst (koláže), Höch, Hausmann, Heartfield (fotomontáž)." },
   faze: [{ nazev: "Curych", kdy: "1916–1919" }, { nazev: "Berlín / Paříž / New York", kdy: "1918–1923" }],
-  osobnosti: ["Marcel Duchamp", "Tristan Tzara", "Hans Arp", "Kurt Schwitters", "Hannah Höch"],
+  osobnosti: ["Marcel Duchamp", "Tristan Tzara", "Hans Arp", "Kurt Schwitters", "Hannah Höch", "Francis Picabia", "Sophie Taeuber-Arp", "Hugo Ball"],
   cesko: "Dadaistické prvky v Devětsilu a poetismu (Teige, Nezval, Štyrský), Osvobozené divadlo (Voskovec a Werich).",
   pamatky: [
-    { img: "dada_duchamp.jpg", nazev: "Duchamp: Fontána", popis: "1917 (replika) – ready-made, který změnil definici umění." }
+    { img: "dada_duchamp.jpg", nazev: "Duchamp: Fontána", popis: "1917 (replika) – ready-made, který změnil definici umění." },
+    { img: "dada_hugo_ball.jpg", nazev: "Hugo Ball v kostýmu (Cabaret Voltaire)", popis: "Curych 1916 – přednes zvukové básně Karawane v kartonovém kostýmu." },
+    { img: "dada_cabaret_voltaire.jpg", nazev: "Cabaret Voltaire (Curych)", popis: "Dům ve Spiegelgasse, kde dada roku 1916 vzniklo; dnes opět kabaret a muzeum." },
+    { img: "dada_picabia_oko.jpg", nazev: "Picabia: Kakodylové oko", popis: "1921, Centre Pompidou – obraz popsaný podpisy a vzkazy přátel." },
+    { img: "dada_taeuber_hlava.jpg", nazev: "Sophie Taeuber-Arp: Dada hlava", popis: "1920 – malovaná dřevěná hlava, portrét i loutka zároveň." },
+    { img: "dada_soiree.jpg", nazev: "Schwitters a van Doesburg: Kleine Dada Soirée", popis: "Plakát, 1922 – typografický chaos jako manifest." }
   ],
   jung: { postoj: -0.4, nazevPostoje: "Trickster", funkce: "Intuice (Ne) & myšlení",
     text: "Archetyp šibala (trickstera): převrácení hodnot, náhoda jako hlas nevědomí. Kompenzace kolektivní hrůzy z války smíchem a absurditou; alchymistické nigredo – rozklad starých forem." },
@@ -320,12 +365,15 @@ EPOCHY.push(
   znaky: ["Forma sleduje funkci, bez ornamentu", "Nové materiály: beton, ocel, sklo", "Geometrie, pravý úhel, základní barvy", "Typografie, fotomontáž, design", "Sociální program – bydlení pro všechny"],
   oblasti: { architektura: "Gropius (Bauhaus Dessau), Mies (Tugendhat, Barcelonský pavilon), Le Corbusier (Savoye), Rietveld; Fuchs (Brno), Havlíček a Honzík (Všeobecný penzijní ústav), Gočár (Hradec Králové, Grand hotel Pardubice), Krejcar, Baťa Zlín.", socharstvi: "Tatlin, Gabo, Pevsner, Moholy-Nagy (světelný modulátor); Pešánek.", malirstvi: "Malevič, Lisickij, Rodčenko (fotografie, plakát), Mondrian, Albers, Klee; Sutnar (design), Teige (typografie)." },
   faze: [{ nazev: "Ruský konstruktivismus", kdy: "1917–1930" }, { nazev: "Bauhaus", kdy: "1919–1933" }, { nazev: "Mezinárodní styl / funkcionalismus", kdy: "1925–1939" }],
-  osobnosti: ["Vladimir Tatlin", "El Lisickij", "Walter Gropius", "Mies van der Rohe", "Le Corbusier", "Bohuslav Fuchs", "Josef Gočár", "Karel Teige"],
+  osobnosti: ["Vladimir Tatlin", "El Lisickij", "Walter Gropius", "Mies van der Rohe", "Le Corbusier", "Bohuslav Fuchs", "Josef Gočár", "Karel Teige", "Gerrit Rietveld"],
   cesko: "Vila Tugendhat (UNESCO), Veletržní palác, osada Baba, Zlín, Gočárův Hradec Králové; Pardubice – Grand hotel (Gočár 1931), Janákovo krematorium (1923), automatické mlýny (Gočár 1910, dnes galerie).",
   pamatky: [
     { img: "funkcionalismus_tugendhat.jpg", nazev: "Vila Tugendhat (Brno)", popis: "Mies van der Rohe, 1929–30 – ikona funkcionalismu, UNESCO." },
     { img: "funkcionalismus_grand_pardubice.jpg", nazev: "Gočár: Grand hotel Pardubice", popis: "1927–31 – funkcionalismus v našem městě." },
-    { img: "konstruktivismus_tatlin.jpg", nazev: "Tatlin: Věž III. internacionály", popis: "Model 1919–20 – nikdy nepostavená spirála nové doby." }
+    { img: "konstruktivismus_tatlin.jpg", nazev: "Tatlin: Věž III. internacionály", popis: "Model 1919–20 – nikdy nepostavená spirála nové doby." },
+    { img: "konstruktivismus_bauhaus.jpg", nazev: "Bauhaus v Desavě", popis: "Walter Gropius, 1925–1926 – škola i manifest funkcionalismu: sklo, beton, asymetrie." },
+    { img: "konstruktivismus_lisickij.jpg", nazev: "El Lisickij: Klínem rudým bij bílé", popis: "Plakát, 1919 – politické poselství jen pomocí geometrických tvarů." },
+    { img: "konstruktivismus_rietveld.jpg", nazev: "Rietveld: Schröderův dům (Utrecht)", popis: "1924 – architektura skupiny De Stijl: plochy a linie v základních barvách." }
   ],
   jung: { postoj: 0.8, nazevPostoje: "Extravertní myšlení", funkce: "Myšlení & vnímání (Te-Se)",
     text: "Racionální propojení umění s průmyslem a sociálním inženýrstvím za účelem transformace vnější společnosti. Persona nové doby; stín – totalitní zneužití (stalinismus, nacismus)." },
@@ -350,7 +398,11 @@ EPOCHY.push(
   cesko: "Josef Šíma, Georges Kars, Kupka v Paříži; Josef Lada jako český naivní klasik.",
   pamatky: [
     { img: "naivni_rousseau.jpg", nazev: "Rousseau: Sen", popis: "1910, MoMA – naivní džungle a měsíční svit." },
-    { img: "parizska_chagall.jpg", nazev: "Chagall: Já a vesnice", popis: "1911, MoMA – sen a vzpomínka." }
+    { img: "parizska_chagall.jpg", nazev: "Chagall: Já a vesnice", popis: "1911, MoMA – sen a vzpomínka." },
+    { img: "parizska_modigliani.jpg", nazev: "Modigliani: Jeanne Hébuterne", popis: "1918 – protáhlé tvary a mandlové oči, jemná melancholie." },
+    { img: "parizska_modigliani_akt.jpg", nazev: "Modigliani: Ležící akt", popis: "1917 – klasické téma s ostrou linií a teplou barvou." },
+    { img: "parizska_soutine.jpg", nazev: "Soutine: Hovězí trup", popis: "1925 – expresivní malba masa podle Rembrandta." },
+    { img: "parizska_rousseau_tygr.jpg", nazev: "Rousseau: Překvapení! (Tygr v bouři)", popis: "1891, National Gallery – naivní malíř a jeho vysněná džungle." }
   ],
   jung: { postoj: -0.5, nazevPostoje: "Introvertní cítění", funkce: "Cítění & intuice",
     text: "Intimní lyrický projev, poezie forem – introvertní citový typ, který se nepodřizuje davu ani programu. Naivní umění = přímý přístup k dětské, nezkažené obraznosti." },
@@ -371,12 +423,15 @@ EPOCHY.push(
   znaky: ["Sen, nevědomí, psychoanalýza", "Automatismus, náhoda, frotáž, koláž", "Veristická snová malba (Dalí, Magritte)", "Objekt, „náhodné setkání“ nesouvisejících věcí", "Erotika, humor, tajemství"],
   oblasti: { architektura: "—", socharstvi: "Giacometti, Arp, Oppenheimová, objekty (Dalí: Telefon-humr).", malirstvi: "Dalí, Magritte, Ernst, Miró, Tanguy, Delvaux, de Chirico (metafyzická malba); Štyrský, Toyen, Šíma, Muzika." },
   faze: [{ nazev: "Manifest a automatismus", kdy: "1924–1929" }, { nazev: "Veristický surrealismus", kdy: "1929–1939" }, { nazev: "Válka a exil", kdy: "1939–1950" }],
-  osobnosti: ["André Breton", "Salvador Dalí", "René Magritte", "Max Ernst", "Joan Miró", "Toyen", "Jindřich Štyrský"],
+  osobnosti: ["André Breton", "Salvador Dalí", "René Magritte", "Max Ernst", "Joan Miró", "Toyen", "Jindřich Štyrský", "Frida Kahlo", "Claude Cahun", "Paul Nash"],
   cesko: "Surrealistická skupina v ČSR (1934), Toyen, Štyrský, Nezval, Teige; po válce Medek, Švankmajer, Skupina Ra.",
   pamatky: [
     { img: "surrealismus_magritte.jpg", nazev: "Magritte: Syn člověka", popis: "1964 – buřinka a jablko: Persona a vpád potlačené přírody." },
     { img: "surrealismus_dali.jpg", nazev: "Dalí: Persistence paměti", popis: "1931, MoMA – měkké hodiny, čas jako sen." },
-    { img: "surrealismus_toyen.jpg", nazev: "Toyen: Spící", popis: "1937 – česká surrealistka světového významu." }
+    { img: "surrealismus_toyen.jpg", nazev: "Toyen: Spící", popis: "1937 – česká surrealistka světového významu." },
+    { img: "surrealismus_cahun.jpg", nazev: "Claude Cahun: Trénuji, nelíbej mě", popis: "Cca 1927 – fotografický autoportrét v kostýmu siláka; surrealistická hra s maskou a identitou." },
+    { img: "surrealismus_nash.jpg", nazev: "Paul Nash: Mrtvé moře (Totes Meer)", popis: "1940–1941, Tate – vraky letadel jako zamrzlé vlny, snová vize války." },
+    { img: "surrealismus_las_pozas.jpg", nazev: "Las Pozas (Xilitla, Mexiko)", popis: "Edward James, 1949–1984 – surrealistická zahrada betonových sloupů a schodišť v džungli." }
   ],
   jung: { postoj: -0.9, nazevPostoje: "Introvertní intuice", funkce: "Intuice & cítění (Ni-Fi)",
     text: "Nejúplnější vyjádření introvertního obratu: snové vize a automatické kresby jako metoda aktivní imaginace, integrace vytěsněných komplexů, setkání se Stínem a Animou. Magrittův oblek = Persona, jablko = vpád nevědomí." },
@@ -402,7 +457,10 @@ EPOCHY.push(
   pamatky: [
     { img: "abstraktni_expresionismus_pollock.jpg", nazev: "Pollock: Katedrála", popis: "1947, Dallas – dripping; malba jako rituální pole aktivní imaginace." },
     { img: "abstraktni_rothko.jpg", nazev: "Rothko: Oranžová, červená, žlutá", popis: "1961 – barevné pole jako kontemplace." },
-    { img: "informel_medek.jpg", nazev: "Medek: obraz z období informelu", popis: "Konec 50. a 60. léta – český informel: drásaná hmota barvy, znak, tíseň (Velké jídlo, 1956; Signály)." }
+    { img: "informel_medek.jpg", nazev: "Medek: obraz z období informelu", popis: "Konec 50. a 60. léta – český informel: drásaná hmota barvy, znak, tíseň (Velké jídlo, 1956; Signály)." },
+    { img: "abstraktni_rothko_kaple.jpg", nazev: "Rothkova kaple (Houston)", popis: "1971 – osmiboká kaple pro 14 tmavých obrazů Marka Rothka, prostor k meditaci." },
+    { img: "abstraktni_pollock_dum.jpg", nazev: "Dům a ateliér Pollocka a Krasnerové", popis: "East Hampton – podlaha stodoly, na níž Pollock kapal barvu; dnes muzeum." },
+    { img: "abstraktni_tapies.jpg", nazev: "Fundació Antoni Tàpies (Barcelona)", popis: "Budova s Tàpiesovou drátěnou plastikou Mrak a židle (1990) na střeše." }
   ],
   jung: { postoj: -1, nazevPostoje: "Extrémní introverze", funkce: "Intuice & cítění (Ni-Fi)",
     text: "Alchymistické nigredo: rozbití formy jako rozpad starého kánonu. Malba jako rituální pole, v němž umělec projektuje archetypy z hlubin nevědomí bez kontroly rozumu; návrat k individuální duši po kolektivní katastrofě." },
@@ -428,7 +486,10 @@ EPOCHY.push(
   pamatky: [
     { img: "popart_warhol.jpg", nazev: "Warhol: Západ slunce", popis: "1972, sítotisk – opakovaný obraz zbavený subjektivní hloubky." },
     { img: "popart_warhol_campbell.jpg", nazev: "Warhol: Campbellovy polévky", popis: "1962, MoMA – 32 pláten, zboží jako ikona." },
-    { img: "popart_lichtenstein.jpg", nazev: "Lichtenstein: Whaam!", popis: "1963, Tate – komiks a rastr v muzeu." }
+    { img: "popart_lichtenstein.jpg", nazev: "Lichtenstein: Whaam!", popis: "1963, Tate – komiks a rastr v muzeu." },
+    { img: "popart_lichtenstein_hlava.jpg", nazev: "Lichtenstein: Barcelonská hlava", popis: "1992, Barcelona – komiksová hlava jako 15 m vysoká plastika." },
+    { img: "popart_oldenburg_kornout.jpg", nazev: "Oldenburg a van Bruggen: Spadlý kornout (Kolín n. R.)", popis: "2001 – obří zmrzlina „spadlá“ na střechu obchodního domu." },
+    { img: "popart_oldenburg_lahev.jpg", nazev: "Oldenburg a van Bruggen: Láhev se vzkazem (Middlesbrough)", popis: "1993 – zvětšený každodenní předmět, typické pop-artové gesto." }
   ],
   jung: { postoj: 1, nazevPostoje: "Extravertní vnímání", funkce: "Vnímání & myšlení (Se-Te)",
     text: "Totální ztotožnění s povrchem reality a mechanickou reprodukcí: absolutní splynutí s archetypem Persony v davu spotřebitelů. Umění nezrcadlí hloubku, ale prázdnotu a masky své doby – to je jeho výpověď." },
@@ -449,11 +510,15 @@ EPOCHY.push(
   znaky: ["Optická iluze pohybu, vibrace", "Geometrie, moaré, kontrast", "Skutečný pohyb: mobil, motor, vítr", "Světlo, kybernetika, počítač", "Divák jako součást díla"],
   oblasti: { architektura: "Světelné a kinetické fasády, Schöfferova věž (Liège 1961).", socharstvi: "Calder, Tinguely, Schöffer, Soto, Le Parc; Pešánek, Demartini, Malich.", malirstvi: "Vasarely, Riley, Anuszkiewicz; Sýkora, Kratina." },
   faze: [{ nazev: "Předchůdci (Calder, Pešánek)", kdy: "1930–1950" }, { nazev: "Vrchol op artu", kdy: "1960–1970" }],
-  osobnosti: ["Victor Vasarely", "Bridget Riley", "Alexander Calder", "Jean Tinguely", "Zdeněk Sýkora", "Zdeněk Pešánek"],
+  osobnosti: ["Victor Vasarely", "Bridget Riley", "Alexander Calder", "Jean Tinguely", "Zdeněk Sýkora", "Zdeněk Pešánek", "Karel Malich", "Yaacov Agam"],
   cesko: "Zdeněk Pešánek (světelně-kinetické plastiky, 1930), Zdeněk Sýkora (počítačové struktury 1964), Radoslav Kratina (variabily), Hugo Demartini.",
   pamatky: [
     { img: "opart_vasarely.jpg", nazev: "Vasarely: Vega", popis: "1968 – vypouklá koule z mřížky." },
-    { img: "opart_sykora.jpg", nazev: "Sýkora: Linie", popis: "Od r. 1964 černobílé struktury komponované s pomocí počítače, od 70. let barevné Linie (na ukázce)." }
+    { img: "opart_sykora.jpg", nazev: "Sýkora: Linie", popis: "Od r. 1964 černobílé struktury komponované s pomocí počítače, od 70. let barevné Linie (na ukázce)." },
+    { img: "kineticke_calder.jpg", nazev: "Calder: Člověk (L'Homme), Montréal", popis: "1967 – ocelový stabil pro Expo 67; Calder je i vynálezcem pohyblivých „mobilů“." },
+    { img: "kineticke_tinguely.jpg", nazev: "Tinguely: Fasnachtsbrunnen (Basilej)", popis: "1977 – kašna z pohyblivých strojů, které stříkají vodu." },
+    { img: "kineticke_tinguely_heureka.jpg", nazev: "Tinguely: Heureka (Curych)", popis: "1964 – stroj, který se pohybuje „k ničemu“: kinetická plastika jako ironie technického pokroku." },
+    { img: "kineticke_agam.jpg", nazev: "Agam: Oheň a voda (Tel Aviv)", popis: "1986 – otáčivá kašna izraelského průkopníka kinetického umění." }
   ],
   jung: { postoj: 0.6, nazevPostoje: "Extravertní myšlení a vnímání", funkce: "Myšlení & vnímání",
     text: "Racionální, vědecký přístup k vnímání – umění jako experiment s okem a strojem. Divák je vtažen do hry; objekt se osamostatňuje od umělce." },
@@ -478,7 +543,11 @@ EPOCHY.push(
   cesko: "Knížák (Aktual), Kovanda, Mlčoch, Štembera, Miler; Křižovnická škola čistého humoru bez vtipu; Ruller (8. 8. 88).",
   pamatky: [
     { img: "performance_beuys.jpg", nazev: "Beuys: Jak vysvětlit obrazy mrtvému zajíci", popis: "1965, Düsseldorf – performance s medem a zlatem." },
-    { img: "performance_kovanda.jpg", nazev: "Kovanda: Kontakt", popis: "1977, Praha – nenápadná akce v ulicích." }
+    { img: "performance_kovanda.jpg", nazev: "Kovanda: Kontakt", popis: "1977, Praha – nenápadná akce v ulicích." },
+    { img: "performance_abramovic.jpg", nazev: "Abramović: Umělkyně je přítomna", popis: "MoMA 2010 – 736 hodin tichého sedění naproti návštěvníkům." },
+    { img: "performance_beuys_duby.jpg", nazev: "Beuys: 7000 dubů (Kassel)", popis: "1982–1987 – sociální plastika: ke každému stromu čedičový sloupek." },
+    { img: "performance_fluxus.jpg", nazev: "Fluxus (1964)", popis: "Hnutí Fluxus spojovalo hudbu, poezii a akci; z jeho happeningů vyrostla performance." },
+    { img: "performance_paik.jpg", nazev: "Nam June Paik: videoplastika", popis: "Průkopník videoartu – sochy a věže z televizorů (od 60. let)." }
   ],
   jung: { postoj: -0.2, nazevPostoje: "Rituál a šaman", funkce: "Intuice & cítění",
     text: "Návrat k rituálu a šamanovi (Beuys): umění opět jako obřad, ne zboží – kompenzace pop-artové Persony. Tělo jako místo setkání vědomí a nevědomí; kolektivní účast jako obnova participation mystique." },
@@ -499,11 +568,15 @@ EPOCHY.push(
   znaky: ["Krajina jako materiál i galerie", "Monumentální zásahy nebo pomíjivé stopy", "Průmyslový materiál, seriálnost (minimalismus)", "Dokumentace fotografií", "Ekologické vědomí, čas, eroze"],
   oblasti: { architektura: "Minimalistická architektura (Ando, Zumthor), krajinářské parky.", socharstvi: "Judd, Andre, Serra (ocelové plechy), Smithson, Heizer, Long, Goldsworthy; Kafka, Ságlová.", malirstvi: "Stella, Agnes Martin, Ryman (monochrom)." },
   faze: [{ nazev: "Minimalismus", kdy: "1963–1975" }, { nazev: "Land art", kdy: "1968–1985" }],
-  osobnosti: ["Robert Smithson", "Christo a Jeanne-Claude", "Richard Long", "Andy Goldsworthy", "Donald Judd", "Zorka Ságlová"],
+  osobnosti: ["Robert Smithson", "Christo a Jeanne-Claude", "Richard Long", "Andy Goldsworthy", "Donald Judd", "Zorka Ságlová", "James Turrell"],
   cesko: "Zorka Ságlová, Ivan Kafka (instalace v krajině), Miloš Šejn, Jan Steklík; dnes Land art v krajinářských projektech (Krajina Kuks).",
   pamatky: [
     { img: "landart_smithson.jpg", nazev: "Smithson: Spirálové molo", popis: "1970, Utah – 460 m spirála z čediče, střídavě pod hladinou jezera." },
-    { img: "landart_christo.jpg", nazev: "Christo: Zabalený Reichstag", popis: "1995, Berlín – dva týdny stříbrné látky." }
+    { img: "landart_christo.jpg", nazev: "Christo: Zabalený Reichstag", popis: "1995, Berlín – dva týdny stříbrné látky." },
+    { img: "land_smithson_emmen.jpg", nazev: "Smithson: Rozbitý kruh / Spirálový kopec (Emmen)", popis: "1971, Nizozemsko – jediné Smithsonovo dílo v Evropě, vytvořené v pískovně." },
+    { img: "land_goldsworthy.jpg", nazev: "Goldsworthy: Ovčín (Cumbria)", popis: "Kamenná suchá zídka jako land art, od 1996 – projekt Sheepfolds." },
+    { img: "land_turrell_kielder.jpg", nazev: "Turrell: Cat Cairn – Kielder Skyspace", popis: "2000, Northumberland – kruhový prostor s otvorem do nebe." },
+    { img: "land_christo_mastaba.jpg", nazev: "Christo: Londýnská mastaba", popis: "2018, Serpentine – plovoucí stavba ze 7506 barevných sudů." }
   ],
   jung: { postoj: 0.2, nazevPostoje: "Návrat k Velké Matce", funkce: "Vnímání & intuice",
     text: "Kompenzace technokratické civilizace obratem k Zemi: spirála jako archetyp (uroboros, mandala) vepsaná do krajiny. Minimalismus = introvertní myšlení redukující na podstatu; land art = smíření ega s přírodou (centroverze)." },
@@ -524,11 +597,15 @@ EPOCHY.push(
   znaky: ["Citace a ironie, hra s historií", "Pluralita stylů, mix vysokého a nízkého", "Návrat malby a figury (neoexpresionismus)", "Street art, graffiti, fotografie", "Dekonstruktivismus v architektuře"],
   oblasti: { architektura: "Venturi, Graves, Rossi, Bofill, Gehry (Bilbao 1997, Tančící dům), Hadid, Libeskind; u nás Tančící dům, Jan Kaplický (vize).", socharstvi: "Koons, Hirst, Gormley, Kapoor; Róna, Černý, Skála.", malirstvi: "Baselitz, Kiefer, Richter, Basquiat, Haring, Sherman (foto); Tvrdohlaví, Sopko, Nešleha." },
   faze: [{ nazev: "Postmoderní architektura", kdy: "1975–1990" }, { nazev: "Transavantgarda / neoexpresionismus", kdy: "1978–1990" }, { nazev: "YBA a globalizace", kdy: "1990–2000" }],
-  osobnosti: ["Robert Venturi", "Frank Gehry", "Anselm Kiefer", "Jean-Michel Basquiat", "Jeff Koons", "Damien Hirst", "David Černý"],
+  osobnosti: ["Robert Venturi", "Frank Gehry", "Anselm Kiefer", "Jean-Michel Basquiat", "Jeff Koons", "Damien Hirst", "David Černý", "Michael Graves", "Philip Johnson"],
   cesko: "Tančící dům (1996), Tvrdohlaví (1987), David Černý, Jiří Sopko, Vladimír Kokolia; Pardubice – Východočeská galerie, Divadlo 29.",
   pamatky: [
     { img: "postmoderna_tancici_dum.jpg", nazev: "Gehry a Milunić: Tančící dům", popis: "Praha, 1992–96 – dekonstruktivismus na Vltavě." },
-    { img: "postmoderna_basquiat.jpg", nazev: "Basquiat: Bez názvu (lebka)", popis: "1981 – graffiti v galerii." }
+    { img: "postmoderna_basquiat.jpg", nazev: "Basquiat: Bez názvu (lebka)", popis: "1981 – graffiti v galerii." },
+    { img: "postmoderna_venturi.jpg", nazev: "Venturi: Dům Vanny Venturiové", popis: "1964, Filadelfie – „méně je nuda“: hra s historickým štítem a symetrií." },
+    { img: "postmoderna_portland.jpg", nazev: "Graves: Portland Building", popis: "1982, Portland – barevná postmoderní kancelářská budova s ozdobnými motivy." },
+    { img: "postmoderna_bilbao.jpg", nazev: "Gehry: Guggenheimovo muzeum Bilbao", popis: "1997 – titanem obložené plastické objemy, „efekt Bilbao“." },
+    { img: "postmoderna_att.jpg", nazev: "Johnson: AT&T Building (New York)", popis: "1984 – mrakodrap se štítem ve tvaru nábytku chippendale." }
   ],
   jung: { postoj: 0.3, nazevPostoje: "Persona a její ironie", funkce: "Myšlení & cítění (hra)",
     text: "Hra s maskami (Sherman) a citacemi: vědomí, že každý styl je Persona. Kompenzace ztráty velkého vyprávění; nebezpečí povrchnosti, ale i krok k integraci – všechny minulé formy jsou k dispozici." },
